@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="root">
+        <xs:complexType>
+            <xs:all>
+                <!-- definition ensemble des candidats -->
+                <xs:element name="Candidats" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="candidat" type="Candidat" minOccurs="0"
+                                maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- definition ensemble des candidatures -->
+                <xs:element name="Candidatures" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="candidature" type="Candidatures" minOccurs="0"
+                                maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- definition ensemble des annees -->
+                <xs:element name="Annees" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Annee" minOccurs="0"
+                                maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- définition l'elements villes groupe de ville-->
+                <xs:element name="villes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Ville" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- définition l'elements regions groupe de region-->
+                <xs:element name="regions">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Region" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- définition l'elements pays groupe de pays-->
+                <xs:element name="pays">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Pays" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- définition l'elements mentions groupe de mentions-->
+                <xs:element name="mentions">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Mention" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- définition l'elements types de bac groupe du type de bac-->
+                <xs:element name="TypeBacs">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="TypeBac" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Coefficients">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Coefficient" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- définition l'elements types de bac groupe du type de bac-->
+                <xs:element name="TypeCentres">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="TypeCentre" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- définition l'elements academies groupe d'academie-->
+                <xs:element name="Academies">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Accademie" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- définition l'elements types de formations groupe de type de formation-->
+                <xs:element name="TypesFormations">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="TypeFormation" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- définition l'elements fillieres de diplome groupe de fillieres de diplome-->
+                <xs:element name="FilieresDiplome">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="FiliereDiplome" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- définition l'elements etablissements groupe d'etablissement-->
+                <xs:element name="Etablissements">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Etablissement" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- définition l'elements type des etablissement groupe de type d'etablissement-->
+                <xs:element name="TypesEtablissements">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="TypeEtablissement" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- définition l'elements universites groupe de universite-->
+                <xs:element name="Universites">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Univesite" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- définition l'elements centres groupe de centre-->
+                <xs:element name="centres">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="centre" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- définition l'elements fillieres souhaites groupe de filliere souhaites-->
+                <xs:element name="FiliereSouhaites">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="FiliereSouhaite" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- définition l'elements types des documents groupe du type du document-->
+                <xs:element name="TypeDocuments">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="TypeDocument" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- définition l'elements utilisateurs-->
+                <xs:element name="Utilisateurs" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Utilisateur" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- définition l'elements langues-->
+                <xs:element name="Langues" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Langue" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- définition l'elements langues-->
+                <xs:element name="Permissions" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Permission" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- définition l'elements Roles-->
+                <xs:element name="Roles" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Role" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!-- définition les elements de candidat et ses attributs -->
+    <xs:complexType name="Candidat">
+        <xs:sequence>
+            <xs:element name="nomComplet" type="xs:string" maxOccurs="1" />
+            <xs:element name="email" type="EmailType" maxOccurs="1" />
+            <xs:element name="addresse1" type="xs:string" maxOccurs="1" />
+            <xs:element name="addresse2" type="xs:string" maxOccurs="1" />
+            <xs:element name="dateNaissance" type="xs:date" maxOccurs="1" />
+            <xs:element name="lieuNaissance" type="xs:string" maxOccurs="1" />
+            <xs:element name="bac" type="Bac" maxOccurs="unbounded" />
+            <xs:element name="Diplome" type="Diplome" maxOccurs="unbounded" />
+            <xs:element name="experienceProfisonnelle" type="experienceProfisonnelle" />
+            <xs:element name="Document" type="Document"  maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="Utilisateur" type="xs:IDREF" use="required" />
+        <xs:attribute name="CNE" type="xs:ID" use="required" />
+        <xs:attribute name="appoge" use="optional" />
+    </xs:complexType>
+    <!-- définition les elements de candidature et ses attributs -->
+    <xs:complexType name="Candidatures">
+        <xs:sequence>
+            <xs:element name="status" type="xs:string" maxOccurs="1" />
+            <xs:element name="convocation" type="xs:string" maxOccurs="1" />
+            <xs:element name="choix" type="choix" maxOccurs="3" />
+            <xs:element name="Diplome" type="Diplome"/>
+            <xs:element name="bac" type="Bac"/>
+        </xs:sequence>
+        <xs:attribute name="Utilisateur" type="xs:IDREF" use="required" />
+        <xs:attribute name="idCandidature" type="xs:ID" use="required" />
+        <xs:attribute name="Annee" type="xs:IDREF" use="required" />
+    </xs:complexType>
+    <!-- entité Utilisateur -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="Utilisateur">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="login" type="EmailType" maxOccurs="1" />
+                <xs:element name="password" type="PasswordType" maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute name="CIN" type="xs:ID" use="required" />
+            <xs:attribute name="Langue" type="xs:IDREF" use="optional" default="fr" />
+            <xs:attribute name="Permissions" type="xs:IDREFS" use="optional" />
+            <xs:attribute name="role" type="xs:IDREF" use="optional" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité Langue -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="Langue">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Langue" type="xs:string" maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute name="CodeLangues" type="xs:ID" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <!-- entité Role -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="Role">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Role" type="xs:string" maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute name="IdRole" type="xs:ID" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité Role -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="Permission">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Permissions" type="xs:string" maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute name="IdPermission" type="xs:ID" use="required" />
+            <xs:attribute name="Roles" type="xs:IDREFS" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité Role -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="Annee">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Annee" type="xs:string" maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute name="IdAnnee" type="xs:ID" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité Ville -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="Ville">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nom" type="xs:string" maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute name="idVille" type="xs:ID" use="required" />
+            <xs:attribute name="region" type="xs:IDREF" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="TypeCentre">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="typeCentre" type="xs:string" maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute name="idType" type="xs:ID" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité Region -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="Region">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nom" type="xs:string" maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute name="idRegion" type="xs:ID" use="required" />
+            <xs:attribute name="pays" type="xs:IDREF" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité Pays -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="Pays">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nom" type="xs:string" maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute name="idPays" type="xs:ID" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité Ceofficient -->
+    <xs:element name="Coefficient">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nom" type="xs:string" maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute name="idCoefficient" type="xs:ID" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!--
+    ********************************************************************************************* -->
+    <xs:complexType name="Bac">
+        <xs:sequence>
+            <xs:element name="anneeBac" type="xs:string" />
+            <xs:element name="noteBac" type="Note" />
+        </xs:sequence>
+        <xs:attribute name="mentionBac" type="xs:IDREF" use="required" />
+        <xs:attribute name="type" type="xs:IDREF" use="required" />
+        <xs:attribute name="accadime" type="xs:IDREF" use="required" />
+    </xs:complexType>
+    <!-- entité mention -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="Mention">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="NomMEntion" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="idMention" type="xs:ID" use="required" />
+            <xs:attribute name="coefficient" type="xs:IDREF" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité typeBac -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="TypeBac">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nomType" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="idType" type="xs:ID" use="required" />
+            <xs:attribute name="coefficient" type="xs:IDREF" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité acadèmie -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="Accademie">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nomAcademie" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="idAcademie" type="xs:ID" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité diplome -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:complexType name="Diplome">
+        <xs:sequence>
+            <xs:element name="InofsPremiereAnnee" type="InfoAnnee"  minOccurs="0"/>
+            <xs:element name="InofsDeuxiemeAnnee" type="InfoAnnee" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="mentionDiplome" type="xs:IDREF" use="required" />
+        <xs:attribute name="Etablissement" type="xs:IDREF" use="optional" />
+        <xs:attribute name="typeFormation" type="xs:IDREF" use="required" />
+        <xs:attribute name="filiereDiplome" type="xs:IDREF" use="required" />
+        <xs:attribute name="Centre" type="xs:IDREF" use="optional" />
+    </xs:complexType>
+    <!-- entité formation -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="TypeFormation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="NomFormation" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="idFormation" type="xs:ID" use="required" />
+            <xs:attribute name="Coefficient" type="xs:IDREF" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité filiere diplome -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="FiliereDiplome">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="intitule" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="idFiliere" type="xs:ID" use="required" />
+            <xs:attribute name="Coefficient" type="xs:IDREF" use="required" />
+            <xs:attribute name="filliereSouhaitee" type="xs:IDREF" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité Etablissement -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="Etablissement">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nomEtablissement" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="idEtablissement" type="xs:ID" use="required" />
+            <xs:attribute name="TypeEtablissement" type="xs:IDREF" use="required" />
+            <xs:attribute name="Universite" type="xs:IDREF" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité typeEtablissement -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="TypeEtablissement">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nomType" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="idTypeEtablissement " type="xs:ID" use="required" />
+            <xs:attribute name="Coefficient" type="xs:IDREF" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité universite -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="Univesite">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nomUniversite" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="idUniversite" type="xs:ID" use="required" />
+            <xs:attribute name="TypeFormation" type="xs:IDREFS" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité centre -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="centre">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="NomCentre" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="idCentre" type="xs:ID" use="required" />
+            <xs:attribute name="idVille" type="xs:IDREF" use="required" />
+            <xs:attribute name="idTypeCentre" type="xs:IDREF" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité filiereSouhaite -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:element name="FiliereSouhaite">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="intituleFiliere" type="xs:string" />
+                <xs:element name="DescriptionFiliere" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="idFiliere" type="xs:ID" use="required" />
+            <xs:attribute name="lang" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- entité choix -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:complexType name="choix">
+        <xs:sequence>
+            <xs:element name="ordre" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="idFiliereSouhaite" type="xs:IDREF" use="required" />
+        <xs:attribute name="idCandidature" type="xs:IDREF" use="required" />
+    </xs:complexType>
+    <!-- entité experienceProfisionelle -->
+    <!--
+    ********************************************************************************************* -->
+    <xs:complexType name="experienceProfisonnelle">
+        <xs:sequence>
+            <xs:element name="experiencePro" type="xs:string" />
+            <xs:element name="nombreAnne" type="xs:integer" />
+        </xs:sequence>
+    </xs:complexType>
+    <!-- entité documents -->
+    <!--********************************************************************************************* -->
+    <xs:complexType name="Document">
+        <xs:sequence>
+            <xs:element name="file" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="idTypeDocument" type="xs:IDREF" use="required" />
+    </xs:complexType>
+    <xs:element name="TypeDocument">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="typeDocument" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="idTypeDocument" type="xs:ID" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- definition des elements communs -->
+    <!-- ****************************************************************************** -->
+    <xs:complexType name="AddresseType">
+        <xs:sequence>
+            <xs:element name="rue" type="xs:string" />
+            <xs:element name="numero" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="idVille" type="xs:IDREF" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="InfoAnnee">
+        <xs:sequence>
+            <xs:element name="annee" type="xs:string" />
+            <xs:element name="NombreEtudiant" type="xs:integer" />
+            <xs:element name="moyenne" type="Note" />
+            <xs:element name="classement" type="xs:integer" />
+        </xs:sequence>
+    </xs:complexType>
+    <!-- définition des simples types -->
+    <!-- ****************************************************************************** -->
+    <!-- définition du type email -->
+    <xs:simpleType name="EmailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" />
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- définition du type password -->
+    <xs:simpleType name="PasswordType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="8" />
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- définition du type note -->
+    <xs:simpleType name="Note">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="4" />
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="20" />
+            <xs:fractionDigits value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

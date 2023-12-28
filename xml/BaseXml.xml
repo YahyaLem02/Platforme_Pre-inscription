@@ -1,0 +1,1568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./ShemaPreinscription.xsd">
+    <?xml-stylesheet href="../filiere/xsl" type="text/xsl"?>
+
+    <pays>
+        <Pays idPays="maroc">
+            <nom>Maroc</nom>
+        </Pays>
+    </pays>
+    <regions>
+        <Region idRegion="r1" pays="maroc">
+            <nom>Tanger-Tétouan-Al Hoceïma</nom>
+        </Region>
+        <Region idRegion="r2" pays="maroc">
+            <nom>Oriental</nom>
+        </Region>
+        <Region idRegion="r3" pays="maroc">
+            <nom>Fès-Meknès</nom>
+        </Region>
+        <Region idRegion="r4" pays="maroc">
+            <nom>Rabat-Salé-Kénitra</nom>
+        </Region>
+        <Region idRegion="r5" pays="maroc">
+            <nom>Béni Mellal-Khénifra</nom>
+        </Region>
+        <Region idRegion="r6" pays="maroc">
+            <nom>Casablanca-Settat</nom>
+        </Region>
+        <Region idRegion="r7" pays="maroc">
+            <nom>Marrakech-Safi</nom>
+        </Region>
+        <Region idRegion="r8" pays="maroc">
+            <nom>Drâa-Tafilalet</nom>
+        </Region>
+        <Region idRegion="r9" pays="maroc">
+            <nom>Souss-Massa</nom>
+        </Region>
+        <Region idRegion="r10" pays="maroc">
+            <nom>Guelmim-Oued Noun</nom>
+        </Region>
+        <Region idRegion="r11" pays="maroc">
+            <nom>Laâyoune-Sakia El Hamra</nom>
+        </Region>
+        <Region idRegion="r12" pays="maroc">
+            <nom>Dakhla-Oued Ed-Dahab</nom>
+        </Region>
+    </regions>
+
+    <villes>
+        <Ville idVille="v1" region="r1">
+            <nom>Tanger</nom>
+        </Ville>
+        <Ville idVille="v2" region="r1">
+            <nom>Tétouan</nom>
+        </Ville>
+        <Ville idVille="v3" region="r2">
+            <nom>Oujda</nom>
+        </Ville>
+        <Ville idVille="v4" region="r2">
+            <nom>Nador</nom>
+        </Ville>
+        <Ville idVille="v5" region="r3">
+            <nom>Fès</nom>
+        </Ville>
+        <Ville idVille="v6" region="r3">
+            <nom>Meknès</nom>
+        </Ville>
+        <Ville idVille="v7" region="r4">
+            <nom>Rabat</nom>
+        </Ville>
+        <Ville idVille="v8" region="r4">
+            <nom>Salé</nom>
+        </Ville>
+        <Ville idVille="v9" region="r5">
+            <nom>Béni Mellal</nom>
+        </Ville>
+        <Ville idVille="v10" region="r5">
+            <nom>Khénifra</nom>
+        </Ville>
+        <Ville idVille="v11" region="r6">
+            <nom>Casablanca</nom>
+        </Ville>
+        <Ville idVille="v12" region="r6">
+            <nom>Settat</nom>
+        </Ville>
+        <Ville idVille="v13" region="r7">
+            <nom>Marrakech</nom>
+        </Ville>
+        <Ville idVille="v14" region="r7">
+            <nom>Essaouira</nom>
+        </Ville>
+        <Ville idVille="v15" region="r8">
+            <nom>Ouarzazate</nom>
+        </Ville>
+        <Ville idVille="v16" region="r8">
+            <nom>Errachidia</nom>
+        </Ville>
+        <Ville idVille="v17" region="r9">
+            <nom>Agadir</nom>
+        </Ville>
+        <Ville idVille="v18" region="r9">
+            <nom>Tiznit</nom>
+        </Ville>
+        <Ville idVille="v19" region="r10">
+            <nom>Guelmim</nom>
+        </Ville>
+        <Ville idVille="v20" region="r6">
+            <nom>Berrechid</nom>
+        </Ville>
+        <Ville idVille="v21" region="r11">
+            <nom>Boujdour</nom>
+        </Ville>
+        <Ville idVille="v22" region="r12">
+            <nom>Dakhla</nom>
+        </Ville>
+        <Ville idVille="v23" region="r12">
+            <nom>Aousserd</nom>
+        </Ville>
+        <Ville idVille="v24" region="r1">
+            <nom>Assilah</nom>
+        </Ville>
+        <Ville idVille="v25" region="r1">
+            <nom>Chefchaouen</nom>
+        </Ville>
+        <Ville idVille="v26" region="r2">
+            <nom>Berkane</nom>
+        </Ville>
+        <Ville idVille="v27" region="r2">
+            <nom>Al Hoceïma</nom>
+        </Ville>
+        <Ville idVille="v28" region="r3">
+            <nom>Martil</nom>
+        </Ville>
+        <Ville idVille="v29" region="r3">
+            <nom>Azrou</nom>
+        </Ville>
+        <Ville idVille="v30" region="r4">
+            <nom>Skhirat</nom>
+        </Ville>
+        <Ville idVille="v31" region="r4">
+            <nom>Kénitra</nom>
+        </Ville>
+        <Ville idVille="v32" region="r5">
+            <nom>Khouribga</nom>
+        </Ville>
+        <Ville idVille="v33" region="r7">
+            <nom>Kelâat Es-Sraghna</nom>
+        </Ville>
+        <Ville idVille="v34" region="r6">
+            <nom>Mohammedia</nom>
+        </Ville>
+        <Ville idVille="v36" region="r6">
+            <nom>El Jadida</nom>
+        </Ville>
+        <Ville idVille="v37" region="r7">
+            <nom>Agdz</nom>
+        </Ville>
+        <Ville idVille="v38" region="r8">
+            <nom>Merzouga</nom>
+        </Ville>
+        <Ville idVille="v39" region="r8">
+            <nom>Tinghir</nom>
+        </Ville>
+        <Ville idVille="v40" region="r9">
+            <nom>Taghazout</nom>
+        </Ville>
+        <Ville idVille="v41" region="r10">
+            <nom>Sidi Ifni</nom>
+        </Ville>
+        <Ville idVille="v42" region="r9">
+            <nom>Mirleft</nom>
+        </Ville>
+        <Ville idVille="v43" region="r10">
+            <nom>Assa</nom>
+        </Ville>
+        <Ville idVille="v44" region="r10">
+            <nom>Smara</nom>
+        </Ville>
+        <Ville idVille="v45" region="r11">
+            <nom>Bir Gandouz</nom>
+        </Ville>
+        <Ville idVille="v46" region="r11">
+            <nom>Marsa Boujdour</nom>
+        </Ville>
+
+        <Ville idVille="v47" region="r7">
+            <nom>Safi</nom>
+        </Ville>
+
+        <Ville idVille="v48" region="r6">
+            <nom>Zemmamra</nom>
+        </Ville>
+        <Ville idVille="v49" region="r7">
+            <nom>Ben Guerir</nom>
+        </Ville>
+
+        <Ville idVille="v50" region="r1">
+            <nom>Larache</nom>
+        </Ville>
+        <Ville idVille="v51" region="r1">
+            <nom>Oued Laou</nom>
+        </Ville>
+        <Ville idVille="v52" region="r2">
+            <nom>Taourirt</nom>
+        </Ville>
+        <Ville idVille="v53" region="r2">
+            <nom>Jebha</nom>
+        </Ville>
+        <Ville idVille="v54" region="r3">
+            <nom>Sefrou</nom>
+        </Ville>
+        <Ville idVille="v55" region="r3">
+            <nom>Imouzzer Kandar</nom>
+        </Ville>
+        <Ville idVille="v56" region="r4">
+            <nom>Benslimane</nom>
+        </Ville>
+        <Ville idVille="v57" region="r4">
+            <nom>Sidi Kacem</nom>
+        </Ville>
+        <Ville idVille="v58" region="r5">
+            <nom>Azilal</nom>
+        </Ville>
+
+
+        <Ville idVille="v59" region="r6">
+            <nom>Sidi Bennour</nom>
+        </Ville>
+        <Ville idVille="v60" region="r7">
+            <nom>Asni</nom>
+        </Ville>
+        <Ville idVille="v61" region="r7">
+            <nom>Al Haouz</nom>
+        </Ville>
+        <Ville idVille="v62" region="r7">
+            <nom>Imintanoute</nom>
+        </Ville>
+        <Ville idVille="v63" region="r8">
+            <nom>Alnif</nom>
+        </Ville>
+        <Ville idVille="v64" region="r8">
+            <nom>Rissani</nom>
+        </Ville>
+        <Ville idVille="v65" region="r9">
+            <nom>Biougra</nom>
+        </Ville>
+        <Ville idVille="v66" region="r9">
+            <nom>Smimou</nom>
+        </Ville>
+
+        <Ville idVille="v68" region="r10">
+            <nom>Oued-Eddahab</nom>
+        </Ville>
+        <Ville idVille="v69" region="r11">
+            <nom>Tarfaya</nom>
+        </Ville>
+        <Ville idVille="v70" region="r12">
+            <nom>Gueltat Zemmour</nom>
+        </Ville>
+        <Ville idVille="v71" region="r12">
+            <nom>El Argoub</nom>
+        </Ville>
+        <Ville idVille="v72" region="r1">
+            <nom>Ksar El Kebir</nom>
+        </Ville>
+        <Ville idVille="v73" region="r2">
+            <nom>Taza</nom>
+        </Ville>
+        <Ville idVille="v74" region="r3">
+            <nom>Ifrane</nom>
+        </Ville>
+        <Ville idVille="v76" region="r4">
+            <nom>Rommani</nom>
+        </Ville>
+        <Ville idVille="v77" region="r4">
+            <nom>Laayoune</nom>
+        </Ville>
+    </villes>
+    <FiliereSouhaites>
+        <FiliereSouhaite idFiliere="Fil1" lang="fr">
+            <intituleFiliere>MÉCATRONIQUE</intituleFiliere>
+            <DescriptionFiliere>
+                Combine l'expertise en mécanique, électronique et informatique pour former des
+                professionnels capables de concevoir,
+                développer et optimiser des systèmes intégrés,
+                alliant composants mécaniques et électroniques pour créer des solutions innovantes dans
+                divers domaines industriels.
+            </DescriptionFiliere>
+        </FiliereSouhaite>
+        <FiliereSouhaite idFiliere="Fil2" lang="fr">
+            <intituleFiliere>INGÉNIERIE DES SYSTÈMES D'INFORMATION ET RÉSEAUX</intituleFiliere>
+            <DescriptionFiliere>
+                Forme des experts chargés de concevoir, développer et maintenir des systèmes informatiques
+                efficaces,
+                ainsi que de gérer les réseaux pour assurer la connectivité et la sécurité des données au
+                sein des organisations.
+            </DescriptionFiliere>
+        </FiliereSouhaite>
+        <FiliereSouhaite idFiliere="Fil3" lang="fr">
+            <intituleFiliere>GESTION COMPTABLE ET FINANCIÈRE</intituleFiliere>
+            <DescriptionFiliere>
+                Forme des professionnels spécialisés dans la gestion précise des Utilisateurs et des finances,
+                visant à assurer la stabilité financière et la conformité aux normes comptables dans les
+                organisations.
+            </DescriptionFiliere>
+        </FiliereSouhaite>
+        <FiliereSouhaite idFiliere="Fil4" lang="fr">
+            <intituleFiliere>MÉTROLOGIE, QUALITÉ, SÉCURITÉ ET ENVIRONNEMENT</intituleFiliere>
+            <DescriptionFiliere>
+                Forme des experts pour garantir la précision des mesures,
+                assurer la qualité des produits et services, ainsi que promouvoir la sécurité et la
+                durabilité environnementale.
+            </DescriptionFiliere>
+        </FiliereSouhaite>
+        <FiliereSouhaite idFiliere="FilEn1" lang="en">
+            <intituleFiliere>MECHATRONICS</intituleFiliere>
+            <DescriptionFiliere>
+                Combines expertise in mechanics, electronics, and computing to train professionals capable of designing,
+                developing, and optimizing integrated systems, combining mechanical and electronic components to create
+                innovative solutions in various industrial fields.
+            </DescriptionFiliere>
+        </FiliereSouhaite>
+
+        <FiliereSouhaite idFiliere="FilEn2" lang="en">
+            <intituleFiliere>INFORMATION SYSTEMS AND NETWORKS ENGINEERING</intituleFiliere>
+            <DescriptionFiliere>
+                Shapes experts responsible for designing, developing, and maintaining efficient computer systems, as
+                well as managing networks to ensure data connectivity and security within organizations.
+            </DescriptionFiliere>
+        </FiliereSouhaite>
+
+        <FiliereSouhaite idFiliere="FilEn3" lang="en">
+            <intituleFiliere>ACCOUNTING AND FINANCIAL MANAGEMENT</intituleFiliere>
+            <DescriptionFiliere>
+                Trains professionals specialized in precise management of users and finances, aiming to ensure financial
+                stability and compliance with accounting standards within organizations.
+            </DescriptionFiliere>
+        </FiliereSouhaite>
+
+        <FiliereSouhaite idFiliere="FilEn4" lang="en">
+            <intituleFiliere>METROLOGY, QUALITY, SAFETY, AND ENVIRONMENT</intituleFiliere>
+            <DescriptionFiliere>
+                Educates experts to ensure measurement accuracy, maintain product and service quality, as well as
+                promote environmental safety and sustainability.
+            </DescriptionFiliere>
+        </FiliereSouhaite>
+        <FiliereSouhaite idFiliere="FilAr1" lang="ar">
+            <intituleFiliere>الميكاترونيات</intituleFiliere>
+            <DescriptionFiliere>
+                يجمع بين الخبرة في الهندسة الميكانيكية والإلكترونية والحاسوبية لتدريب المحترفين القادرين على تصميم
+                وتطوير وتحسين الأنظمة المتكاملة، مما يجمع بين المكونات الميكانيكية والإلكترونية لخلق حلول مبتكرة في
+                مجالات صناعية متنوعة.
+            </DescriptionFiliere>
+        </FiliereSouhaite>
+
+        <FiliereSouhaite idFiliere="FilAr2" lang="ar">
+            <intituleFiliere>هندسة أنظمة المعلومات والشبكات</intituleFiliere>
+            <DescriptionFiliere>
+                يشكل خبراء مسؤولين عن تصميم وتطوير وصيانة أنظمة الحاسوب الفعالة، بالإضافة إلى إدارة الشبكات لضمان
+                الاتصالات والأمان في نقل البيانات داخل المؤسسات.
+            </DescriptionFiliere>
+        </FiliereSouhaite>
+
+        <FiliereSouhaite idFiliere="FilAr3" lang="ar">
+            <intituleFiliere>إدارة المحاسبة والمالية</intituleFiliere>
+            <DescriptionFiliere>
+                يدرب المحترفين المتخصصين في إدارة دقيقة للمستخدمين والتمويل، بهدف ضمان الاستقرار المالي والامتثال
+                للمعايير المحاسبية داخل المؤسسات.
+            </DescriptionFiliere>
+        </FiliereSouhaite>
+
+        <FiliereSouhaite idFiliere="FilAr4" lang="ar">
+            <intituleFiliere>القياس والجودة والسلامة والبيئة</intituleFiliere>
+            <DescriptionFiliere>
+                يؤهل الخبراء لضمان دقة القياسات والحفاظ على جودة المنتجات والخدمات، وكذلك تعزيز السلامة البيئية
+                والاستدامة.
+            </DescriptionFiliere>
+        </FiliereSouhaite>
+
+
+
+    </FiliereSouhaites>
+
+
+    <Universites>
+        <Univesite idUniversite="Univ1" TypeFormation="formation1 formation2 formation3">
+            <nomUniversite>Université Mohammed V de Rabat</nomUniversite>
+        </Univesite>
+        <Univesite idUniversite="Univ2" TypeFormation="formation1 formation2 formation3">
+            <nomUniversite>Université Cadi Ayyad de Marrakech</nomUniversite>
+        </Univesite>
+        <Univesite idUniversite="Univ3" TypeFormation="formation1 formation2 formation3">
+            <nomUniversite>Université Hassan II de Casablanca</nomUniversite>
+        </Univesite>
+        <Univesite idUniversite="Univ4" TypeFormation="formation1 formation2 formation3">
+            <nomUniversite>Université Ibn Tofail de Kénitra</nomUniversite>
+        </Univesite>
+        <Univesite idUniversite="Univ5" TypeFormation="formation1 formation2 formation3">
+            <nomUniversite>Université Mohammed Premier d'Oujda</nomUniversite>
+        </Univesite>
+        <Univesite idUniversite="Univ6" TypeFormation="formation1 formation2 formation3">
+            <nomUniversite>Université Moulay Ismaïl de Meknès</nomUniversite>
+        </Univesite>
+        <Univesite idUniversite="Univ7" TypeFormation="formation1 formation2 formation3">
+            <nomUniversite>Université Sidi Mohamed Ben Abdellah de Fès</nomUniversite>
+        </Univesite>
+        <Univesite idUniversite="Univ8" TypeFormation="formation1 formation2 formation3">
+            <nomUniversite>Université Abdelmalek Essaâdi de Tanger</nomUniversite>
+        </Univesite>
+        <Univesite idUniversite="Univ9" TypeFormation="formation1 formation2 formation3">
+            <nomUniversite>Université Sultan Moulay Slimane de Béni Mellal</nomUniversite>
+        </Univesite>
+        <Univesite idUniversite="Univ10" TypeFormation="formation1 formation2 formation3">
+            <nomUniversite>Université Hassan Premier de Settat</nomUniversite>
+        </Univesite>
+        <Univesite idUniversite="Univ11" TypeFormation="formation1 formation2 formation3">
+            <nomUniversite>Université Ibn Zohr de Agadir</nomUniversite>
+        </Univesite>
+        <Univesite idUniversite="Univ12" TypeFormation="formation1 formation2 formation3">
+            <nomUniversite>Université Chouiab Doukkali d'EL Jadida</nomUniversite>
+        </Univesite>
+    </Universites>
+
+
+    <TypesEtablissements>
+        <TypeEtablissement idTypeEtablissement="typeEtab1" Coefficient="coef3">
+            <nomType>Faculté</nomType>
+        </TypeEtablissement>
+        <TypeEtablissement idTypeEtablissement="typeEtab2" Coefficient="coef3">
+            <nomType>École</nomType>
+        </TypeEtablissement>
+    </TypesEtablissements>
+
+
+    <Etablissements>
+        <!-- Université Mohammed V de Rabat -->
+        <Etablissement idEtablissement="etab1" TypeEtablissement="typeEtab1" Universite="Univ1">
+            <nomEtablissement>Faculté des sciences juridiques, économiques et sociales Souissi
+                (FSJES-Souissi)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab2" TypeEtablissement="typeEtab1" Universite="Univ1">
+            <nomEtablissement>Faculté des sciences juridiques, économiques et sociales de Salé
+                (FSJES-Salé)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab3" TypeEtablissement="typeEtab1" Universite="Univ1">
+            <nomEtablissement>Faculté des sciences juridiques, économiques et sociales - Agdal
+                (FSJES-Agdal)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab4" TypeEtablissement="typeEtab1" Universite="Univ1">
+            <nomEtablissement>Faculté des sciences de Rabat</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab5" TypeEtablissement="typeEtab2" Universite="Univ1">
+            <nomEtablissement>École supérieure de technologie de Salé</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab6" TypeEtablissement="typeEtab2" Universite="Univ1">
+            <nomEtablissement>École normale supérieure de Rabat</nomEtablissement>
+        </Etablissement>
+        <!-- Université Cadi Ayyad de Marrakech -->
+
+        <Etablissement idEtablissement="etab7" TypeEtablissement="typeEtab1" Universite="Univ2">
+            <nomEtablissement>Faculté des sciences - Semlalia</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab8" TypeEtablissement="typeEtab1" Universite="Univ2">
+            <nomEtablissement>Faculté des sciences juridiques, économiques et sociales</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab9" TypeEtablissement="typeEtab1" Universite="Univ2">
+            <nomEtablissement>Faculté des sciences et techniques</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab10" TypeEtablissement="typeEtab2" Universite="Univ2">
+            <nomEtablissement>École supérieure de technologie d'Essaouira</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab11" TypeEtablissement="typeEtab2" Universite="Univ2">
+            <nomEtablissement>École nationale des sciences appliquées de Safi</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab12" TypeEtablissement="typeEtab1" Universite="Univ2">
+            <nomEtablissement>Faculté Polydisciplinaire de Safi</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab13" TypeEtablissement="typeEtab2" Universite="Univ2">
+            <nomEtablissement>École normale supérieure de Marrakech</nomEtablissement>
+        </Etablissement>
+        <!-- Université Hassan II de Casablanca -->
+
+        <Etablissement idEtablissement="etab14" TypeEtablissement="typeEtab1" Universite="Univ3">
+            <nomEtablissement>Faculté des sciences et techniques de Mohammedia (FSTM)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab15" TypeEtablissement="typeEtab1" Universite="Univ3">
+            <nomEtablissement>Faculté des sciences juridiques, économiques et sociales de Mohammedia
+                (FSJESM)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab16" TypeEtablissement="typeEtab1" Universite="Univ3">
+            <nomEtablissement>Faculté des sciences juridiques, économiques et sociales d'Ain Sebaâ
+                (FSJESA)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab17" TypeEtablissement="typeEtab2" Universite="Univ3">
+            <nomEtablissement>École supérieure de technologie de Casablanca (ESTC)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab18" TypeEtablissement="typeEtab2" Universite="Univ3">
+            <nomEtablissement>École normale supérieure de Casablanca </nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab19" TypeEtablissement="typeEtab1" Universite="Univ3">
+            <nomEtablissement>Faculté de Sciences - Ain Chock (FSAC)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab20" TypeEtablissement="typeEtab1" Universite="Univ3">
+            <nomEtablissement>Faculté des sciences juridiques, économiques et sociales de Casablanca
+                (FSJESC)</nomEtablissement>
+        </Etablissement>
+        <!-- Université Ibn Tofail de Kénitra -->
+        <Etablissement idEtablissement="etab21" TypeEtablissement="typeEtab2" Universite="Univ4">
+            <nomEtablissement>Ecole Supérieure de l’éducation et de la Formation de Kénitra</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab22" TypeEtablissement="typeEtab2" Universite="Univ4">
+            <nomEtablissement>Ecole Supérieure de Technologie de Kénitra (ESTK)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab23" TypeEtablissement="typeEtab1" Universite="Univ4">
+            <nomEtablissement>Faculté d'Economie et de Gestion de Kénitra</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab24" TypeEtablissement="typeEtab1" Universite="Univ4">
+            <nomEtablissement>Faculté des Sciences de Kenitra</nomEtablissement>
+        </Etablissement>
+        <!-- Université Mohammed Premier d'Oujda -->
+        <Etablissement idEtablissement="etab25" TypeEtablissement="typeEtab2" Universite="Univ5">
+            <nomEtablissement>École Supérieure De L'éducation Et De La Formation</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab26" TypeEtablissement="typeEtab2" Universite="Univ5">
+            <nomEtablissement>École Supérieure de Technologie de Nador</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab27" TypeEtablissement="typeEtab2" Universite="Univ5">
+            <nomEtablissement>École Supérieure de Technologie d'oujda</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab28" TypeEtablissement="typeEtab1" Universite="Univ5">
+            <nomEtablissement>Faculté Pluridisciplinaire de Nador</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab29" TypeEtablissement="typeEtab1" Universite="Univ5">
+            <nomEtablissement>Faculté des Sciences Juridiques, Économiques et Sociales</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab30" TypeEtablissement="typeEtab1" Universite="Univ5">
+            <nomEtablissement>La Faculté des Sciences d’Oujda</nomEtablissement>
+        </Etablissement>
+        <!-- Université Moulay Ismaïl de Meknès -->
+        <Etablissement idEtablissement="etab31" TypeEtablissement="typeEtab2" Universite="Univ6">
+            <nomEtablissement>École normale supérieure (ENS), Meknès</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab32" TypeEtablissement="typeEtab2" Universite="Univ6">
+            <nomEtablissement>École supérieure de technologie (EST), Meknès</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab33" TypeEtablissement="typeEtab1" Universite="Univ6">
+            <nomEtablissement>Faculté polydisciplinaire (FP), Errachidia</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab34" TypeEtablissement="typeEtab1" Universite="Univ6">
+            <nomEtablissement>Faculté des sciences et techniques (FST), Errachidia</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab35" TypeEtablissement="typeEtab1" Universite="Univ6">
+            <nomEtablissement>Faculté des sciences juridiques, économiques et sociales (FSJES), Meknès
+            </nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab36" TypeEtablissement="typeEtab1" Universite="Univ6">
+            <nomEtablissement>Faculté des sciences (FS), Meknès</nomEtablissement>
+        </Etablissement>
+        <!-- Université Sidi Mohamed Ben Abdellah de Fès -->
+        <Etablissement idEtablissement="etab37" TypeEtablissement="typeEtab1" Universite="Univ7">
+            <nomEtablissement>Faculté des sciences juridiques, économique et sociales Fès (Dhar El Mehraz)
+            </nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab38" TypeEtablissement="typeEtab1" Universite="Univ7">
+            <nomEtablissement>Faculté des sciences Fès (Dhar El Mehraz)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab39" TypeEtablissement="typeEtab1" Universite="Univ7">
+            <nomEtablissement>Faculté des sciences et techniques Fès</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab40" TypeEtablissement="typeEtab2" Universite="Univ7">
+            <nomEtablissement>École Supérieure de Technologie Fès</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab41" TypeEtablissement="typeEtab1" Universite="Univ7">
+            <nomEtablissement>Faculté polydisciplinaire de Taza</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab42" TypeEtablissement="typeEtab1" Universite="Univ7">
+            <nomEtablissement>Faculté polydisciplinaire de Taounate</nomEtablissement>
+        </Etablissement>
+        <!-- Université Abdelmalek Essaâdi de Tanger -->
+
+        <Etablissement idEtablissement="etab43" TypeEtablissement="typeEtab1" Universite="Univ8">
+            <nomEtablissement>Faculté des sciences de Tétouan</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab44" TypeEtablissement="typeEtab2" Universite="Univ8">
+            <nomEtablissement>École normale supérieure de Martil</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab45" TypeEtablissement="typeEtab1" Universite="Univ8">
+            <nomEtablissement>Faculté des sciences et techniques de Tanger</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab46" TypeEtablissement="typeEtab1" Universite="Univ8">
+            <nomEtablissement>Faculté des sciences juridiques, économiques et sociales de Tanger</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab47" TypeEtablissement="typeEtab1" Universite="Univ8">
+            <nomEtablissement>Faculté polydisciplinaire de Larache</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab48" TypeEtablissement="typeEtab1" Universite="Univ8">
+            <nomEtablissement>Faculté des Sciences et Techniques d'Al Hoceïma</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab49" TypeEtablissement="typeEtab1" Universite="Univ8">
+            <nomEtablissement>Faculté des sciences juridiques, économiques et sociales de Tétouan-Martil
+            </nomEtablissement>
+        </Etablissement>
+        <!-- Université Sultan Moulay Slimane de Béni Mellal -->
+        <Etablissement idEtablissement="etab50" TypeEtablissement="typeEtab1" Universite="Univ9">
+            <nomEtablissement>Faculté des sciences et techniques de Béni Mellal</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab51" TypeEtablissement="typeEtab1" Universite="Univ9">
+            <nomEtablissement>Faculté polydisciplinaire de Béni Mellal</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab52" TypeEtablissement="typeEtab2" Universite="Univ9">
+            <nomEtablissement>École supérieure de technologie de Beni Mellal</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab53" TypeEtablissement="typeEtab2" Universite="Univ9">
+            <nomEtablissement>École supérieure de technologie de Khénifra</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab54" TypeEtablissement="typeEtab2" Universite="Univ9">
+            <nomEtablissement>École Supérieure De L'éducation Et De La Formation de Beni Mellal</nomEtablissement>
+        </Etablissement>
+        <!-- Université Hassan Premier de Settat -->
+
+        <Etablissement idEtablissement="etab55" TypeEtablissement="typeEtab1" Universite="Univ10">
+            <nomEtablissement>Faculté polydisciplinaire de Berrechid (FPB)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab56" TypeEtablissement="typeEtab2" Universite="Univ10">
+            <nomEtablissement>École supérieure de l'éducation et de la formation (ESEF)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab57" TypeEtablissement="typeEtab1" Universite="Univ10">
+            <nomEtablissement>Faculté des sciences et techniques (FST)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab58" TypeEtablissement="typeEtab1" Universite="Univ10">
+            <nomEtablissement>Faculté d'économie et de gestion (FEG)</nomEtablissement>
+        </Etablissement>
+        <!-- Université Ibn Zohr de Agadir -->
+        <Etablissement idEtablissement="etab99" TypeEtablissement="typeEtab2" Universite="Univ11">
+            <nomEtablissement>École supérieure de technologie - Laâyoune (ESTL)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab98" TypeEtablissement="typeEtab1" Universite="Univ11">
+            <nomEtablissement>Faculté d'économie et de gestion - Guelmim (FEGG)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab97" TypeEtablissement="typeEtab2" Universite="Univ11">
+            <nomEtablissement>École supérieure de technologie - Guelmim (ESTG)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab95" TypeEtablissement="typeEtab2" Universite="Univ11">
+            <nomEtablissement>École supérieure de technologie - Agadir (ESTA)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab59" TypeEtablissement="typeEtab1" Universite="Univ11">
+            <nomEtablissement>Faculté pluridisciplinaire - Taroudannt (FPT)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab60" TypeEtablissement="typeEtab1" Universite="Univ11">
+            <nomEtablissement>Faculté pluridisciplinaire - Ouarzazate (FPO)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab61" TypeEtablissement="typeEtab1" Universite="Univ11">
+            <nomEtablissement>Faculté des sciences appliquées - Ait Melloul (FSA)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab62" TypeEtablissement="typeEtab1" Universite="Univ11">
+            <nomEtablissement>Faculté des sciences juridiques, économiques et sociales - Ait Melloul
+                (FSJESAM)</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab63" TypeEtablissement="typeEtab1" Universite="Univ11">
+            <nomEtablissement>Faculté des sciences juridiques, économiques et sociales - Agadir (FSJES)
+            </nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab64" TypeEtablissement="typeEtab1" Universite="Univ11">
+            <nomEtablissement>Faculté des sciences - Agadir (FSA)</nomEtablissement>
+        </Etablissement>
+        <!-- Université Chouiab Doukkali d'EL Jadida -->
+
+        <Etablissement idEtablissement="etab65" TypeEtablissement="typeEtab1" Universite="Univ12">
+            <nomEtablissement>Faculté Polydisciplinaire de Sidi Bennour</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab66" TypeEtablissement="typeEtab2" Universite="Univ12">
+            <nomEtablissement>École Supérieure de Technologie de Sidi Bennour</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab67" TypeEtablissement="typeEtab1" Universite="Univ12">
+            <nomEtablissement>Faculté des sciences juridiques, économiques et sociales d'El Jadida</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab68" TypeEtablissement="typeEtab1" Universite="Univ12">
+            <nomEtablissement>Faculté des Sciences d'El Jadida</nomEtablissement>
+        </Etablissement>
+        <Etablissement idEtablissement="etab69" TypeEtablissement="typeEtab2" Universite="Univ10">
+            <nomEtablissement>École supérieure de l'éducation et de la formation d'El Jadida (ESEF)</nomEtablissement>
+        </Etablissement>
+
+    </Etablissements>
+    <TypeBacs>
+        <TypeBac idType="SM" coefficient="coef1">
+            <nomType>Bac Sciences Mathématiques (SM)</nomType>
+        </TypeBac>
+        <TypeBac idType="SPC" coefficient="coef2">
+            <nomType>Bac Sciences Physiques et Chimiques (SPC)</nomType>
+        </TypeBac>
+        <TypeBac idType="SVT" coefficient="coef3">
+            <nomType>Bac Sciences de la Vie et de la Terre (SVT)</nomType>
+        </TypeBac>
+        <TypeBac idType="SE" coefficient="coef4">
+            <nomType>Bac Sciences Économiques (SE)</nomType>
+        </TypeBac>
+        <TypeBac idType="STE" coefficient="coef5">
+            <nomType>Bac Sciences et Technologies Électriques (STE)</nomType>
+        </TypeBac>
+        <TypeBac idType="STM" coefficient="coef6">
+            <nomType>Bac Sciences et Technologies Mécaniques (STM)</nomType>
+        </TypeBac>
+    </TypeBacs>
+
+    <TypeCentres>
+        <TypeCentre idType="OFPPT">
+            <typeCentre>L'Office de la Formation Professionnelle et de la Promotion du Travail (OFPPT)</typeCentre>
+        </TypeCentre>
+        <TypeCentre idType="BTS">
+            <typeCentre>Brevet de Technicien Supérieur (BTS)</typeCentre>
+        </TypeCentre>
+    </TypeCentres>
+
+    <TypesFormations>
+        <TypeFormation idFormation="formation1" Coefficient="coef1">
+            <NomFormation>Diplôme d'Études Universitaires Générales (DEUG)</NomFormation>
+        </TypeFormation>
+        <TypeFormation idFormation="formation2" Coefficient="coef2">
+            <NomFormation>Diplôme Universitaire de Technologie (DUT)</NomFormation>
+        </TypeFormation>
+        <TypeFormation idFormation="formation3" Coefficient="coef3">
+            <NomFormation>Diplôme d'Études Universitaires Scientifiques et Techniques (DEUST)</NomFormation>
+        </TypeFormation>
+        <TypeFormation idFormation="formation4" Coefficient="coef4">
+            <NomFormation>Diplôme de Technicien Spécialisé (DTS)</NomFormation>
+        </TypeFormation>
+        <TypeFormation idFormation="formation5" Coefficient="coef5">
+            <NomFormation>Brevet de Technicien Supérieur (BTS)</NomFormation>
+        </TypeFormation>
+
+    </TypesFormations>
+    <centres>
+        <!-- casablanca -->
+        <centre idCentre="centre1" idVille="v11" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Casablanca-Anfa</NomCentre>
+        </centre>
+        <centre idCentre="centre2" idVille="v11" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Casablanca-Maarif</NomCentre>
+        </centre>
+        <centre idCentre="centre3" idVille="v11" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Casablanca-Hay Hassani</NomCentre>
+        </centre>
+        <centre idCentre="centre4" idVille="v11" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Casablanca-Sidi Othmane</NomCentre>
+        </centre>
+        <centre idCentre="centre5" idVille="v11" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Casablanca-Ben Msik</NomCentre>
+        </centre>
+        <centre idCentre="centre6" idVille="v11" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Lalla Fatima Zahra (BTS)</NomCentre>
+        </centre>
+        <centre idCentre="centre7" idVille="v11" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Moulay Youssef</NomCentre>
+        </centre>
+        <centre idCentre="centre8" idVille="v11" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Ibnou Al Haytam</NomCentre>
+        </centre>
+        <centre idCentre="centre9" idVille="v11" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Lalla Amina</NomCentre>
+        </centre>
+        <centre idCentre="centre10" idVille="v11" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Moulay Ismaïl</NomCentre>
+        </centre>
+        <!-- Rabat -->
+        <centre idCentre="centre11" idVille="v7" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Rabat-Témara</NomCentre>
+        </centre>
+        <centre idCentre="centre12" idVille="v7" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Rabat-Hay Riad</NomCentre>
+        </centre>
+        <centre idCentre="centre13" idVille="v7" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Rabat-Océan</NomCentre>
+        </centre>
+        <centre idCentre="centre14" idVille="v7" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Rabat-Agdal</NomCentre>
+        </centre>
+        <centre idCentre="centre15" idVille="v7" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Rabat-Hassan</NomCentre>
+        </centre>
+        <centre idCentre="centre16" idVille="v7" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Al Khawarizmi (BTS)</NomCentre>
+        </centre>
+        <centre idCentre="centre17" idVille="v7" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Ibnou Al Haytam (BTS)</NomCentre>
+        </centre>
+        <centre idCentre="centre18" idVille="v7" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Moulay Slimane (BTS)</NomCentre>
+        </centre>
+        <centre idCentre="centre19" idVille="v7" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Moulay Rachid (BTS)</NomCentre>
+        </centre>
+        <centre idCentre="centre20" idVille="v7" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique d'État (BTS)</NomCentre>
+        </centre>
+        <!-- Tanger -->
+        <centre idCentre="centre21" idVille="v1" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Tanger-Quartier Industriel</NomCentre>
+        </centre>
+        <centre idCentre="centre22" idVille="v1" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Tanger-Mnoud</NomCentre>
+        </centre>
+        <centre idCentre="centre23" idVille="v1" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Tanger-Minar</NomCentre>
+        </centre>
+        <centre idCentre="centre24" idVille="v1" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Tanger-Méchouar</NomCentre>
+        </centre>
+        <centre idCentre="centre25" idVille="v1" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Tanger-Gzenaya</NomCentre>
+        </centre>
+        <centre idCentre="centre26" idVille="v1" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Moulay Youssef (BTS)</NomCentre>
+        </centre>
+        <centre idCentre="centre27" idVille="v1" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Ibn Khaldoun (BTS)</NomCentre>
+        </centre>
+        <centre idCentre="centre28" idVille="v1" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Ibn Battouta (BTS)</NomCentre>
+        </centre>
+        <centre idCentre="centre29" idVille="v1" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Moulay Rachid (BTS)</NomCentre>
+        </centre>
+        <centre idCentre="centre30" idVille="v1" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique d'État de Tanger (BTS)</NomCentre>
+        </centre>
+        <!-- Oujda -->
+        <centre idCentre="centre31" idVille="v3" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Oujda-Bir Tam Tam</NomCentre>
+        </centre>
+        <centre idCentre="centre32" idVille="v3" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Oujda-Hay El Qods</NomCentre>
+        </centre>
+        <centre idCentre="centre33" idVille="v3" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Oujda-Hay Salam</NomCentre>
+        </centre>
+        <centre idCentre="centre34" idVille="v3" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Oujda-Al Qods</NomCentre>
+        </centre>
+        <centre idCentre="centre35" idVille="v3" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Oujda-Agadir</NomCentre>
+        </centre>
+        <centre idCentre="centre36" idVille="v3" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Moulay Youssef</NomCentre>
+        </centre>
+        <centre idCentre="centre37" idVille="v3" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Al Kortobi</NomCentre>
+        </centre>
+        <centre idCentre="centre38" idVille="v3" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Errazi</NomCentre>
+        </centre>
+        <centre idCentre="centre39" idVille="v3" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Ibn Battouta</NomCentre>
+        </centre>
+        <!-- Fès -->
+        <centre idCentre="centre40" idVille="v5" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Fès-Médina</NomCentre>
+        </centre>
+        <centre idCentre="centre41" idVille="v5" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Fès-Zouagha</NomCentre>
+        </centre>
+        <centre idCentre="centre42" idVille="v5" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Fès-Borj Fès</NomCentre>
+        </centre>
+        <centre idCentre="centre43" idVille="v5" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Fès-Bensouda</NomCentre>
+        </centre>
+        <centre idCentre="centre44" idVille="v5" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Fès-Agdal</NomCentre>
+        </centre>
+        <centre idCentre="centre45" idVille="v5" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique d'État de Fès</NomCentre>
+        </centre>
+        <centre idCentre="centre46" idVille="v5" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Al Khawarizmi</NomCentre>
+        </centre>
+        <centre idCentre="centre47" idVille="v5" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Moulay Rachid</NomCentre>
+        </centre>
+        <centre idCentre="centre48" idVille="v5" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Al Idrissi</NomCentre>
+        </centre>
+        <centre idCentre="centre49" idVille="v5" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Ibn Khaldoun</NomCentre>
+        </centre>
+        <!-- Marrakech -->
+
+        <centre idCentre="centre50" idVille="v13" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Marrakech-Sidi Ghanem</NomCentre>
+        </centre>
+        <centre idCentre="centre51" idVille="v13" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Marrakech-Al Massira</NomCentre>
+        </centre>
+        <centre idCentre="centre52" idVille="v13" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Marrakech-Hay Hassani</NomCentre>
+        </centre>
+        <centre idCentre="centre53" idVille="v13" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Marrakech-Sidi Youssef Ben Ali</NomCentre>
+        </centre>
+        <centre idCentre="centre54" idVille="v13" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Marrakech-Ménara</NomCentre>
+        </centre>
+        <centre idCentre="centre55" idVille="v13" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique d'État de Marrakech</NomCentre>
+        </centre>
+        <centre idCentre="centre56" idVille="v13" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Ibn Tachfine</NomCentre>
+        </centre>
+        <centre idCentre="centre57" idVille="v13" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Ibn Abi Zaydoun</NomCentre>
+        </centre>
+        <centre idCentre="centre58" idVille="v13" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Mohammed VI</NomCentre>
+        </centre>
+        <!-- Agadir -->
+        <centre idCentre="centre59" idVille="v17" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Agadir-Inezgane</NomCentre>
+        </centre>
+        <centre idCentre="centre60" idVille="v17" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Agadir-Anza</NomCentre>
+        </centre>
+        <centre idCentre="centre61" idVille="v17" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Agadir-Tikiouine</NomCentre>
+        </centre>
+        <centre idCentre="centre62" idVille="v17" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Agadir-Al Massira</NomCentre>
+        </centre>
+        <centre idCentre="centre63" idVille="v17" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Agadir-Hassan II</NomCentre>
+        </centre>
+        <centre idCentre="centre64" idVille="v17" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique d'État d'Agadir</NomCentre>
+        </centre>
+        <centre idCentre="centre65" idVille="v17" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Ibn Zohr</NomCentre>
+        </centre>
+        <centre idCentre="centre66" idVille="v17" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Ibn Abbas</NomCentre>
+        </centre>
+        <!-- Laayoune -->
+        <centre idCentre="centre67" idVille="v77" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Laâyoune-Hay El Wifak</NomCentre>
+        </centre>
+        <centre idCentre="centre68" idVille="v77" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Laâyoune-Bellamiri</NomCentre>
+        </centre>
+        <centre idCentre="centre69" idVille="v77" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Laâyoune-El Massira</NomCentre>
+        </centre>
+        <centre idCentre="centre70" idVille="v77" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Laâyoune-Hay Essalam</NomCentre>
+        </centre>
+        <centre idCentre="centre71" idVille="v77" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Laâyoune-El Yarmouk</NomCentre>
+        </centre>
+        <centre idCentre="centre72" idVille="v77" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique d'État de Laâyoune</NomCentre>
+        </centre>
+        <!-- Safi -->
+        <centre idCentre="centre73" idVille="v47" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Safi-Hay Al Wahda</NomCentre>
+        </centre>
+        <centre idCentre="centre74" idVille="v47" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Safi-Quartier Industriel</NomCentre>
+        </centre>
+        <centre idCentre="centre75" idVille="v47" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Safi-Hay El Massira</NomCentre>
+        </centre>
+        <centre idCentre="centre76" idVille="v47" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Safi-Hay Ennour</NomCentre>
+        </centre>
+        <centre idCentre="centre77" idVille="v47" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Safi-Quartier Administratif</NomCentre>
+        </centre>
+        <centre idCentre="centre78" idVille="v47" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Al Khawarizmi (BTS)</NomCentre>
+        </centre>
+        <!-- Beni Mellal -->
+        <centre idCentre="centre79" idVille="v9" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Beni Mellal-Sidi Jaber</NomCentre>
+        </centre>
+        <centre idCentre="centre80" idVille="v9" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Beni Mellal-Oued Zem</NomCentre>
+        </centre>
+        <centre idCentre="centre81" idVille="v9" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Beni Mellal-Massira</NomCentre>
+        </centre>
+        <centre idCentre="centre82" idVille="v9" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Beni Mellal-Oulad Yaich</NomCentre>
+        </centre>
+        <centre idCentre="centre83" idVille="v9" idTypeCentre="OFPPT">
+            <NomCentre>Centre OFPPT Beni Mellal-Hay Salam</NomCentre>
+        </centre>
+        <centre idCentre="centre84" idVille="v9" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Ibn Rochd (BTS)</NomCentre>
+        </centre>
+        <centre idCentre="centre85" idVille="v9" idTypeCentre="BTS">
+            <NomCentre>Lycée Technique Al Idrissi (BTS)</NomCentre>
+        </centre>
+    </centres>
+    <Academies>
+        <Accademie idAcademie="academie1">
+            <nomAcademie>Dakhla-Oued Ed-Dahab</nomAcademie>
+        </Accademie>
+        <Accademie idAcademie="academie2">
+            <nomAcademie>Laâyoune-Sakia El Hamra</nomAcademie>
+        </Accademie>
+        <Accademie idAcademie="academie3">
+            <nomAcademie>Guelmim-Oued Noun</nomAcademie>
+        </Accademie>
+        <Accademie idAcademie="academie4">
+            <nomAcademie>Souss-Massa</nomAcademie>
+        </Accademie>
+        <Accademie idAcademie="academie5">
+            <nomAcademie>Marrakech-Safi</nomAcademie>
+        </Accademie>
+        <Accademie idAcademie="academie6">
+            <nomAcademie>L’oriental</nomAcademie>
+        </Accademie>
+        <Accademie idAcademie="academie7">
+            <nomAcademie>Casablanca-Settat</nomAcademie>
+        </Accademie>
+        <Accademie idAcademie="academie8">
+            <nomAcademie>Rabat-Salé-Kénitra</nomAcademie>
+        </Accademie>
+        <Accademie idAcademie="academie9">
+            <nomAcademie>Béni Mellal-Khénifra</nomAcademie>
+        </Accademie>
+        <Accademie idAcademie="academie10">
+            <nomAcademie>Drâa Tafilalt</nomAcademie>
+        </Accademie>
+        <Accademie idAcademie="academie11">
+            <nomAcademie>Fès-Meknès</nomAcademie>
+        </Accademie>
+        <Accademie idAcademie="academie12">
+            <nomAcademie>Tanger - Tetouan - Alhouceima</nomAcademie>
+        </Accademie>
+    </Academies>
+    <mentions>
+        <Mention idMention="excellent" coefficient="coef1">
+            <NomMEntion>Excellent</NomMEntion>
+        </Mention>
+        <Mention idMention="assezBien" coefficient="coef2">
+            <NomMEntion>Assez Bien</NomMEntion>
+        </Mention>
+        <Mention idMention="bien" coefficient="coef3">
+            <NomMEntion>Bien</NomMEntion>
+        </Mention>
+        <Mention idMention="tresBien" coefficient="coef4">
+            <NomMEntion>Très Bien</NomMEntion>
+        </Mention>
+        <Mention idMention="passable" coefficient="coef5">
+            <NomMEntion>Passable</NomMEntion>
+        </Mention>
+
+    </mentions>
+    <TypeDocuments>
+        <TypeDocument idTypeDocument="baccalaureat">
+            <typeDocument>Baccalaureat</typeDocument>
+        </TypeDocument>
+        <TypeDocument idTypeDocument="photoProfil">
+            <typeDocument>Photo de profil</typeDocument>
+        </TypeDocument>
+        <TypeDocument idTypeDocument="copieCIN">
+            <typeDocument>Copie de CIN</typeDocument>
+        </TypeDocument>
+        <TypeDocument idTypeDocument="diplomeBac2">
+            <typeDocument>Diplôme Bac+2</typeDocument>
+        </TypeDocument>
+        <TypeDocument idTypeDocument="releveeDeNotes1">
+            <typeDocument>Relevé de notes1 </typeDocument>
+        </TypeDocument>
+        <TypeDocument idTypeDocument="releveeDeNotes2">
+            <typeDocument>Relevé de notes2</typeDocument>
+        </TypeDocument>
+
+    </TypeDocuments>
+    <FilieresDiplome>
+        <!-- GCF -->
+        <FiliereDiplome idFiliere="dutGEA" Coefficient="coef1" filliereSouhaitee="Fil3">
+            <intitule> Gestion des Entreprises et des Administrations (GEA)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="dutTM" Coefficient="coef2" filliereSouhaitee="Fil3">
+            <intitule> Techniques de Management (TM)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsCG" Coefficient="coef3" filliereSouhaitee="Fil3">
+            <intitule> Comptabilité et Gestion (CG)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsAGPMEPMI" Coefficient="coef4" filliereSouhaitee="Fil3">
+            <intitule> Assistant de Gestion PME-PMI</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsBanque" Coefficient="coef5" filliereSouhaitee="Fil3">
+            <intitule> Banque</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsNRC" Coefficient="coef6" filliereSouhaitee="Fil3">
+            <intitule> Négociation et Relation Client (NRC)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsCommerceInternational" Coefficient="coef7" filliereSouhaitee="Fil3">
+            <intitule> Commerce International</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsAssistantManager" Coefficient="coef8" filliereSouhaitee="Fil3">
+            <intitule> Assistant de Manager</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsComptabilite" Coefficient="coef9" filliereSouhaitee="Fil3">
+            <intitule> Comptabilité</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsTPL" Coefficient="coef10" filliereSouhaitee="Fil3">
+            <intitule>Transport et Prestations Logistiques (TPL)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsMUC" Coefficient="coef11" filliereSouhaitee="Fil3">
+            <intitule> Management des Unités Commerciales (MUC)</intitule>
+        </FiliereDiplome>
+        <!-- ISIR -->
+        <FiliereDiplome idFiliere="dutGenieInfo" Coefficient="coef1" filliereSouhaitee="Fil2">
+            <intitule> Génie Informatique</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsSIO" Coefficient="coef2" filliereSouhaitee="Fil2">
+            <intitule> Services Informatiques aux Organisations (SIO)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsIRIS" Coefficient="coef3" filliereSouhaitee="Fil2">
+            <intitule> Informatique et Réseaux pour l'Industrie et les Services Techniques (IRIS)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsSystemesNumeriques" Coefficient="coef4" filliereSouhaitee="Fil2">
+            <intitule> Systèmes Numériques</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsSAMInformatique" Coefficient="coef5" filliereSouhaitee="Fil2">
+            <intitule> Support à l'Action Managériale (SAM) avec une option en Informatique</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="dutRT" Coefficient="coef6" filliereSouhaitee="Fil2">
+            <intitule> Réseaux et Télécommunications (RT)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="dutSRC" Coefficient="coef7" filliereSouhaitee="Fil2">
+            <intitule>Services et Réseaux de Communication (SRC)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsSP3SInformatique" Coefficient="coef8" filliereSouhaitee="Fil2">
+            <intitule> Services et Prestations des Secteurs Sanitaire et Social (SP3S) avec une option
+                en Informatique</intitule>
+        </FiliereDiplome>
+        <!-- MÉTROLOGIE, QUALITÉ, SÉCURITÉ ET ENVIRONNEMENT -->
+        <FiliereDiplome idFiliere="dutGIM" Coefficient="coef1" filliereSouhaitee="Fil3">
+            <intitule>Génie Industriel et Maintenance (GIM)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="dutTIMQ" Coefficient="coef1" filliereSouhaitee="Fil3">
+            <intitule>TECHNIQUES INSTRUMENTALES et MANAGEMENT DE LA QUALITÉ (TIMQ)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="dutGLT" Coefficient="coef2" filliereSouhaitee="Fil3">
+            <intitule>Gestion Logistique et Transport (GLT)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsCIRA" Coefficient="coef3" filliereSouhaitee="Fil3">
+            <intitule>Contrôle Industriel et Régulation Automatique (CIRA)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsMS" Coefficient="coef4" filliereSouhaitee="Fil3">
+            <intitule>Maintenance des Systèmes (MS)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsQIABI" Coefficient="coef5" filliereSouhaitee="Fil3">
+            <intitule>Qualité dans les Industries Alimentaires et les Bio-Industries (QIABI)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsMetiersEau" Coefficient="coef6" filliereSouhaitee="Fil3">
+            <intitule>Métiers de l'Eau</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsChimiste" Coefficient="coef7" filliereSouhaitee="Fil3">
+            <intitule>Chimiste</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsABM" Coefficient="coef8" filliereSouhaitee="Fil3">
+            <intitule>Analyses de Biologie Médicale (ABM)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsMECPQualite" Coefficient="coef9" filliereSouhaitee="Fil3">
+            <intitule>Métiers de l'Esthétique-Cosmétique-Parfumerie (MECP) avec une option en qualité, hygiène et
+                environnement</intitule>
+        </FiliereDiplome>
+        <!-- Mecatronique -->
+        <FiliereDiplome idFiliere="dutGEII" Coefficient="coef1" filliereSouhaitee="Fil1">
+            <intitule>Génie Électrique et Informatique Industrielle (GEII)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="dutGI" Coefficient="coef2" filliereSouhaitee="Fil1">
+            <intitule>Génie Industriel et Maintenance (GIM)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="dutMP" Coefficient="coef3" filliereSouhaitee="Fil1">
+            <intitule>Mesures Physiques (MP)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsCRSA" Coefficient="coef4" filliereSouhaitee="Fil1">
+            <intitule>Conception et Réalisation de Systèmes Automatiques (CRSA)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsMI" Coefficient="coef5" filliereSouhaitee="Fil1">
+            <intitule>Maintenance Industrielle (MI)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsSN" Coefficient="coef6" filliereSouhaitee="Fil1">
+            <intitule>Systèmes Numériques (SN)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsCPI" Coefficient="coef7" filliereSouhaitee="Fil1">
+            <intitule>Conception de Produits Industriels (CPI)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsMAI" Coefficient="coef8" filliereSouhaitee="Fil1">
+            <intitule>Mécanique et Automatismes Industriels (MAI)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsElectrotechnique" Coefficient="coef9" filliereSouhaitee="Fil1">
+            <intitule>Électrotechnique</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsInformatiqueIndustrielle" Coefficient="coef10" filliereSouhaitee="Fil1">
+            <intitule>Informatique Industrielle</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsATI" Coefficient="coef1" filliereSouhaitee="Fil1">
+            <intitule>Assistance Technique d'Ingénieur (ATI)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsCIR" Coefficient="coef1" filliereSouhaitee="Fil1">
+            <intitule>Contrôle Industriel et Régulation Automatique (CIRA)</intitule>
+        </FiliereDiplome>
+        <FiliereDiplome idFiliere="btsFED" Coefficient="coef1" filliereSouhaitee="Fil1">
+            <intitule>Fluides, Énergies, Domotique (FED)</intitule>
+        </FiliereDiplome>
+
+    </FilieresDiplome>
+    <Coefficients>
+        <Coefficient idCoefficient="coef1">
+            <nom>Coefficient 1</nom>
+        </Coefficient>
+        <Coefficient idCoefficient="coef2">
+            <nom>Coefficient 2</nom>
+        </Coefficient>
+        <Coefficient idCoefficient="coef3">
+            <nom>Coefficient 3</nom>
+        </Coefficient>
+        <Coefficient idCoefficient="coef4">
+            <nom>Coefficient 4</nom>
+        </Coefficient>
+        <Coefficient idCoefficient="coef5">
+            <nom>Coefficient 5</nom>
+        </Coefficient>
+        <Coefficient idCoefficient="coef6">
+            <nom>Coefficient 6</nom>
+        </Coefficient>
+        <Coefficient idCoefficient="coef7">
+            <nom>Coefficient 7</nom>
+        </Coefficient>
+        <Coefficient idCoefficient="coef8">
+            <nom>Coefficient 8</nom>
+        </Coefficient>
+        <Coefficient idCoefficient="coef9">
+            <nom>Coefficient 9</nom>
+        </Coefficient>
+        <Coefficient idCoefficient="coef10">
+            <nom>Coefficient 10</nom>
+        </Coefficient>
+        <Coefficient idCoefficient="coef11">
+            <nom>Coefficient 11</nom>
+        </Coefficient>
+    </Coefficients>
+    <Utilisateurs>
+        <Utilisateur CIN="MD26234" Langue="fr">
+            <login>lemkharbechy@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+        <Utilisateur CIN="MD87923" Langue="fr">
+            <login>haha@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+    </Utilisateurs>
+    <Langues>
+        <Langue CodeLangues="ar">
+            <Langue>العربية</Langue>
+        </Langue>
+        <Langue CodeLangues="fr">
+            <Langue>Français</Langue>
+        </Langue>
+        <Langue CodeLangues="en">
+            <Langue>English</Langue>
+        </Langue>
+    </Langues>
+    <Candidats>
+
+
+        <candidat CNE="EA237793" appoge="1234556" Utilisateur="MD26234">
+            <nomComplet>Yarbi tsdaq</nomComplet>
+            <email>abdelmoughith@gmail.com</email>
+            <addresse1>hay el jadid e</addresse1>
+            <addresse2>hay imlil n 29</addresse2>
+            <dateNaissance>2002-05-11</dateNaissance>
+            <lieuNaissance>Ben Guerir</lieuNaissance>
+            <bac mentionBac="bien" type="SPC" accadime="academie5">
+                <anneeBac>2019-2020</anneeBac>
+                <noteBac>15</noteBac>
+            </bac>
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
+                <InofsPremiereAnnee>
+                    <annee>2021-2022</annee>
+                    <NombreEtudiant>35</NombreEtudiant>
+                    <moyenne>13.55</moyenne>
+                    <classement>35</classement>
+                </InofsPremiereAnnee>
+                <InofsDeuxiemeAnnee>
+                    <annee>2022-2023</annee>
+                    <NombreEtudiant>100</NombreEtudiant>
+                    <moyenne>14.56</moyenne>
+                    <classement>23</classement>
+                </InofsDeuxiemeAnnee>
+            </Diplome>
+            <experienceProfisonnelle>
+                <experiencePro>no work</experiencePro>
+                <nombreAnne>1</nombreAnne>
+            </experienceProfisonnelle>
+            <Document idTypeDocument="baccalaureat">
+                <file>/img658cd79883b9e_photo-transformed.jpeg</file>
+            </Document>
+            <Document idTypeDocument="diplomeBac2">
+                <file>/img658cd79883fc1_pxfuel.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes1">
+                <file>/img658cd7988409b_Sign Up LinkedIn.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes2">
+                <file>/img658cd79884170_K_DA (@KDA_MUSIC) _ X.jpg</file>
+            </Document>
+            <Document idTypeDocument="photoProfil">
+                <file>/img658cd7988424e_EST_Safi-removebg-preview(2).png</file>
+            </Document>
+            <Document idTypeDocument="copieCIN">
+                <file>/img658cd798844e6_EST_Safi-removebg-preview(1).png</file>
+            </Document>
+        </candidat>
+        <candidat CNE="EA237792" appoge="1234556" Utilisateur="MD26234">
+            <nomComplet>Yarbi tsdaq</nomComplet>
+            <email>abdelmoughith@gmail.com</email>
+            <addresse1>hay el jadid e</addresse1>
+            <addresse2>hay imlil n 29</addresse2>
+            <dateNaissance>2002-05-11</dateNaissance>
+            <lieuNaissance>Ben Guerir</lieuNaissance>
+            <bac mentionBac="bien" type="SPC" accadime="academie5">
+                <anneeBac>2019-2020</anneeBac>
+                <noteBac>15</noteBac>
+            </bac>
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
+                <InofsPremiereAnnee>
+                    <annee>2021-2022</annee>
+                    <NombreEtudiant>35</NombreEtudiant>
+                    <moyenne>13.55</moyenne>
+                    <classement>35</classement>
+                </InofsPremiereAnnee>
+                <InofsDeuxiemeAnnee>
+                    <annee>2022-2023</annee>
+                    <NombreEtudiant>100</NombreEtudiant>
+                    <moyenne>14.56</moyenne>
+                    <classement>23</classement>
+                </InofsDeuxiemeAnnee>
+            </Diplome>
+            <experienceProfisonnelle>
+                <experiencePro>no work</experiencePro>
+                <nombreAnne>1</nombreAnne>
+            </experienceProfisonnelle>
+            <Document idTypeDocument="baccalaureat">
+                <file>img658cd8011a084_photo-transformed.jpeg</file>
+            </Document>
+            <Document idTypeDocument="diplomeBac2">
+                <file>img658cd8011cc8b_pxfuel.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes1">
+                <file>img658cd8011ce3d_Sign Up LinkedIn.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes2">
+                <file>img658cd8011cff5_K_DA (@KDA_MUSIC) _ X.jpg</file>
+            </Document>
+            <Document idTypeDocument="photoProfil">
+                <file>img658cd8011d1f0_EST_Safi-removebg-preview(2).png</file>
+            </Document>
+            <Document idTypeDocument="copieCIN">
+                <file>img658cd8011d36f_EST_Safi-removebg-preview(1).png</file>
+            </Document>
+        </candidat>
+        <candidat CNE="EA2377923" appoge="1234556" Utilisateur="MD26234">
+            <nomComplet>Yarbi tsdaq</nomComplet>
+            <email>abdelmoughith@gmail.com</email>
+            <addresse1>hay el jadid e</addresse1>
+            <addresse2>hay imlil n 29</addresse2>
+            <dateNaissance>2002-05-11</dateNaissance>
+            <lieuNaissance>Ben Guerir</lieuNaissance>
+            <bac mentionBac="bien" type="SPC" accadime="academie5">
+                <anneeBac>2019-2020</anneeBac>
+                <noteBac>15</noteBac>
+            </bac>
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
+                <InofsPremiereAnnee>
+                    <annee>2021-2022</annee>
+                    <NombreEtudiant>35</NombreEtudiant>
+                    <moyenne>13.55</moyenne>
+                    <classement>35</classement>
+                </InofsPremiereAnnee>
+                <InofsDeuxiemeAnnee>
+                    <annee>2022-2023</annee>
+                    <NombreEtudiant>100</NombreEtudiant>
+                    <moyenne>14.56</moyenne>
+                    <classement>23</classement>
+                </InofsDeuxiemeAnnee>
+            </Diplome>
+            <experienceProfisonnelle>
+                <experiencePro>no work</experiencePro>
+                <nombreAnne>1</nombreAnne>
+            </experienceProfisonnelle>
+            <Document idTypeDocument="baccalaureat">
+                <file>/img658cd84f7f7ac_photo-transformed.jpeg</file>
+            </Document>
+            <Document idTypeDocument="diplomeBac2">
+                <file>/img658cd84f7f987_pxfuel.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes1">
+                <file>/img658cd84f7faa4_Sign Up LinkedIn.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes2">
+                <file>/img658cd84f7fb9f_K_DA (@KDA_MUSIC) _ X.jpg</file>
+            </Document>
+            <Document idTypeDocument="photoProfil">
+                <file>/img658cd84f7fc94_EST_Safi-removebg-preview(2).png</file>
+            </Document>
+            <Document idTypeDocument="copieCIN">
+                <file>/img658cd84f7fd7d_EST_Safi-removebg-preview(1).png</file>
+            </Document>
+        </candidat>
+        <candidat CNE="EA237793232" appoge="1234556" Utilisateur="MD26234">
+            <nomComplet>Yarbi tsdaq</nomComplet>
+            <email>abdelmoughith@gmail.com</email>
+            <addresse1>hay el jadid e</addresse1>
+            <addresse2>hay imlil n 29</addresse2>
+            <dateNaissance>2002-05-11</dateNaissance>
+            <lieuNaissance>Ben Guerir</lieuNaissance>
+            <bac mentionBac="bien" type="SPC" accadime="academie5">
+                <anneeBac>2019-2020</anneeBac>
+                <noteBac>15</noteBac>
+            </bac>
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
+                <InofsPremiereAnnee>
+                    <annee>2021-2022</annee>
+                    <NombreEtudiant>35</NombreEtudiant>
+                    <moyenne>13.55</moyenne>
+                    <classement>35</classement>
+                </InofsPremiereAnnee>
+                <InofsDeuxiemeAnnee>
+                    <annee>2022-2023</annee>
+                    <NombreEtudiant>100</NombreEtudiant>
+                    <moyenne>14.56</moyenne>
+                    <classement>23</classement>
+                </InofsDeuxiemeAnnee>
+            </Diplome>
+            <experienceProfisonnelle>
+                <experiencePro>no work</experiencePro>
+                <nombreAnne>1</nombreAnne>
+            </experienceProfisonnelle>
+            <Document idTypeDocument="baccalaureat">
+                <file>img658cd8579be43_photo-transformed.jpeg</file>
+            </Document>
+            <Document idTypeDocument="diplomeBac2">
+                <file>img658cd8579c055_pxfuel.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes1">
+                <file>img658cd8579c281_Sign Up LinkedIn.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes2">
+                <file>img658cd8579c4b4_K_DA (@KDA_MUSIC) _ X.jpg</file>
+            </Document>
+            <Document idTypeDocument="photoProfil">
+                <file>img658cd8579c943_EST_Safi-removebg-preview(2).png</file>
+            </Document>
+            <Document idTypeDocument="copieCIN">
+                <file>img658cd8579cc12_EST_Safi-removebg-preview(1).png</file>
+            </Document>
+        </candidat>
+        <candidat CNE="EA2373232792" appoge="1234556" Utilisateur="MD26234">
+            <nomComplet>Yarbi tsdaq</nomComplet>
+            <email>abdelmoughith@gmail.com</email>
+            <addresse1>hay el jadid e</addresse1>
+            <addresse2>hay imlil n 29</addresse2>
+            <dateNaissance>2002-05-11</dateNaissance>
+            <lieuNaissance>Ben Guerir</lieuNaissance>
+            <bac mentionBac="bien" type="SPC" accadime="academie5">
+                <anneeBac>2019-2020</anneeBac>
+                <noteBac>15</noteBac>
+            </bac>
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
+                <InofsPremiereAnnee>
+                    <annee>2021-2022</annee>
+                    <NombreEtudiant>35</NombreEtudiant>
+                    <moyenne>13.55</moyenne>
+                    <classement>35</classement>
+                </InofsPremiereAnnee>
+                <InofsDeuxiemeAnnee>
+                    <annee>2022-2023</annee>
+                    <NombreEtudiant>100</NombreEtudiant>
+                    <moyenne>14.56</moyenne>
+                    <classement>23</classement>
+                </InofsDeuxiemeAnnee>
+            </Diplome>
+            <experienceProfisonnelle>
+                <experiencePro>no work</experiencePro>
+                <nombreAnne>1</nombreAnne>
+            </experienceProfisonnelle>
+            <Document idTypeDocument="baccalaureat">
+                <file>imageCandidature/img658cd8cebc794_photo-transformed.jpeg</file>
+            </Document>
+            <Document idTypeDocument="diplomeBac2">
+                <file>imageCandidature/img658cd8cebcc76_pxfuel.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes1">
+                <file>imageCandidature/img658cd8cebcfef_Sign Up LinkedIn.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes2">
+                <file>imageCandidature/img658cd8cebd232_K_DA (@KDA_MUSIC) _ X.jpg</file>
+            </Document>
+            <Document idTypeDocument="photoProfil">
+                <file>imageCandidature/img658cd8cebd3f4_EST_Safi-removebg-preview(2).png</file>
+            </Document>
+            <Document idTypeDocument="copieCIN">
+                <file>imageCandidature/img658cd8cebd612_EST_Safi-removebg-preview(1).png</file>
+            </Document>
+        </candidat>
+        <candidat CNE="EA2377932232322" appoge="1234556" Utilisateur="MD26234">
+            <nomComplet>Yarbi tsdaq</nomComplet>
+            <email>abdelmoughith@gmail.com</email>
+            <addresse1>hay el jadid e</addresse1>
+            <addresse2>hay imlil n 29</addresse2>
+            <dateNaissance>2002-05-11</dateNaissance>
+            <lieuNaissance>Ben Guerir</lieuNaissance>
+            <bac mentionBac="bien" type="SPC" accadime="academie5">
+                <anneeBac>2019-2020</anneeBac>
+                <noteBac>15</noteBac>
+            </bac>
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
+                <InofsPremiereAnnee>
+                    <annee>2021-2022</annee>
+                    <NombreEtudiant>35</NombreEtudiant>
+                    <moyenne>13.55</moyenne>
+                    <classement>35</classement>
+                </InofsPremiereAnnee>
+                <InofsDeuxiemeAnnee>
+                    <annee>2022-2023</annee>
+                    <NombreEtudiant>100</NombreEtudiant>
+                    <moyenne>14.56</moyenne>
+                    <classement>23</classement>
+                </InofsDeuxiemeAnnee>
+            </Diplome>
+            <experienceProfisonnelle>
+                <experiencePro>no work</experiencePro>
+                <nombreAnne>1</nombreAnne>
+            </experienceProfisonnelle>
+            <Document idTypeDocument="baccalaureat">
+                <file>imageCandidature/img658cd8dc963b2_photo-transformed.jpeg</file>
+            </Document>
+            <Document idTypeDocument="diplomeBac2">
+                <file>imageCandidature/img658cd8dc968f0_pxfuel.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes1">
+                <file>imageCandidature/img658cd8dc96bfd_Sign Up LinkedIn.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes2">
+                <file>imageCandidature/img658cd8dc96f86_K_DA (@KDA_MUSIC) _ X.jpg</file>
+            </Document>
+            <Document idTypeDocument="photoProfil">
+                <file>imageCandidature/img658cd8dc9768e_EST_Safi-removebg-preview(2).png</file>
+            </Document>
+            <Document idTypeDocument="copieCIN">
+                <file>imageCandidature/img658cd8dc978fa_EST_Safi-removebg-preview(1).png</file>
+            </Document>
+        </candidat>
+    </Candidats>
+
+</root>

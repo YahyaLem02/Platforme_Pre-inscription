@@ -1,0 +1,106 @@
+{
+    "hero_section": {
+        "preinscription_button": "بدء التسجيل المسبق"
+    },
+    "contact_section": {
+        "contact_us": "اتصل بنا"
+    },
+    "menu": {
+        "home": "الصفحة الرئيسية",
+        "our_programs": "برامجنا",
+        "mechatronics": "الميكاترونيكا",
+        "systems_engineering": "هندسة نظم المعلومات والشبكات",
+        "accounting_management": "إدارة المحاسبة والمالية",
+        "metrology_quality": "علم القياس والجودة والسلامة والبيئة",
+        "register": "التسجيل",
+        "login": "تسجيل الدخول"
+    },
+    "footer": {
+        "contact": {
+            "title": "EST SAFI",
+            "address": "التسجيل المسبق للدورة الجامعية المهنية بسافي، المغرب",
+            "phone": "(+212) 5 589 55488 55",
+            "email": "info@example.com"
+        },
+        "useful_links": {
+            "title": "روابط مفيدة",
+            "links": [
+                { "text": "الصفحة الرئيسية", "url": "#hero" },
+                { "text": "البرامج", "url": "#filiere" },
+                { "text": "حول", "url": "#contact" }
+            ]
+        },
+        "stay_connected": {
+            "title": "ابقَ على اتصال",
+            "description": "تابعنا على وسائل التواصل الاجتماعي لتبقى على اطلاع بآخر الأخبار والفعاليات:",
+
+            "social_media": [
+                { "icon": "bx bxl-twitter", "url": "#" },
+                { "icon": "bx bxl-facebook", "url": "#" },
+                { "icon": "bx bxl-instagram", "url": "#" },
+                { "icon": "bx bxl-linkedin", "url": "#" }
+            ]
+        },
+        "credits": {
+            "text": "@2023 EST Safi. كل الحقوق محفوظة. تم تطويره بواسطة يحيى المخربش وعبد المغيث العماري، طلاب في EST Safi"
+        }
+        
+        
+    },
+    "contact": {
+        "title": "الاتصال",
+        "subtitle": "اتصل بنا",
+        "content": "لأي طلب لمعلومات إضافية، أو استفسار حول برامج التدريب لدينا، أو أي سؤال آخر، فلا تتردد في التواصل معنا. سنكون سعداء بالرد عليكم.",
+        "address": {
+            "label": "العنوان",
+            "value": "طريق دار سي عيسى، ص.ب. 89، 46000 – آسفي"
+        },
+        "email": {
+            "label": "البريد الإلكتروني",
+            "value": "contact.ests@uca.ma"
+        },
+        "phone": {
+            "label": "الهاتف",
+            "value": "(+212) 5 24 62 50 53"
+        },
+        "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.150481872137!2d-9.218748884861483!3d32.30781068111619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdac20c13554a6a3%3A0xe0bcd1e33a700800!2sEcole+Sup%C3%A9rieure+de+T%C3%A9chnologie!5e0!3m2!1sfr!2sma!4v1560955562472!5m2!1sfr!2sma",
+        "placeholders": {
+            "name": "اسمك",
+            "email": "بريدك الإلكتروني",
+            "subject": "الموضوع",
+            "message": "الرسالة",
+            "loading": "جار التحميل",
+            "error_message": "لم يتم إرسال رسالتك. يرجى المحاولة مرة أخرى.",
+            "sent_message": "تم إرسال رسالتك. شكرا لك!",
+            "send_button": "إرسال الرسالة"
+        }
+  
+    },
+    "counts": {
+        "happy_clients": "العملاء السعداء",
+        "projects": "المشاريع",
+        "hours_of_support": "ساعات الدعم",
+        "hard_workers": "العمال الجادين"
+    },
+    "form":{
+    "title": "أنشئ حسابك",
+    "name": "الاسم الكامل",
+    "cin": "رقم الهوية",
+    "confirm_password": "تأكيد كلمة المرور",
+    "register": "سجل",
+    "emailLabel": "البريد الإلكتروني",
+    "passwordLabel": "كلمة المرور",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "link": "ليس لدي حساب",
+    "login": "تسجيل الدخول",
+    "title-conncet": "تسجيل الدخول"
+
+    
+
+    }
+    
+
+   
+    
+}

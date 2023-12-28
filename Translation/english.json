@@ -1,0 +1,105 @@
+{
+    "hero_section": {
+        "preinscription_button": "Start Pre-registration"
+    },
+    "contact_section": {
+        "contact_us": "Contact Us"
+       
+    },
+    "menu": {
+        "home": "Home",
+        "our_programs": "Our Programs",
+        "mechatronics": "Mechatronics",
+        "systems_engineering": "Systems Engineering and Networks",
+        "accounting_management": "Accounting and Financial Management",
+        "metrology_quality": "Metrology, Quality, Safety, and Environment",
+        "register": "Register",
+        "login": "Login"
+      },
+      "footer": {
+        "contact": {
+          "title": "EST SAFI",
+          "address": "Pre-registration for Professional Bachelor's Degree SAFI, Morocco",
+          "phone": "(+212) 5 589 55488 55",
+          "email": "info@example.com"
+        },
+        "useful_links": {
+            "title": "Useful Links",
+            "links": [
+              { "text": "Home", "url": "#hero" },
+              { "text": "Programs", "url": "#filiere" },
+              { "text": "About", "url": "#contact" }
+            ]
+          },
+        "stay_connected": {
+          "title": "Stay Connected",
+          "description": "Follow us on our social media to stay informed about the latest news and events:",
+          "social_media": [
+            { "icon": "bx bxl-twitter", "url": "#" },
+            { "icon": "bx bxl-facebook", "url": "#" },
+            { "icon": "bx bxl-instagram", "url": "#" },
+            { "icon": "bx bxl-linkedin", "url": "#" }
+          ]
+        },
+        "credits": {
+          "text": " @2023 EST Safi. All rights reserved. Developed by Yahya Lemkharbech and Abdelmoughit El Aoumari, students at EST Safi"
+        }
+      },
+      "contact": {
+        "title": "Contact",
+        "subtitle": "Contact Us",
+        "content": "For any further information request, information about our training programs, or for any other questions, feel free to contact us. We will be happy to assist you.",
+        "address": {
+          "label": "Address",
+          "value": "Route Dar Si Aïssa, B.P. 89, 46000 – Safi"
+        },
+        "email": {
+          "label": "Email",
+          "value": "contact.ests@uca.ma"
+        },
+        "phone": {
+          "label": "Phone",
+          "value": "(+212) 5 24 62 50 53"
+        },
+        "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.150481872137!2d-9.218748884861483!3d32.30781068111619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdac20c13554a6a3%3A0xe0bcd1e33a700800!2sEcole+Sup%C3%A9rieure+de+T%C3%A9chnologie!5e0!3m2!1sfr!2sma!4v1560955562472!5m2!1sfr!2sma",
+        "placeholders": {
+            "name": "Your Name",
+            "email": "Your Email",
+            "subject": "Subject",
+            "message": "Message",
+            "loading": "Loading",
+            "error_message": "Your message has not been sent. Please try again.",
+            "sent_message": "Your message has been sent. Thank you!",
+            "send_button": "Send Message"
+        }
+          },
+          "counts": {
+            "happy_clients": "Happy Clients",
+            "projects": "Projects",
+            "hours_of_support": "Hours Of Support",
+            "hard_workers": "Hard Workers"
+        },
+        "form":{
+        "title": "Create your account",
+        "name": "Full Name",
+        "cin": "ID Number",
+        "confirm_password": "Confirm Password",
+        "register": "Register",
+        "emailLabel": "Email Address",
+        "passwordLabel": "Password",
+        "email": "Email Address",
+        "password": "Password",
+        "link": "I don't have an account",
+        "login": "Log In",
+        "title-conncet": "Log In"
+
+        }
+        
+ 
+    
+        
+      
+     
+      
+      
+}

@@ -1,0 +1,104 @@
+{
+    "hero_section": {
+        "preinscription_button": "Commencer la pré-inscription"
+    },
+    "contact_section": {
+        "contact_us": "Contactez-nous"
+    },
+    "menu": {
+        "home": "Accueil",
+        "our_programs": "Nos filières",
+        "mechatronics": "Mécatronique",
+        "systems_engineering": "Ingénierie des Systèmes d’information et Réseaux",
+        "accounting_management": "Gestion comptable et financière",
+        "metrology_quality": "Métrologie, qualité, sécurité et environnement",
+        "register": "S'inscrire",
+        "login": "Connecter"
+      },
+      
+        "footer": {
+          "contact": {
+            "title": "EST SAFI",
+            "address": "Préinscription au Cycle de Licence Professionnelle SAFI, Maroc",
+            "phone": "(+212) 5 589 55488 55",
+            "email": "info@example.com"
+          },
+          "useful_links": {
+            "title": "Liens Utiles",
+            "links": [
+              { "text": "Accueil", "url": "#hero" },
+              { "text": "Programmes", "url": "#filiere" },
+              { "text": "À Propos", "url": "#contact" }
+            ]
+          },
+          "stay_connected": {
+            "title": "Restez Connecté",
+            "description": "Suivez-nous sur nos réseaux sociaux pour rester informé des dernières actualités et événements :",
+
+            "social_media": [
+              { "icon": "bx bxl-twitter", "url": "#" },
+              { "icon": "bx bxl-facebook", "url": "#" },
+              { "icon": "bx bxl-instagram", "url": "#" },
+              { "icon": "bx bxl-linkedin", "url": "#" }
+            ]
+          },
+          "credits": {
+            "text": "@2023 EST Safi. Tous droits réservés. Développé par Yahya Lemkharbech et Abdelmoughit El Aoumari, étudiants à l'EST Safi"
+          }
+        },
+          "contact": {
+            "title": "Contact",
+            "subtitle": "Contactez-nous",
+            "content": "Pour toute demande d'information complémentaire, de renseignements sur nos programmes de formation, ou pour toute autre question, n'hésitez pas à prendre contact avec nous. Nous nous ferons un plaisir de vous répondre.",
+            "address": {
+              "label": "Adresse",
+              "value": "Route Dar Si Aïssa, B.P. 89, 46000 – Safi"
+            },
+            "email": {
+              "label": "Email",
+              "value": "contact.ests@uca.ma"
+            },
+            "phone": {
+              "label": "Téléphone",
+              "value": "(+212) 5 24 62 50 53"
+            },
+            "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.150481872137!2d-9.218748884861483!3d32.30781068111619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdac20c13554a6a3%3A0xe0bcd1e33a700800!2sEcole+Sup%C3%A9rieure+de+T%C3%A9chnologie!5e0!3m2!1sfr!2sma!4v1560955562472!5m2!1sfr!2sma",
+            "placeholders": {
+                "name": "Votre Nom",
+                "email": "Votre Email",
+                "subject": "Sujet",
+                "message": "Message",
+                "loading": "Chargement",
+                "error_message": "Votre message n'a pas été envoyé. Veuillez réessayer.",
+                "sent_message": "Votre message a été envoyé. Merci !",
+                "send_button": "Envoyer le Message"
+            }
+        
+         },
+                  
+                  "counts": {
+                    "happy_clients": "Clients Satisfaits",
+                    "projects": "Projets",
+                    "hours_of_support": "Heures de Support",
+                    "hard_workers": "Travailleurs Assidus"
+                },
+                "form":{
+                  "title": "Créer votre compte",
+                  "name": "Nom complet",
+                  "cin": "Numéro de carte d'identité",
+                  "confirm_password": "Confirmez le mot de passe",
+                  "register": "S'inscrire",
+                  "emailLabel": "Adresse e-mail",
+                  "passwordLabel": "Mot de passe",
+                  "email": "Adresse e-mail",
+                  "password": "Mot de passe",
+                  "link": "Je n'ai pas de compte",
+                  "login": "Se connecter",
+                  "title-conncet":"Se connecter"
+                }
+                
+
+           
+      }
+      
+
