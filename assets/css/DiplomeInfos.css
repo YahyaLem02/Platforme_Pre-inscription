@@ -1,0 +1,154 @@
+
+
+
+
+/* Styles des libellés */
+label {
+    font-weight: bold;
+}
+
+
+/* Champs de saisie principaux */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Effets sur les champs de saisie */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus {
+    border-color: #4361ee;
+    outline: none;
+}
+
+/* Styles pour les boutons */
+.button {
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background-color: #4361ee;
+    color: #fff;
+}
+
+/* Styles pour les erreurs */
+input[type="text"].error,
+input[type="number"].error,
+input[type="email"].error,
+input[type="date"].error {
+    border-color: #ff4757;
+}
+
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+
+
+/* Effet de profondeur sur les sélecteurs */
+select {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les erreurs */
+select.error {
+    border-color: #ff4757;
+}
+
+/* Style pour regrouper chaque paire d'input dans une ligne */
+.diplome-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.annee-details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.annee-details label {
+    margin-bottom: 5px;
+}
+
+.annee-details input {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+/* Alignement horizontal des labels et des inputs */
+.annee-details label,
+.annee-details input {
+    display: inline-block;
+    width: 50%;
+}
+
+/* Style pour la section avec l'ID step-3 */
+#step-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Style pour le groupe de détails du diplôme avec deux années */
+.diplome-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Style pour chaque année */
+.annee-details {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Style pour les titres des années */
+.annee-details h4 {
+    margin-top: 0;
+}
+
+/* Style pour les étiquettes et les champs de saisie */
+.annee-details label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.annee-details input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+
+}
+
+
+
+
+

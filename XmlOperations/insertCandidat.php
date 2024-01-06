@@ -2,7 +2,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     session_start();
     // Capturer les données du formulaire
-  
+
     $cne = $_POST['CNE'];
     $appoge = isset($_POST['appoge']) ? $_POST['appoge'] : '';
     $email = $_POST['email'];
@@ -15,14 +15,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $noteBac = $_POST['noteBac'];
     $mentionBac = $_POST['mentionBac'];
     $typeBac = $_POST['typeBac'];
+    $villeCandidat = $_POST['villeCandidat'];
     $academieBac = $_POST['academieBac'];
 
     //element diplome
     $mentionDiplome = $_POST['mentionDiplome'];
     $TypeFormation = $_POST['TypeFormation'];
     $FiliereDiplome = $_POST['FiliereDiplome'];
-    $etablissement = isset($_POST['etablissement']) ? $_POST['etablissement'] : '';
-    $centre = isset($_POST['centre']) ? $_POST['centre'] : '';
+
+    $etablissement = $_POST['etablissement'];
+
     $anneePremiereAnnee = $_POST['InofsPremiereAnnee-annee'];
     $nombreEtudiantsPremiereAnnee = $_POST['InofsPremiereAnnee-NombreEtudiant'];
     $moyennePremiereAnnee = $_POST['InofsPremiereAnnee-moyenne'];
@@ -47,10 +49,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $candidat = $xml->createElement('candidat');
     $candidat->setAttribute('CNE', $cne);
     $candidat->setAttribute('appoge', $appoge);
-    $candidat->setAttribute('Utilisateur',$_SESSION['cin']);
+    $candidat->setAttribute('ville', $villeCandidat);
+    $candidat->setAttribute('Utilisateur', $_SESSION['cin']);
 
     // Créer et ajouter des éléments pour le candidat
-    $candidat->appendChild($xml->createElement('nomComplet',$_SESSION['name'])); // Remplacez 'Nom Complet' par la valeur réelle
+    $candidat->appendChild($xml->createElement('nomComplet', $_SESSION['name'])); // Remplacez 'Nom Complet' par la valeur réelle
     $candidat->appendChild($xml->createElement('email', $email));
     $candidat->appendChild($xml->createElement('addresse1', $adresse1));
     $candidat->appendChild($xml->createElement('addresse2', $adresse2));
@@ -92,7 +95,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $deuxiemeAnneeElement->appendChild($xml->createElement('moyenne', $moyenneDeuxiemeAnnee));
     $deuxiemeAnneeElement->appendChild($xml->createElement('classement', $classementDeuxiemeAnnee));
 
-
     // Ajout des éléments <InofsPremiereAnnee> et <InofsDeuxiemeAnnee> sous l'élément <Diplome>
     $newDiplome->appendChild($premiereAnneeElement);
     $newDiplome->appendChild($deuxiemeAnneeElement);
@@ -111,14 +113,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $candidat->appendChild($experienceProfElement);
 
     // Dossier de destination pour les fichiers téléchargés
-    $dossierDestination = 'imageCandidature/img';
+    $dossierDestination = '../assets/imageCandidature/';
 
     foreach ($_FILES as $inputName => $file) {
-        // if ($file['error'] !== UPLOAD_ERR_OK) {
-        //     // Gérer l'erreur du téléchargement du fichier si nécessaire
-        //     continue;
-        // }
-
         $nomFichier = uniqid() . '_' . basename($file['name']);
         $cheminFichier = $dossierDestination . $nomFichier;
 
@@ -141,6 +138,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $candidats->appendChild($candidat);
     $xml->save($xmlFile);
+    $messageSuccess = 'Données insérées avec succès.';
+    header('Location: ../candidature/personalInfos?messageSuccess=' . urlencode($messageSuccess));
 
     // Gérer les erreurs et envoyer une réponse à l'utilisateur
     // Vous pouvez ajouter ici la logique pour la gestion des erreurs ou la confirmation d'insertion

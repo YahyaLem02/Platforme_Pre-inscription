@@ -215,6 +215,8 @@
         <xs:attribute name="Utilisateur" type="xs:IDREF" use="required" />
         <xs:attribute name="CNE" type="xs:ID" use="required" />
         <xs:attribute name="appoge" use="optional" />
+        <xs:attribute name="ville" use="optional" />
+
     </xs:complexType>
     <!-- définition les elements de candidature et ses attributs -->
     <xs:complexType name="Candidatures">
@@ -235,13 +237,14 @@
     <xs:element name="Utilisateur">
         <xs:complexType>
             <xs:sequence>
+                <xs:element name="nomComplet" type="xs:string"/>
                 <xs:element name="login" type="EmailType" maxOccurs="1" />
                 <xs:element name="password" type="PasswordType" maxOccurs="1" />
             </xs:sequence>
             <xs:attribute name="CIN" type="xs:ID" use="required" />
             <xs:attribute name="Langue" type="xs:IDREF" use="optional" default="fr" />
             <xs:attribute name="Permissions" type="xs:IDREFS" use="optional" />
-            <xs:attribute name="role" type="xs:IDREF" use="optional" />
+            <xs:attribute name="role" type="xs:IDREF" use="required" />
         </xs:complexType>
     </xs:element>
     <!-- entité Langue -->
@@ -262,7 +265,7 @@
     <xs:element name="Role">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Role" type="xs:string" maxOccurs="1" />
+                <xs:element name="role" type="xs:string" maxOccurs="1" />
             </xs:sequence>
             <xs:attribute name="IdRole" type="xs:ID" use="required" />
         </xs:complexType>

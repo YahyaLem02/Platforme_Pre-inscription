@@ -98,7 +98,68 @@
 
     
 
-    }
+    },
+    "Informations personnelles": "المعلومات الشخصية",
+    "Informations du Baccalauréat": "معلومات البكالوريا",
+    "Informations du diplôme": "معلومات الشهادة",
+    "Les expériences professionnelles": "الخبرات المهنية",
+    "Documents à uploader": "تحميل المستندات",
+    "CNE": "رقم مسار:",
+    "Apogée (Facultatif)": "أبوجي (اختياري):",
+    "Région :": "المنطقة:",
+    "Ville :": "المدينة:",
+    "Email": "البريد الإلكتروني:",
+    "Confirmer Email": "تأكيد البريد الإلكتروني:",
+    "Adresse 1": "العنوان 1:",
+    "Adresse 2": "العنوان 2:",
+    "Date de Naissance": "تاريخ الميلاد:",
+    "Lieu de Naissance": "مكان الميلاد:",
+    "Année du Baccalauréat:": "سنة البكالوريا:",
+    "Choisissez une année": "اختر سنة",
+    "Note au Baccalauréat:": "درجة البكالوريا:",
+    "Académie :": "الأكاديمية:",
+    "Choisissez une option": "اختر خيارًا",
+    "Type de Bac :": "نوع البكالوريا:",
+    "Mention :": "الميزة:",
+    "Prev": "السابق",
+    "Next": "التالي",  
+    "mention_label": "الميزة:",
+    "type_formation_label": "نوع التكوين:",
+    "university_label": "الجامعة:",
+    "type_etablissement_label": "نوع المؤسسة:",
+    "etablissement_label": "المؤسسة:",
+    "ville_label": "المدينة:",
+    "type_centre_label": "نوع المركز:",
+    "centre_label": "المركز:",
+    "filiere_diplome_label": "تخصص الدبلوم:",
+    "diplome_details": "تفاصيل الشهادة",
+    "Première Année": "السنة الأولى",
+    "Année": "السنة:",
+    "Nombre d'Étudiants": "عدد الطلاب:",
+    "Moyenne": "المتوسط:",
+    "Classement": "الترتيب:",
+    "Deuxième Année": "السنة الثانية",
+    "Année:": "السنة:",
+    "Nombre d'Étudiants :": "عدد الطلاب:",
+    "Moyenne :": "متوسط ​​الدرجات:",
+    "Classement :": "التصنيف:",
+    "Expérience Professionnelle": "الخبرة المهنية",
+    "Expérience Professionnelle:": "الخبرة المهنية :",
+    "Nombre d'années d'expérience:": "عدد سنوات الخبرة :",
+        
+    "Fichiers": "الملفات",
+    "Baccalauréat:": "الباكالوريا:",
+    "Attestation de réussite ou diplôme:": "شهادة النجاح أو الدبلوم:",
+    "Relevé de notes S1:": "سجل الدرجات S1:",
+    "Relevé de notes S2:": "سجل الدرجات S2:",
+    "Photo personnel:": "الصورة الشخصية:",
+    "Copie de CIN:": "نسخة من البطاقة الوطنية:",
+    "send":"حفظ"
+          
+          
+      
+      
+   
     
 
    

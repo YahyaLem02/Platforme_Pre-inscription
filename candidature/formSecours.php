@@ -1,12 +1,13 @@
 <?php
 include '../Translation/headerTranslationCandidatConnect.php';
 // if (
-//     isset($_SESSION['AccesForm']) &&
+//     isset($_SESSION['AccesForm']) && 
 //     $_SESSION['AccesForm'] == false
 // ) {
 //     header("Location: ../Welcome/connecter.php");
-//     exit();
+//     exit(); 
 // }
+
 ?>
 <!DOCTYPE html>
 <html <?php echo $_SESSION['lang'] === 'arabic' ? 'lang="ar" dir="rtl"' : 'lang="fr" dir="ltr"'; ?>>
@@ -38,7 +39,6 @@ include '../Translation/headerTranslationCandidatConnect.php';
 
     <!-- Template Main CSS File -->
     <link href="../assets/css/style.css" rel="stylesheet">
-    <link href="../assets/css/formInsert.css" rel="stylesheet">
     <link rel="stylesheet" href="../node_modules/sweetalert/dist/sweetalert.css">
 
 </head>
@@ -48,6 +48,7 @@ include '../Translation/headerTranslationCandidatConnect.php';
     <div>
         <h2>Créer votre espace étudiant</h2>
         <div id="multi-step-form-container">
+            <!-- Form Steps / Progress Bar -->
             <ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
                 <!-- Step 1 -->
                 <li class="form-stepper-active text-center form-stepper-list" step="1">
@@ -140,7 +141,7 @@ include '../Translation/headerTranslationCandidatConnect.php';
                         $Villes = $xpath->query('//Ville');
                         ?>
                         <label for="villes" data-translate="Ville :">Ville :</label>
-                        <select name="villeCandidat" id="villes">
+                        <select name="Ville" id="villes">
                             <option value="">Choisissez une option</option>
                             <?php foreach ($Villes as $Ville) : ?>
                             <option value="<?php echo $Ville->getAttribute('idVille'); ?>">
@@ -428,7 +429,7 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                         $Centres = $xpath->query('//centre');
                                         ?>
                                         <label data-translate="centre_label" for="centre">Centre :</label> <select
-                                            name="etablissement" id="centre">
+                                            name="centre" id="centre">
                                             <option value="" data-translate="Choisissez une option">Choisissez
                                                 une
                                                 option</option> <?php foreach ($Centres as $Centre) : ?>
@@ -466,7 +467,10 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                     <option value="" selected data-translate="Choisissez une année">Choisissez
                                         une année</option>
                                     <?php
+                                    // Obtenir l'année actuelle
                                     $currentYear = date('Y');
+                                    
+                                    // Remplir les options des 10 dernières années pour la première année
                                     for ($i = $currentYear; $i >= $currentYear - 9; $i--) {
                                         $nextYear = $i + 1;
                                         echo "<option value='$i-$nextYear'>$i-$nextYear</option>";
@@ -563,28 +567,36 @@ include '../Translation/headerTranslationCandidatConnect.php';
                     <!-- Step 4 input fields -->
                     <div class="file-details mt-3">
                         <h3 data-translate="Fichiers">Files</h3>
+                        <!-- Baccalauréat -->
                         <label for="baccalaureat" data-translate="Baccalauréat:">Baccalauréat:</label>
                         <input type="file" id="baccalaureat" name="baccalaureat" accept=".jpg,.png,.jpeg"
                             required>
+
+                        <!-- Attestation de réussite ou diplôme -->
                         <label for="attestation" data-translate="Attestation de réussite ou diplôme:">Attestation de
                             réussite ou diplôme:</label>
                         <input type="file" id="attestation" name="diplomeBac2" accept=".jpg,.png,.jpeg" required>
+
+                        <!-- Relevé de notes S1 -->
                         <label for="releveS1" data-translate="Relevé de notes S1:">Relevé de notes S1:</label>
                         <input type="file" id="releveS1" name="releveeDeNotes1" accept=".jpg,.png,.jpeg"
                             required>
+
+                        <!-- Relevé de notes S2 -->
                         <label for="releveS2" data-translate="Relevé de notes S2:">Relevé de notes S2:</label>
                         <input type="file" id="releveS2" name="releveeDeNotes2" accept=".jpg,.png,.jpeg"
                             required>
                         <label for="photo" data-translate="Photo personnel:">Photo personnel:</label>
                         <input type="file" id="photo" name="photoProfil" accept=".jpg,.png,.jpeg" required>
+
+                        <!-- Copie de CIN -->
                         <label for="cinCopy" data-translate="Copie de CIN:">Copie de CIN:</label>
                         <input type="file" id="cinCopy" name="copieCIN" accept=".jpg,.png,.jpeg" required>
                     </div>
 
                     <div class="mt-3">
-                        <button class="button btn-navigate-form-step" type="button" step_number="4"
-                            data-translate="Prev">Prev</button>
-                        <button class="button submit-btn" type="submit" data-translate="send">Save</button>
+                        <button class="button btn-navigate-form-step" type="button" step_number="4"   data-translate="Prev">Prev</button>
+                        <button class="button submit-btn" type="submit"    data-translate="send">Save</button>
                     </div>
                 </section>
 
@@ -592,35 +604,928 @@ include '../Translation/headerTranslationCandidatConnect.php';
             </form>
         </div>
     </div>
-    <?php include '../Layouts/footer.html'; ?>
-<?php
-// session_start();
+    <style>
+        h1,
+        h2 {
+            text-align: center;
+        }
 
-if (isset($_GET['messageSuccess'])) {
-$messageSuccess = urldecode($_GET['messageSuccess']);
-echo "<script src='node_modules/sweetalert/dist/sweetalert.min.js'></script>";
-echo "<script>
-document.addEventListener('DOMContentLoaded', function() {
-    swal('Succès', '$messageSuccess', 'success');
-});
-</script>";
-}
-if (isset($_GET['messageError'])) {
-$messageError = urldecode($_GET['messageError']);
-echo "<script src='node_modules/sweetalert/dist/sweetalert.min.js'></script>";
-echo "<script>
-document.addEventListener('DOMContentLoaded', function() {
-    swal('Erreur', '$messageError', 'error');
-});
-</script>";
-}
-?>
-<script>
-const lang = <?php echo json_encode($lang); ?>;
-</script>
-<script src="Translation/language.js"></script>
-<script src="../assets/js/inscrire.js"></script>
-    <script src="../assets/js/formInsert.js"></script>
+
+        #multi-step-form-container {
+            margin-top: 2rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pl-0 {
+            padding-left: 0;
+        }
+
+        .button {
+            padding: 0.7rem 1.5rem;
+            border: 1px solid #4361ee;
+            background-color: #4361ee;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            border: 1px solid #0e9594;
+            background-color: #0e9594;
+        }
+
+        .mt-3 {
+            margin-top: 2rem;
+        }
+
+        .d-none {
+            display: none;
+        }
+
+        .form-step {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+        }
+
+        .font-normal {
+            font-weight: normal;
+        }
+
+        ul.form-stepper {
+            counter-reset: section;
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.form-stepper .form-stepper-circle {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin-right: 0;
+            line-height: 1.7rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.38);
+            border-radius: 50%;
+        }
+
+        ul.form-stepper .form-stepper-circle span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+
+        .form-stepper-horizontal {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+        }
+
+        ul.form-stepper>li:not(:last-of-type) {
+            margin-bottom: 0.625rem;
+            transition: margin-bottom 0.4s;
+        }
+
+        .form-stepper-horizontal>li:not(:last-of-type) {
+            margin-bottom: 0 !important;
+        }
+
+        .form-stepper-horizontal li {
+            position: relative;
+            display: flex;
+            flex: 1;
+            align-items: start;
+            transition: 0.5s;
+        }
+
+        .form-stepper-horizontal li:not(:last-child):after {
+            position: relative;
+            flex: 1;
+            height: 1px;
+            content: "";
+            top: 32%;
+            background-color: #dee2e6;
+        }
+
+        .form-stepper-horizontal li:after {
+            background-color: #dee2e6;
+        }
+
+        .form-stepper-horizontal li.form-stepper-completed:after {
+            background-color: #4da3ff;
+        }
+
+        .form-stepper-horizontal li:last-child {
+            flex: unset;
+        }
+
+
+        /* Style pour la section avec l'ID step-2 */
+        #step-2 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Style pour chaque groupe de détails Bac */
+        .bac-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            /* Espacement entre les éléments */
+            margin-top: 10px;
+            /* Marge supérieure entre chaque groupe */
+        }
+
+        /* Style pour chaque élément de formulaire dans un groupe de détails Bac */
+        .input-group {
+            flex: 1 1 calc(50% - 10px);
+            /* Deux éléments par ligne avec espacement */
+        }
+
+        /* Style pour les boutons en bas */
+        #step-2>div:last-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            /* Espacement par rapport aux éléments précédents */
+        }
+
+        /* Style pour les boutons individuels */
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Style pour les boutons de navigation */
+        .btn-navigate-form-step {
+            background-color: #28a745;
+            /* Couleur pour le bouton Next */
+        }
+
+
+
+        .form-stepper .form-stepper-active .form-stepper-circle {
+            background-color: #33a5ff !important;
+            color: #fff;
+        }
+
+        .form-stepper .form-stepper-active .label {
+            color: #33a5ff !important;
+        }
+
+        .form-stepper .form-stepper-active .form-stepper-circle:hover {
+            background-color: #33a5ff !important;
+            color: #fff !important;
+        }
+
+        .form-stepper .form-stepper-unfinished .form-stepper-circle {
+            background-color: #f8f7ff;
+        }
+
+        .form-stepper .form-stepper-completed .form-stepper-circle {
+            background-color: #248010 !important;
+            color: #fff;
+        }
+
+        .form-stepper .form-stepper-completed .label {
+            color: #248010 !important;
+        }
+
+        .form-stepper .form-stepper-completed .form-stepper-circle:hover {
+            background-color: #248010 !important;
+            color: #fff !important;
+        }
+
+        .form-stepper .form-stepper-active span.text-muted {
+            color: #fff !important;
+        }
+
+        .form-stepper .form-stepper-completed span.text-muted {
+            color: #fff !important;
+        }
+
+        .form-stepper .label {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .form-stepper a {
+            cursor: default;
+        }
+
+        /* Styles généraux */
+
+        /* Police et espacement pour une meilleure lisibilité */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+            /* Couleur de fond générale */
+            margin: 0;
+            /* Supprime les marges par défaut du navigateur */
+            padding: 0;
+            /* Supprime les rembourrages par défaut du navigateur */
+        }
+
+        /* Couleur de texte pour les éléments importants */
+        h1,
+        h2,
+        h3 {
+            color: #000;
+        }
+
+        /* Étapes du formulaire */
+
+        /* Conteneur des étapes */
+        .form-step {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styles des libellés */
+        label {
+            font-weight: bold;
+        }
+
+        /* Styles des champs de saisie */
+
+        /* Champs de saisie principaux */
+        input[type="text"],
+        input[type="email"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Effets sur les champs de saisie */
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="email"]:focus,
+        input[type="date"]:focus {
+            border-color: #4361ee;
+            outline: none;
+        }
+
+        /* Styles pour les boutons */
+        .button {
+            transition: all 0.3s ease-in-out;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            background-color: #4361ee;
+            color: #fff;
+        }
+
+        /* Styles pour les erreurs */
+        input[type="text"].error,
+        input[type="email"].error,
+        input[type="date"].error {
+            border-color: #ff4757;
+        }
+
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+
+
+        /* Effet de profondeur sur les sélecteurs */
+        select {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style pour les erreurs */
+        select.error {
+            border-color: #ff4757;
+        }
+
+        /* Style pour regrouper chaque paire d'input dans une ligne */
+        .diplome-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .annee-details {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .annee-details label {
+            margin-bottom: 5px;
+        }
+
+        .annee-details input {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        /* Alignement horizontal des labels et des inputs */
+        .annee-details label,
+        .annee-details input {
+            display: inline-block;
+            width: 50%;
+        }
+
+        /* Style pour la section avec l'ID step-3 */
+        #step-3 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            /* Espacement entre les éléments */
+        }
+
+        /* Style pour le groupe de détails du diplôme avec deux années */
+        .diplome-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            /* Espacement entre les sections de chaque année */
+        }
+
+        /* Style pour chaque année */
+        .annee-details {
+            border: 1px solid #ccc;
+            /* Bordure autour de chaque année */
+            padding: 15px;
+            /* Espacement intérieur */
+            border-radius: 5px;
+            /* Coins arrondis */
+        }
+
+        /* Style pour les titres des années */
+        .annee-details h4 {
+            margin-top: 0;
+            /* Supprime la marge supérieure par défaut */
+        }
+
+        /* Style pour les étiquettes et les champs de saisie */
+        .annee-details label {
+            display: block;
+            /* Affiche les étiquettes sur une nouvelle ligne */
+            margin-bottom: 5px;
+            /* Espacement entre les étiquettes */
+        }
+
+        .annee-details input[type="text"] {
+            width: 100%;
+            /* Prend la largeur totale */
+            padding: 8px;
+            /* Espacement intérieur */
+            margin-bottom: 10px;
+            /* Espacement entre les champs */
+            border-radius: 3px;
+            /* Coins arrondis pour les champs */
+            border: 1px solid #ccc;
+            /* Bordure */
+        }
+
+        /* Style pour les boutons en bas */
+        #step-3>div:last-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            /* Espacement par rapport aux éléments précédents */
+        }
+
+        #step-2>div:last-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            /* Espacement par rapport aux éléments précédents */
+        }
+
+        /* Style pour les boutons individuels */
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Style pour les boutons de navigation */
+        .btn-navigate-form-step {
+            background-color: #28a745;
+            /* Couleur pour le bouton Prev */
+        }
+
+        /* Style pour le bouton Next */
+        #step-3 .btn-navigate-form-step:last-child {
+            background-color: #dc3545;
+            /* Couleur pour le bouton Next */
+        }
+
+        #step-4 .btn-navigate-form-step:last-child {
+            background-color: #dc3545;
+            /* Couleur pour le bouton Next */
+        }
+
+        #step-2 .btn-navigate-form-step:last-child {
+            background-color: #dc3545;
+            /* Couleur pour le bouton Next */
+        }
+
+
+        /* Style pour le champ textarea */
+        .experience-details textarea {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+            /* Permet à l'utilisateur de redimensionner verticalement */
+        }
+
+        /* Style pour la section avec l'ID step-4 */
+        #step-4 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            /* Espacement entre les éléments */
+        }
+
+        /* Style pour chaque groupe de détails */
+        .experience-details {
+            border: 1px solid #ccc;
+            /* Bordure autour des détails */
+            padding: 15px;
+            /* Espacement intérieur */
+            border-radius: 5px;
+            /* Coins arrondis */
+        }
+
+        /* Style pour les titres des détails */
+        .experience-details h3 {
+            margin-top: 0;
+            /* Supprime la marge supérieure par défaut */
+        }
+
+        /* Style pour les étiquettes et les champs de saisie */
+        .experience-details label {
+            display: block;
+            /* Affiche les étiquettes sur une nouvelle ligne */
+            margin-bottom: 5px;
+            /* Espacement entre les étiquettes */
+        }
+
+        .experience-details input[type="number"],
+        .experience-details textarea {
+            width: 100%;
+            /* Prend la largeur totale */
+            padding: 8px;
+            /* Espacement intérieur */
+            margin-bottom: 10px;
+            /* Espacement entre les champs */
+            border-radius: 3px;
+            /* Coins arrondis pour les champs */
+            border: 1px solid #ccc;
+            /* Bordure */
+        }
+
+        /* Style pour les boutons en bas */
+        #step-4>div:last-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            /* Espacement par rapport aux éléments précédents */
+        }
+
+        /* Style pour les boutons individuels */
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Style pour le bouton de navigation Prev */
+        .btn-navigate-form-step {
+            background-color: #28a745;
+        }
+
+        /* Style pour le bouton Save */
+        .submit-btn {
+            background-color: #dc3545;
+        }
+
+        /* Style pour la section avec l'ID step-5 */
+        #step-5 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            /* Espacement entre les éléments */
+        }
+
+        /* Style pour le groupe de détails des fichiers */
+        .file-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            /* Espacement entre les sections de chaque fichier */
+        }
+
+        /* Style pour chaque fichier */
+        .file-details label {
+            display: block;
+            /* Affiche les étiquettes sur une nouvelle ligne */
+            margin-bottom: 5px;
+            /* Espacement entre les étiquettes */
+        }
+
+        .file-details input[type="file"] {
+            width: 100%;
+            /* Prend la largeur totale */
+            padding: 8px;
+            /* Espacement intérieur */
+            margin-bottom: 10px;
+            /* Espacement entre les champs */
+            border-radius: 3px;
+            /* Coins arrondis pour les champs */
+            border: 1px solid #ccc;
+            /* Bordure */
+        }
+
+        /* Style pour les boutons en bas */
+        #step-5>div:last-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            /* Espacement par rapport aux éléments précédents */
+        }
+
+        /* Style pour les boutons individuels */
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Style pour le bouton Prev */
+        .btn-navigate-form-step {
+            background-color: #28a745;
+        }
+
+        /* Style pour le bouton Save */
+        .submit-btn {
+            background-color: #dc3545;
+        }
+
+
+
+        /* Autres styles pour les autres éléments si besoin */
+    </style>
+
+
+    <script>
+        /**
+         * Define a function to navigate betweens form steps.
+         * It accepts one parameter. That is - step number.
+         */
+        const navigateToFormStep = (stepNumber) => {
+            /**
+             * Hide all form steps.
+             */
+            document.querySelectorAll(".form-step").forEach((formStepElement) => {
+                formStepElement.classList.add("d-none");
+            });
+            /**
+             * Mark all form steps as unfinished.
+             */
+            document.querySelectorAll(".form-stepper-list").forEach((formStepHeader) => {
+                formStepHeader.classList.add("form-stepper-unfinished");
+                formStepHeader.classList.remove("form-stepper-active", "form-stepper-completed");
+            });
+            /**
+             * Show the current form step (as passed to the function).
+             */
+            document.querySelector("#step-" + stepNumber).classList.remove("d-none");
+            /**
+             * Select the form step circle (progress bar).
+             */
+            const formStepCircle = document.querySelector('li[step="' + stepNumber + '"]');
+            /**
+             * Mark the current form step as active.
+             */
+            formStepCircle.classList.remove("form-stepper-unfinished", "form-stepper-completed");
+            formStepCircle.classList.add("form-stepper-active");
+            /**
+             * Loop through each form step circles.
+             * This loop will continue up to the current step number.
+             * Example: If the current step is 3,
+             * then the loop will perform operations for step 1 and 2.
+             */
+            for (let index = 0; index < stepNumber; index++) {
+                /**
+                 * Select the form step circle (progress bar).
+                 */
+                const formStepCircle = document.querySelector('li[step="' + index + '"]');
+                /**
+                 * Check if the element exist. If yes, then proceed.
+                 */
+                if (formStepCircle) {
+                    /**
+                     * Mark the form step as completed.
+                     */
+                    formStepCircle.classList.remove("form-stepper-unfinished", "form-stepper-active");
+                    formStepCircle.classList.add("form-stepper-completed");
+                }
+            }
+        };
+        /**
+         * Select all form navigation buttons, and loop through them.
+         */
+        document.querySelectorAll(".btn-navigate-form-step").forEach((formNavigationBtn) => {
+            /**
+             * Add a click event listener to the button.
+             */
+            formNavigationBtn.addEventListener("click", () => {
+                /**
+                 * Get the value of the step.
+                 */
+                const stepNumber = parseInt(formNavigationBtn.getAttribute("step_number"));
+                /**
+                 * Call the function to navigate to the target form step.
+                 */
+                navigateToFormStep(stepNumber);
+            });
+        });
+
+
+        // JavaScript pour ajouter dynamiquement des champs pour le baccalauréat
+    </script>
+    <?php include '../Layouts/footer.html'; ?>
+    <?php
+    // session_start();
+    
+    if (isset($_GET['messageSuccess'])) {
+        $messageSuccess = urldecode($_GET['messageSuccess']);
+        echo "<script src='node_modules/sweetalert/dist/sweetalert.min.js'></script>";
+        echo "<script>
+                                                                                                                                                                                                document.addEventListener('DOMContentLoaded', function() {
+                                                                                                                                                                                                    swal('Succès', '$messageSuccess', 'success');
+                                                                                                                                                                                                });
+                                                                                                                                                                                              </script>";
+    }
+    if (isset($_GET['messageError'])) {
+        $messageError = urldecode($_GET['messageError']);
+        echo "<script src='node_modules/sweetalert/dist/sweetalert.min.js'></script>";
+        echo "<script>
+                                                                                                                                                                                                document.addEventListener('DOMContentLoaded', function() {
+                                                                                                                                                                                                    swal('Erreur', '$messageError', 'error');
+                                                                                                                                                                                                });
+                                                                                                                                                                                              </script>";
+    }
+    ?>
+    <script>
+        const lang = <?php echo json_encode($lang); ?>;
+    </script>
+    <script src="Translation/language.js"></script>
+    <script src="assets/js/inscrire.js"></script>
+    <script>
+        function showFields() {
+            var typeFormation = document.getElementById("TypeFormation");
+            var selectedValue = typeFormation.options[typeFormation.selectedIndex].value;
+
+            var formation1to3Div = document.querySelector('.formation1-3');
+            var formation4to5Div = document.querySelector('.formation4-5');
+
+            if (selectedValue === "formation1" || selectedValue === "formation2" || selectedValue === "formation3") {
+                formation1to3Div.style.display = 'block';
+                formation4to5Div.style.display = 'none';
+            } else if (selectedValue === "formation4" || selectedValue === "formation5") {
+                formation1to3Div.style.display = 'none';
+                formation4to5Div.style.display = 'block';
+            } else {
+                formation1to3Div.style.display = 'none';
+                formation4to5Div.style.display = 'none';
+            }
+        }
+
+        // Fonction pour charger et traiter le fichier XML
+        function loadXMLDoc(filename) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", filename, false);
+            xhttp.send();
+            return xhttp.responseXML;
+        }
+
+        // Afficher les établissements en fonction de l'université sélectionnée
+        function showEtablissements() {
+            var universiteSelect = document.getElementById("universite");
+            var typeEtablissementSelect = document.getElementById("typeEtablissement");
+            var etablissementSelect = document.getElementById("etablissement");
+
+            var selectedUniversite = universiteSelect.options[universiteSelect.selectedIndex].value;
+            var selectedTypeEtablissement = typeEtablissementSelect.options[typeEtablissementSelect.selectedIndex].value;
+
+            // Charger le fichier XML
+            var xmlDoc = loadXMLDoc("../xml/baseXml.xml");
+
+            // Récupérer tous les établissements
+            var etablissements = xmlDoc.getElementsByTagName("Etablissement");
+
+            // Effacer les options actuelles
+            etablissementSelect.innerHTML = '';
+
+            // Parcourir les établissements et afficher ceux correspondant à l'université et au type d'établissement sélectionnés
+            for (var i = 0; i < etablissements.length; i++) {
+                var universite = etablissements[i].getAttribute("Universite");
+                var typeEtablissement = etablissements[i].getAttribute("TypeEtablissement");
+
+                if (universite === selectedUniversite && typeEtablissement === selectedTypeEtablissement) {
+                    var nomEtablissement = etablissements[i].getElementsByTagName("nomEtablissement")[0].childNodes[0]
+                        .nodeValue;
+                    var idEtablissement = etablissements[i].getAttribute("idEtablissement");
+                    var option = document.createElement("option");
+                    option.text = nomEtablissement;
+                    option.value = idEtablissement;
+                    etablissementSelect.add(option);
+                }
+            }
+        }
+
+        // Remplir les options de sélection initiales lors du chargement de la page
+        window.onload = function() {
+            showEtablissements
+                (); // Pour remplir les établissements initialement en fonction de l'université et du type d'établissement
+        };
+
+        function showCentres() {
+            var villeSelect = document.getElementById("ville");
+            var typeCentreSelect = document.getElementById("typeCentre");
+            var centreSelect = document.getElementById("centre");
+
+            var selectedVille = villeSelect.options[villeSelect.selectedIndex].value;
+            var selectedTypeCentre = typeCentreSelect.options[typeCentreSelect.selectedIndex].value;
+
+            // Charger le fichier XML
+            var xmlDoc = loadXMLDoc("../xml/baseXml.xml");
+
+            // Récupérer toutes les villes, types de centre et centres
+            var villes = xmlDoc.getElementsByTagName("Ville");
+            var typesCentre = xmlDoc.getElementsByTagName("TypeCentre");
+            var centres = xmlDoc.getElementsByTagName("centre");
+
+            // Effacer les options actuelles
+            centreSelect.innerHTML = '';
+
+            // Afficher les centres correspondant à la ville et au type de centre sélectionnés
+            for (var i = 0; i < centres.length; i++) {
+                var ville = centres[i].getAttribute("idVille");
+                var typeCentre = centres[i].getAttribute("idTypeCentre");
+
+                if (ville === selectedVille && typeCentre === selectedTypeCentre) {
+                    var nomCentre = centres[i].getElementsByTagName("NomCentre")[0].childNodes[0].nodeValue;
+                    var idCentre = centres[i].getAttribute("idCentre");
+
+                    var option = document.createElement("option");
+                    option.text = nomCentre;
+                    option.value = idCentre;
+                    centreSelect.appendChild(option);
+                }
+            }
+        }
+
+        // Remplir les options de sélection initiales lors du chargement de la page
+        window.onload = function() {
+            showCentres(); // Pour remplir les centres initialement en fonction de la ville et du type de centre
+        };
+
+
+        function showVilles() {
+            var regionSelect = document.getElementById("regions");
+            var villeSelect = document.getElementById("villes");
+
+            var selectedRegion = regionSelect.options[regionSelect.selectedIndex].value;
+
+            // Charger le fichier XML
+            var xmlDoc = loadXMLDoc("../xml/BaseXml.xml");
+
+            // Récupérer toutes les villes
+            var villes = xmlDoc.getElementsByTagName("Ville");
+
+            // Effacer les options actuelles
+            villeSelect.innerHTML = '';
+
+            // Parcourir les villes et afficher celles correspondant à la région sélectionnée
+            for (var i = 0; i < villes.length; i++) {
+                var region = villes[i].getAttribute("region");
+
+                if (region === selectedRegion) {
+                    var nomVille = villes[i].getElementsByTagName("nom")[0].childNodes[0].nodeValue;
+                    var idVille = villes[i].getAttribute("idVille");
+
+                    var option = document.createElement("option");
+                    option.text = nomVille;
+                    option.value = idVille;
+                    villeSelect.add(option);
+                }
+            }
+        }
+
+        // Remplir les options de sélection initiales lors du chargement de la page
+        window.onload = function() {
+            showVilles(); // Pour remplir les villes initialement en fonction de la région sélectionnée
+        };
+
+
+
+        const emailField = document.getElementById('email');
+        const confirmEmailField = document.getElementById('confirmEmail');
+
+        emailField.addEventListener('input', validateEmails);
+        confirmEmailField.addEventListener('input', validateEmails);
+
+        confirmEmailField.addEventListener('blur', function() {
+            if (emailField.value !== confirmEmailField.value) {
+                confirmEmailField.style.borderColor = 'red';
+                alert('Les adresses email ne correspondent pas. Veuillez les saisir à nouveau.');
+                confirmEmailField.value = ''; // Réinitialisation du champ Confirm Email
+            } else {
+                confirmEmailField.style.borderColor = 'green';
+            }
+        });
+
+        function validateEmails() {
+            const email = emailField.value;
+            const confirmEmail = confirmEmailField.value;
+
+            if (email !== confirmEmail) {
+                emailField.style.borderColor = 'red';
+                confirmEmailField.style.borderColor = 'red';
+            } else {
+                emailField.style.borderColor = 'green';
+                confirmEmailField.style.borderColor = 'green';
+            }
+        }
+    </script>
     <script>
         const lang = <?php echo json_encode($lang); ?>;
     </script>

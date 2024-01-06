@@ -34,13 +34,14 @@ if ($emailExists || $cinExists) {
     if (!empty($comptes)) {
         $newCompte = $comptes[0]->addChild('Utilisateur');
         $newCompte->addAttribute('CIN', $cin);
-        $newCompte->addAttribute('Langue', 'fr');
+        $newCompte->addAttribute('Langue', 'french');
+        $newCompte->addAttribute('role','rol1');
+        $newCompte->addChild('nomComplet', $name);
         $newCompte->addChild('login', $email);
         $newCompte->addChild('password', $password);
         $xml->asXML($xmlFile);
-
         $messageSuccess = "Données insérées avec succès.";
-        header('Location: ../connecter.php?messageSuccess=' . urlencode($messageSuccess));
+        header('Location: ../Welcome/connecter.php?messageSuccess=' . urlencode($messageSuccess));
         exit;
     }
 }

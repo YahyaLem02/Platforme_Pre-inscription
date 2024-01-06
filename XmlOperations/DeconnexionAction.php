@@ -5,6 +5,6 @@ $_SESSION = array();
 
 session_destroy();
 
-header('Location: ../connecter.php');
+header('Location: ../Welcome/connecter.php');
 exit;
 ?>

@@ -1208,7 +1208,6 @@
         <FiliereDiplome idFiliere="btsFED" Coefficient="coef1" filliereSouhaitee="Fil1">
             <intitule>Fluides, Énergies, Domotique (FED)</intitule>
         </FiliereDiplome>
-
     </FilieresDiplome>
     <Coefficients>
         <Coefficient idCoefficient="coef1">
@@ -1246,30 +1245,55 @@
         </Coefficient>
     </Coefficients>
     <Utilisateurs>
-        <Utilisateur CIN="MD26234" Langue="fr">
-            <login>lemkharbechy@gmail.com</login>
+        <Utilisateur CIN="MD26234" Langue="french" role="rol1">
+            <nomComplet>amin harit</nomComplet>
+            <login>amin@gmail.com</login>
             <password>yahyayahya</password>
         </Utilisateur>
-        <Utilisateur CIN="MD87923" Langue="fr">
-            <login>haha@gmail.com</login>
+        <Utilisateur CIN="MD223344" Langue="french" role="rol1">
+            <nomComplet>taha alami</nomComplet>
+            <login>taha@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+        <Utilisateur CIN="EA1212122" Langue="french" role="rol1">
+            <nomComplet>Anas Moudnib</nomComplet>
+            <login>anas@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+        <Utilisateur CIN="SE1234" Langue="french" role="rol1">
+            <nomComplet>karim</nomComplet>
+            <login>karim@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+        <Utilisateur CIN="MD3333" Langue="french" role="rol1">
+            <nomComplet>taha</nomComplet>
+            <login>taha@test.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+        <Utilisateur CIN="MD222222" Langue="french" role="rol1">
+            <nomComplet>takwin</nomComplet>
+            <login>takwin@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+        <Utilisateur CIN="MD990212" Langue="french" role="rol1">
+            <nomComplet>said</nomComplet>
+            <login>said@gmail.com</login>
             <password>yahyayahya</password>
         </Utilisateur>
     </Utilisateurs>
     <Langues>
-        <Langue CodeLangues="ar">
+        <Langue CodeLangues="arabic">
             <Langue>العربية</Langue>
         </Langue>
-        <Langue CodeLangues="fr">
+        <Langue CodeLangues="french">
             <Langue>Français</Langue>
         </Langue>
-        <Langue CodeLangues="en">
+        <Langue CodeLangues="english">
             <Langue>English</Langue>
         </Langue>
     </Langues>
     <Candidats>
-
-
-        <candidat CNE="EA237793" appoge="1234556" Utilisateur="MD26234">
+        <candidat CNE="EA237793" appoge="1234556" Utilisateur="MD223344">
             <nomComplet>Yarbi tsdaq</nomComplet>
             <email>abdelmoughith@gmail.com</email>
             <addresse1>hay el jadid e</addresse1>
@@ -1280,8 +1304,7 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1329,8 +1352,7 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1378,8 +1400,7 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1427,8 +1448,7 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1476,8 +1496,7 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1525,8 +1544,7 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1563,6 +1581,206 @@
                 <file>imageCandidature/img658cd8dc978fa_EST_Safi-removebg-preview(1).png</file>
             </Document>
         </candidat>
+        <candidat CNE="K1221212" appoge="1212121" Utilisateur="EA1212122">
+            <nomComplet>Anas Moudnib</nomComplet>
+            <email>aa@gmail.Com</email>
+            <addresse1>yahyayahya</addresse1>
+            <addresse2>azza</addresse2>
+            <dateNaissance>2023-12-20</dateNaissance>
+            <lieuNaissance>saa</lieuNaissance>
+            <bac mentionBac="tresBien" type="SPC" accadime="academie3">
+                <anneeBac>2021-2022</anneeBac>
+                <noteBac>20</noteBac>
+            </bac>
+            <Diplome mentionDiplome="excellent" Etablissement="etab5" typeFormation="formation1" filiereDiplome="dutGenieInfo">
+                <InofsPremiereAnnee>
+                    <annee>2023-2024</annee>
+                    <NombreEtudiant>121</NombreEtudiant>
+                    <moyenne>12</moyenne>
+                    <classement>12</classement>
+                </InofsPremiereAnnee>
+                <InofsDeuxiemeAnnee>
+                    <annee>2016-2017</annee>
+                    <NombreEtudiant>12</NombreEtudiant>
+                    <moyenne>1</moyenne>
+                    <classement>213</classement>
+                </InofsDeuxiemeAnnee>
+            </Diplome>
+            <experienceProfisonnelle>
+                <experiencePro>Qs</experiencePro>
+                <nombreAnne>11</nombreAnne>
+            </experienceProfisonnelle>
+            <Document idTypeDocument="baccalaureat">
+                <file>imageCandidature/img6591726a3c87d_Deer wall decor artwork HD wallpaper.jpg</file>
+            </Document>
+            <Document idTypeDocument="diplomeBac2">
+                <file>imageCandidature/img6591726a3ce26_Sign Up LinkedIn.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes1">
+                <file>imageCandidature/img6591726a3d40b_photo-transformed.jpeg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes2">
+                <file>imageCandidature/img6591726a3e17b_EST_Safi-removebg-preview(2).png</file>
+            </Document>
+            <Document idTypeDocument="photoProfil">
+                <file>imageCandidature/img6591726a3e5b7_K_DA (@KDA_MUSIC) _ X.jpg</file>
+            </Document>
+            <Document idTypeDocument="copieCIN">
+                <file>imageCandidature/img6591726a3e8bf_EST_Safi-removebg-preview(2).png</file>
+            </Document>
+        </candidat>
+        <candidat CNE="K123548303" appoge="223232" ville="v13" Utilisateur="SE1234">
+            <nomComplet>karim</nomComplet>
+            <email>karim@gmail.com</email>
+            <addresse1>marrakech safi</addresse1>
+            <addresse2>marrakech safi</addresse2>
+            <dateNaissance>2024-01-18</dateNaissance>
+            <lieuNaissance>zemamra</lieuNaissance>
+            <bac mentionBac="assezBien" type="SPC" accadime="academie6">
+                <anneeBac>2022-2023</anneeBac>
+                <noteBac>12</noteBac>
+            </bac>
+            <Diplome mentionDiplome="excellent" Etablissement="etab1" typeFormation="formation1" filiereDiplome="dutGenieInfo">
+                <InofsPremiereAnnee>
+                    <annee>2023-2024</annee>
+                    <NombreEtudiant>122</NombreEtudiant>
+                    <moyenne>13</moyenne>
+                    <classement>1</classement>
+                </InofsPremiereAnnee>
+                <InofsDeuxiemeAnnee>
+                    <annee>2016-2017</annee>
+                    <NombreEtudiant>133</NombreEtudiant>
+                    <moyenne>12</moyenne>
+                    <classement>2</classement>
+                </InofsDeuxiemeAnnee>
+            </Diplome>
+            <experienceProfisonnelle>
+                <experiencePro>nothing for taht experience</experiencePro>
+                <nombreAnne>12</nombreAnne>
+            </experienceProfisonnelle>
+            <Document idTypeDocument="baccalaureat">
+                <file>../candidature/imageCandidature65973261d1927_photo-transformed.jpeg</file>
+            </Document>
+            <Document idTypeDocument="diplomeBac2">
+                <file>../candidature/imageCandidature65973261d1ace_Sign Up LinkedIn.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes1">
+                <file>../candidature/imageCandidature65973261d1c4a_Sign Up LinkedIn.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes2">
+                <file>../candidature/imageCandidature65973261d1dd1_Deer wall decor artwork HD wallpaper.jpg</file>
+            </Document>
+            <Document idTypeDocument="photoProfil">
+                <file>imageCandidature/65973261d1f7f_Sign Up LinkedIn.jpeg</file>
+            </Document>
+            <Document idTypeDocument="copieCIN">
+                <file>../candidature/imageCandidature65973261d2101_EST Safi.jpg</file>
+            </Document>
+        </candidat>
+
+        <candidat CNE="K2112121212" appoge="21212121" ville="v49" Utilisateur="MD3333">
+            <nomComplet>mohammed taha lemkharbeche</nomComplet>
+            <email>test112@gmail.com</email>
+            <addresse1>zemamera hay essalam1</addresse1>
+            <addresse2>zemamera lemnakr</addresse2>
+            <dateNaissance>2024-01-25</dateNaissance>
+            <lieuNaissance>safi ff</lieuNaissance>
+            <bac mentionBac="passable" type="STE" accadime="academie9">
+                <anneeBac>2019-2020</anneeBac>
+                <noteBac>20</noteBac>
+            </bac>
+            <Diplome mentionDiplome="excellent" Etablissement="etab5" typeFormation="formation5" filiereDiplome="dutGenieInfo">
+                <InofsPremiereAnnee>
+                    <annee>2018-2019</annee>
+                    <NombreEtudiant>32</NombreEtudiant>
+                    <moyenne>9</moyenne>
+                    <classement>21</classement>
+                </InofsPremiereAnnee>
+                <InofsDeuxiemeAnnee>
+                    <annee>2018-2019</annee>
+                    <NombreEtudiant>213</NombreEtudiant>
+                    <moyenne>12</moyenne>
+                    <classement>12</classement>
+                </InofsDeuxiemeAnnee>
+            </Diplome>
+            <experienceProfisonnelle>
+                <experiencePro>3213</experiencePro>
+                <nombreAnne>12</nombreAnne>
+            </experienceProfisonnelle>
+            <Document idTypeDocument="baccalaureat">
+                <file>
+                    ../assets/imageCandidature/6597575c5ccfe_128-1280623_download-computer-user-icon-png-removebg-preview.png
+                </file>
+            </Document>
+            <Document idTypeDocument="diplomeBac2">
+                <file>../assets/imageCandidature/659741c6efe11_Deer wall decor artwork HD wallpaper.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes1">
+                <file>../assets/imageCandidature/659741c6f009d_EST_Safi-removebg-preview(1).png</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes2">
+                <file>../assets/imageCandidature/659741c6f06a7_EST_Safi-removebg-preview(1).png</file>
+            </Document>
+            <Document idTypeDocument="photoProfil">
+                <file>../assets/imageCandidature/65975849c3806_photo-transformed.jpeg</file>
+            </Document>
+            <Document idTypeDocument="copieCIN">
+                <file>../assets/imageCandidature/659741c6f0aa1_pxfuel.jpg</file>
+            </Document>
+        </candidat>
+        <candidat CNE="K21212321" appoge="23122" ville="v17" Utilisateur="MD990212">
+            <nomComplet>said</nomComplet>
+            <email>said@gmail.com</email>
+            <addresse1>zemaera</addresse1>
+            <addresse2>sidi bennour</addresse2>
+            <dateNaissance>2024-02-01</dateNaissance>
+            <lieuNaissance>errachdia</lieuNaissance>
+            <bac mentionBac="assezBien" type="SM" accadime="academie2">
+                <anneeBac>2020-2021</anneeBac>
+                <noteBac>19</noteBac>
+            </bac>
+            <Diplome mentionDiplome="assezBien" Etablissement="etab66" typeFormation="formation2" filiereDiplome="btsSystemesNumeriques">
+                <InofsPremiereAnnee>
+                    <annee>2019-2020</annee>
+                    <NombreEtudiant>211112</NombreEtudiant>
+                    <moyenne>20</moyenne>
+                    <classement>2</classement>
+                </InofsPremiereAnnee>
+                <InofsDeuxiemeAnnee>
+                    <annee>2024-2025</annee>
+                    <NombreEtudiant>            12</NombreEtudiant>
+                    <moyenne>20</moyenne>
+                    <classement>11</classement>
+                </InofsDeuxiemeAnnee>
+            </Diplome>
+            <experienceProfisonnelle>
+                <experiencePro>QSDQSDQSDQS</experiencePro>
+                <nombreAnne>21</nombreAnne>
+            </experienceProfisonnelle>
+            <Document idTypeDocument="baccalaureat">
+                <file>../assets/imageCandidature/6598aa40cb114_releveBacTest$.webp</file>
+            </Document>
+            <Document idTypeDocument="diplomeBac2">
+                <file>../assets/imageCandidature/65988e9d5ec13_deliver.png</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes1">
+                <file>../assets/imageCandidature/65988edc257e8_photo-transformed.jpeg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes2">
+                <file>../assets/imageCandidature/65988f39db8ff_banner.jpg</file>
+            </Document>
+            <Document idTypeDocument="photoProfil">
+                <file>../assets/imageCandidature/65986c48c90e1_photo-transformed.jpeg</file>
+            </Document>
+            <Document idTypeDocument="copieCIN">
+                <file>../assets/imageCandidature/65986c48c93d4_12931.png</file>
+            </Document>
+        </candidat>
     </Candidats>
+    <Roles>
+        <Role IdRole="rol1">
+            <role>Candidat</role>
+        </Role>
+    </Roles>
 
 </root>
