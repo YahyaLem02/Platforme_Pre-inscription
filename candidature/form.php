@@ -550,8 +550,6 @@ include '../Translation/headerTranslationCandidatConnect.php';
                             d'expérience:</label>
                         <input type="number" id="nombreAnne" name="nombreAnne" required>
                     </div>
-
-
                     <div class="mt-3">
                         <button class="button btn-navigate-form-step" type="button" data-translate="Prev"
                             step_number="3">Prev</button>

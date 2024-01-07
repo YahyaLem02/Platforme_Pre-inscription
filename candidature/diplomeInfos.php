@@ -46,10 +46,9 @@ include '../Translation/headerTranslationCandidatConnect.php';
     // Charger le fichier XML en tant qu'objet DOMDocument
     $xml = new DOMDocument();
     $xml->load($xmlFile);
-    
     // Créer un objet DOMXPath
     $xpath = new DOMXPath($xml);
-    
+
     $cin = $_SESSION['cin'];
     
     // Récupérer le candidat spécifique avec la session CIN
@@ -202,8 +201,6 @@ include '../Translation/headerTranslationCandidatConnect.php';
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Modifier les informations du diplome
                 </button>
-
-
                 <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">

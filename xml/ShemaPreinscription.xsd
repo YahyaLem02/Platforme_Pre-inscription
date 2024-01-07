@@ -22,14 +22,6 @@
                     </xs:complexType>
                 </xs:element>
                 <!-- definition ensemble des annees -->
-                <xs:element name="Annees" minOccurs="0">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element ref="Annee" minOccurs="0"
-                                maxOccurs="unbounded" />
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
                 <!-- définition l'elements villes groupe de ville-->
                 <xs:element name="villes">
                     <xs:complexType>
@@ -222,14 +214,11 @@
     <xs:complexType name="Candidatures">
         <xs:sequence>
             <xs:element name="status" type="xs:string" maxOccurs="1" />
-            <xs:element name="convocation" type="xs:string" maxOccurs="1" />
+            <xs:element name="convocation" type="Document" maxOccurs="1" />
+            <xs:element name="AnnneCandidature" type="xs:string" maxOccurs="1" />
             <xs:element name="choix" type="choix" maxOccurs="3" />
-            <xs:element name="Diplome" type="Diplome"/>
-            <xs:element name="bac" type="Bac"/>
         </xs:sequence>
-        <xs:attribute name="Utilisateur" type="xs:IDREF" use="required" />
-        <xs:attribute name="idCandidature" type="xs:ID" use="required" />
-        <xs:attribute name="Annee" type="xs:IDREF" use="required" />
+        <xs:attribute name="Candidat" type="xs:IDREF" use="required" />
     </xs:complexType>
     <!-- entité Utilisateur -->
     <!--
@@ -355,6 +344,7 @@
             <xs:element name="noteBac" type="Note" />
         </xs:sequence>
         <xs:attribute name="mentionBac" type="xs:IDREF" use="required" />
+        <xs:attribute name="document" type="xs:IDREF" use="optional" />
         <xs:attribute name="type" type="xs:IDREF" use="required" />
         <xs:attribute name="accadime" type="xs:IDREF" use="required" />
     </xs:complexType>
@@ -405,6 +395,9 @@
         <xs:attribute name="Etablissement" type="xs:IDREF" use="optional" />
         <xs:attribute name="typeFormation" type="xs:IDREF" use="required" />
         <xs:attribute name="filiereDiplome" type="xs:IDREF" use="required" />
+        <xs:attribute name="documentDiplome" type="xs:IDREF" use="optional" />
+        <xs:attribute name="documentPrAnn" type="xs:IDREF" use="optional" />
+        <xs:attribute name="documentDxAnn" type="xs:IDREF" use="optional" />
         <xs:attribute name="Centre" type="xs:IDREF" use="optional" />
     </xs:complexType>
     <!-- entité formation -->
@@ -521,6 +514,7 @@
             <xs:element name="file" type="xs:string" />
         </xs:sequence>
         <xs:attribute name="idTypeDocument" type="xs:IDREF" use="required" />
+        <xs:attribute name="idDocument" type="xs:ID" use="optional" />
     </xs:complexType>
     <xs:element name="TypeDocument">
         <xs:complexType>
