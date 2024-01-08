@@ -1309,7 +1309,8 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1357,7 +1358,8 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1405,7 +1407,8 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1453,7 +1456,8 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1501,7 +1505,8 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1549,7 +1554,8 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1597,7 +1603,8 @@
                 <anneeBac>2021-2022</anneeBac>
                 <noteBac>20</noteBac>
             </bac>
-            <Diplome mentionDiplome="excellent" Etablissement="etab5" typeFormation="formation1" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="excellent" Etablissement="etab5" typeFormation="formation1"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2023-2024</annee>
                     <NombreEtudiant>121</NombreEtudiant>
@@ -1645,7 +1652,8 @@
                 <anneeBac>2022-2023</anneeBac>
                 <noteBac>12</noteBac>
             </bac>
-            <Diplome mentionDiplome="excellent" Etablissement="etab1" typeFormation="formation1" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="excellent" Etablissement="etab1" typeFormation="formation1"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2023-2024</annee>
                     <NombreEtudiant>122</NombreEtudiant>
@@ -1694,7 +1702,8 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>20</noteBac>
             </bac>
-            <Diplome mentionDiplome="excellent" Etablissement="etab5" typeFormation="formation5" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="excellent" Etablissement="etab5" typeFormation="formation5"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2018-2019</annee>
                     <NombreEtudiant>32</NombreEtudiant>
@@ -1744,7 +1753,8 @@
                 <anneeBac>2020-2021</anneeBac>
                 <noteBac>19</noteBac>
             </bac>
-            <Diplome mentionDiplome="assezBien" Etablissement="etab66" typeFormation="formation2" filiereDiplome="btsAssistantManager">
+            <Diplome mentionDiplome="assezBien" Etablissement="etab66" typeFormation="formation2"
+                filiereDiplome="btsAssistantManager">
                 <InofsPremiereAnnee>
                     <annee>2019-2020</annee>
                     <NombreEtudiant>211112</NombreEtudiant>
@@ -1792,7 +1802,8 @@
                 <anneeBac>2021-2022</anneeBac>
                 <noteBac>13</noteBac>
             </bac>
-            <Diplome mentionDiplome="assezBien" Etablissement="etab66" typeFormation="formation2" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="assezBien" Etablissement="etab66" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2022-2023</annee>
                     <NombreEtudiant>213</NombreEtudiant>
@@ -1835,5 +1846,59 @@
             <role>Candidat</role>
         </Role>
     </Roles>
+    <Candidatures>
+        <candidature Candidat="MD990212">
+            <status>En cours de traitement</status>
+            <AnnneCandidature>2024</AnnneCandidature>
+            <choix idFiliereSouhaite="Fil3">
+                <ordre>1</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil1">
+                <ordre>2</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil2">
+                <ordre>3</ordre>
+            </choix>
+        </candidature>
+        <candidature Candidat="MD990212">
+            <status>En cours de traitement</status>
+            <AnnneCandidature>2023-2024</AnnneCandidature>
+            <choix idFiliereSouhaite="Fil3">
+                <ordre>1</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil1">
+                <ordre>2</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil2">
+                <ordre>3</ordre>
+            </choix>
+        </candidature>
+        <candidature Candidat="MD990212">
+            <status>En cours de traitement</status>
+            <AnnneCandidature>2023-2024</AnnneCandidature>
+            <choix idFiliereSouhaite="Fil3">
+                <ordre>1</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil1">
+                <ordre>2</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil2">
+                <ordre>3</ordre>
+            </choix>
+        </candidature>
+        <candidature Candidat="EA1212122">
+            <status>En cours de traitement</status>
+            <AnnneCandidature>2023-2024</AnnneCandidature>
+            <choix idFiliereSouhaite="Fil2">
+                <ordre>1</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil1">
+                <ordre>2</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil3">
+                <ordre>3</ordre>
+            </choix>
+        </candidature>
+    </Candidatures>
 
 </root>

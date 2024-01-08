@@ -214,7 +214,6 @@
     <xs:complexType name="Candidatures">
         <xs:sequence>
             <xs:element name="status" type="xs:string" maxOccurs="1" />
-            <xs:element name="convocation" type="Document" maxOccurs="1" />
             <xs:element name="AnnneCandidature" type="xs:string" maxOccurs="1" />
             <xs:element name="choix" type="choix" maxOccurs="3" />
         </xs:sequence>
@@ -496,7 +495,6 @@
             <xs:element name="ordre" type="xs:string" />
         </xs:sequence>
         <xs:attribute name="idFiliereSouhaite" type="xs:IDREF" use="required" />
-        <xs:attribute name="idCandidature" type="xs:IDREF" use="required" />
     </xs:complexType>
     <!-- entité experienceProfisionelle -->
     <!--

@@ -55,11 +55,11 @@ include '../Translation/headerTranslation.php';
                     $xpath = new DOMXPath($xml);
                     $query = '';
                     if ($_SESSION['lang'] === 'english') {
-                        $query = '/root/FiliereSouhaites/FiliereSouhaite[@lang="en"]';
+                        $query = '/root/FiliereSouhaites/FiliereSouhaite[@lang="english"]';
                     } elseif ($_SESSION['lang'] === 'french') {
-                        $query = '/root/FiliereSouhaites/FiliereSouhaite[@lang="fr"]';
+                        $query = '/root/FiliereSouhaites/FiliereSouhaite[@lang="french"]';
                     } elseif ($_SESSION['lang'] === 'arabic') {
-                        $query = '/root/FiliereSouhaites/FiliereSouhaite[@lang="ar"]';
+                        $query = '/root/FiliereSouhaites/FiliereSouhaite[@lang="arabic"]';
                     }
                     $result = $xpath->query($query);
                     if ($result->length > 0) {

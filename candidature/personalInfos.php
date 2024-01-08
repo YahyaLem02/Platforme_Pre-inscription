@@ -71,7 +71,7 @@ include '../Translation/headerTranslationCandidatConnect.php';
                             <div class="row align-items-center">
                                 <div class="col-lg-6 mb-3 ">
                                     <div class="profile-pic">
-                                        <img src="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='baccalaureat']/file")->item(0)->nodeValue; ?>" alt="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='photoProfil']/file")->item(0)->nodeValue; ?>" class="img-fluid">
+                                        <img src="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='photoProfil']/file")->item(0)->nodeValue; ?>" alt="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='photoProfil']/file")->item(0)->nodeValue; ?>" class="img-fluid">
                                     </div>
                                 </div>
                                 <!-- Modal -->
@@ -187,7 +187,6 @@ include '../Translation/headerTranslationCandidatConnect.php';
             margin-left: 180px;
             /* couleur et épaisseur de la bordure */
         }
-
         @media (max-width: 767px) {
             .profile-pic {
                 width: 150px;
