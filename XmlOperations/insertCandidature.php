@@ -33,9 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Enregistrement des modifications dans le fichier XML
     $xml->asXML($xmlFile);
-
-    echo "Données insérées avec succès dans le fichier XML.";
-} else {
-    echo "Formulaire non soumis.";
-}
+    $messageSuccess = 'Données insérées avec succès.';
+    header('Location: ../candidature/candidatureInfos?messageSuccess=' . urlencode($messageSuccess));}
 ?>

@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $FiliereDiplome = $_POST['FiliereDiplome'];
 
     $etablissement = $_POST['etablissement'];
+    $centre = $_POST['centre'];
 
     $anneePremiereAnnee = $_POST['InofsPremiereAnnee-annee'];
     $nombreEtudiantsPremiereAnnee = $_POST['InofsPremiereAnnee-NombreEtudiant'];
@@ -75,7 +76,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $newDiplome = $xml->createElement('Diplome');
 
     $newDiplome->setAttribute('mentionDiplome', $mentionDiplome);
-    $newDiplome->setAttribute('Etablissement', $etablissement);
+
+    if (!empty($etablissement)) {
+        $newDiplome->setAttribute('Etablissement', $etablissement);
+    } else {
+        $newDiplome->setAttribute('Etablissement', $centre);
+    }
+
     $newDiplome->setAttribute('typeFormation', $TypeFormation);
     $newDiplome->setAttribute('filiereDiplome', $FiliereDiplome);
 

@@ -115,7 +115,6 @@ foreach ($fileres as $filiere) {
                                                     <td rowspan="<?php echo count($candidatureData['choix']); ?>"><?php echo $candidatureData['anneeCandidature']; ?></td>
                                                     <?php endif; ?>
                                                     <td>Ordre: <?php echo $choix['ordre']; ?></td>
-                                                    <td><?php echo $choix['idFiliere']; ?></td>
                                                     <td><?php echo isset($filiereList[$choix['idFiliere']]) ? $filiereList[$choix['idFiliere']] : 'Non trouvé'; ?></td>
                                                 </tr>
                                                 <?php endforeach; ?>
@@ -125,16 +124,42 @@ foreach ($fileres as $filiere) {
                                     <?php else : ?>
                                     <p><?php echo isset($erreurCandidature) ? $erreurCandidature : 'Aucune candidature trouvée pour ce candidat.'; ?></p>
                                     <?php endif; ?>
-                                    <!-- Bouton de modification -->
                                     <?php if (!empty($candidatureData)) : ?>
                                     <button type="button" class="btn btn-warning" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal" data-type="modification">
                                         Modifier votre candidature
                                     </button>
-                                    <!-- Modal de modification -->
+                                    <!-- Bouton de suppression -->
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                        data-bs-target="#confirmModal">
+                                        Supprimer votre candidature
+                                    </button>
+
+                                    <!-- Modal de confirmation -->
+                                    <div class="modal fade" id="confirmModal" tabindex="-1"
+                                        aria-labelledby="confirmModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="confirmModalLabel">Confirmation</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Êtes-vous sûr de vouloir supprimer votre candidature ?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Annuler</button>
+                                                    <a href="../XmlOperations/DeleteCandidature.php"
+                                                        class="btn btn-danger">Supprimer</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <?php endif  ?>
                                     <?php if (empty($candidatureData)) : ?>
-                                    <!-- Afficher le bouton d'ajout de candidature si aucune candidature n'existe -->
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal" data-type="ajout">
                                         Ajouter candidature
@@ -150,7 +175,6 @@ foreach ($fileres as $filiere) {
                                                         aria-label="Fermer"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <!-- Formulaire pour l'ajout ou la modification -->
                                                     <form method="post" action="" id="modalForm">
                                                         <div class="mb-3">
                                                             <label for="choixFiliere1" class="form-label">Choisissez
@@ -172,7 +196,7 @@ foreach ($fileres as $filiere) {
                                                                         $filiereSouhaite = $xml->xpath("//FiliereDiplome[@idFiliere='$idFS']/@filliereSouhaitee");
                                                                         if (!empty($filiereSouhaite)) {
                                                                             $filiereSouhaite = (string) $filiereSouhaite[0];
-                                                                            $filiereSouhaiteList = $xml->xpath("//FiliereSouhaite[@lang='" . $_SESSION['lang'] . "' and @idFiliere='$filiereSouhaite']");
+                                                                            $filiereSouhaiteList = $xml->xpath("//FiliereSouhaite[@lang='french' and @idFiliere='$filiereSouhaite']");
                                                                 
                                                                             if (!empty($filiereSouhaiteList)) {
                                                                                 foreach ($filiereSouhaiteList as $filiere) {
@@ -211,7 +235,7 @@ foreach ($fileres as $filiere) {
                                                                 $xmlFile = '../xml/BaseXml.xml';
                                                                 $xml = simplexml_load_file($xmlFile);
                                                                 if ($xml !== false) {
-                                                                    $filiereSouhaiteList = $xml->xpath("//FiliereSouhaite[@lang='" . $_SESSION['lang'] . "']");
+                                                                    $filiereSouhaiteList = $xml->xpath("//FiliereSouhaite[@lang='french']");
                                                                     if (!empty($filiereSouhaiteList)) {
                                                                         foreach ($filiereSouhaiteList as $filiere) {
                                                                             $idFiliere = (string) $filiere['idFiliere'];
@@ -259,24 +283,20 @@ foreach ($fileres as $filiere) {
                                                                 }
                                                                 ?>
                                                             </select>
-
                                                         </div>
-
                                                 </div>
                                                 </form>
                                                 <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">Fermer</button>
-                                                <!-- Bouton pour soumettre le formulaire -->
-                                                <button type="submit" class="btn btn-primary"
-                                                    id="submitBtn">Enregistrer les changements</button>
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Fermer</button>
+                                                    <!-- Bouton pour soumettre le formulaire -->
+                                                    <button type="submit" class="btn btn-primary"
+                                                        id="submitBtn">Enregistrer les changements</button>
+                                                </div>
                                             </div>
-                                            </div>
-                                         
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>

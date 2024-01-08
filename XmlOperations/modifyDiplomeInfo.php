@@ -38,6 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($etablissement)) {
         $diplome->setAttribute('Etablissement', $etablissement);
     }
+    if (!empty($_POST['centre'])) {
+        $diplome->setAttribute('Etablissement', $_POST['centre']);
+    }
 
     $premiereAnnee = $diplome->getElementsByTagName('InofsPremiereAnnee')->item(0);
     $deuxiemeAnnee = $diplome->getElementsByTagName('InofsDeuxiemeAnnee')->item(0);

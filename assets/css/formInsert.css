@@ -262,6 +262,7 @@ label {
 
 /* Champs de saisie principaux */
 input[type="text"],
+input[type="number"],
 input[type="email"],
 input[type="date"] {
     width: 100%;
@@ -301,6 +302,7 @@ input[type="date"]:focus {
 
 /* Styles pour les erreurs */
 input[type="text"].error,
+input[type="number"].error,
 input[type="email"].error,
 input[type="date"].error {
     border-color: #ff4757;

@@ -1,4 +1,3 @@
-
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
         <div class="logo">
@@ -44,7 +43,17 @@
                 }
                 ?>
                 <?php if (isset($_SESSION["connect"]) && $_SESSION["connect"] == true) {?>
-                <li><a href="../XmlOperations/DeconnexionAction.php">Déconnexion</a></li>
+                <li class="dropdown">
+                    <a href="#"><span></span> Mes informations<i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="personalInfos.php">Les informations personnelles</a></li>
+                        <li><a href="diplomeInfos.php">Les informations diplômes</a></li>
+                        <li><a href="bacInfos.php">Les informations bac</a></li>
+                        <li><a href="ExperiencePro.php">Les informations expériences professionnelles</a></li>
+                    </ul>
+                </li>
+                <li><a href="candidatureInfos.php">Mes candidatures</a></li>
+                <li><a href="../XmlOperations/DeconnexionAction.php">Quitter</a></li>
                 <li class="lang-selector">
                     <select id="languageSelector">
                         <option value="french" id="frenchButton" <?php if ($_SESSION['lang'] == 'french') {
@@ -59,10 +68,9 @@
                     </select>
 
                 </li>
-                <?php
-                }
-                ?>
-             
+                <?php } ?>
+
+
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -78,6 +86,12 @@
                 border: none;
                 cursor: pointer;
             }
+
+            /* CSS pour supprimer le soulignement des liens */
+            ul li a {
+                text-decoration: none;
+            }
+            
         </style>
     </div>
 </header

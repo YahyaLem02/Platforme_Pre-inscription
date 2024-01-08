@@ -210,8 +210,8 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                 <div class="input-group">
                                     <label for="noteBac1" data-translate="Note au Baccalauréat:">Note au
                                         Baccalauréat:</label>
-                                    <input type="text" id="noteBac" name="noteBac" required
-                                        placeholder="Ex: 15/20">
+                                    <input type="number" id="noteBac" name="noteBac" required
+                                        placeholder="Ex: 15/20" max="20">
                                 </div>
                             </div>
                             <div class="bac-details mt-3">
@@ -428,7 +428,7 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                         $Centres = $xpath->query('//centre');
                                         ?>
                                         <label data-translate="centre_label" for="centre">Centre :</label> <select
-                                            name="etablissement" id="centre">
+                                            name="centre" id="centre">
                                             <option value="" data-translate="Choisissez une option">Choisissez
                                                 une
                                                 option</option> <?php foreach ($Centres as $Centre) : ?>
@@ -483,8 +483,8 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                 <br>
 
                                 <label for="InofsPremiereAnnee-moyenne" data-translate="Moyenne">Moyenne :</label>
-                                <input type="text" id="InofsPremiereAnnee-moyenne"
-                                    name="InofsPremiereAnnee-moyenne" placeholder="Ex. 15.5" required>
+                                <input type="number" id="InofsPremiereAnnee-moyenne"
+                                    name="InofsPremiereAnnee-moyenne" placeholder="Ex. 15.5" required max="20">
                                 <br>
 
                                 <label for="InofsPremiereAnnee-classement" data-translate="Classement">Classement
@@ -516,8 +516,8 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                     name="InofsDouxiemeAnnee-NombreEtudiant" placeholder="Ex. 150" required>
                                 <br>
                                 <label for="InofsPremiereAnnee-moyenne" data-translate="Moyenne :">Moyenne :</label>
-                                <input type="text" id="InofsPremiereAnnee-moyenne"
-                                    name="InofsDouxiemeAnnee-moyenne" placeholder="Ex. 15.5" required>
+                                <input type="number" id="InofsPremiereAnnee-moyenne"
+                                    name="InofsDouxiemeAnnee-moyenne" placeholder="Ex. 15.5" required max="20">
                                 <br>
                                 <label for="InofsPremiereAnnee-classement" data-translate="Classement :">Classement
                                     :</label>
