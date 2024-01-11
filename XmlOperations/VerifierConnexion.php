@@ -12,7 +12,6 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     // Utilisation de htmlspecialchars pour éviter les attaques XSS
     $email = htmlspecialchars($email);
     $password = htmlspecialchars($password);
-    $_SESSION['connect'] = false;
     $_SESSION['candidat'] = false;
     $_SESSION['AccesForm'] = false;
 
@@ -22,24 +21,36 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         $firstMatch = $matchingCompte[0];
         $nomComplet = (string) $firstMatch->nomComplet;
         $cinUtilisateur = (string) $firstMatch['CIN'];
-
-        $candidatAssocie = $xml->xpath("//candidat[@Utilisateur = '{$cinUtilisateur}']");
+        $role = (string) $firstMatch['role'];
         $_SESSION['name'] = $nomComplet;
         $_SESSION['cin'] = $cinUtilisateur;
         $_SESSION['connect'] = true;
-        $_SESSION['candidat'] = true;
 
-        if (!$candidatAssocie) {
-            $_SESSION['AccesForm'] = true;
-            header('Location: ../Candidature/form.php');
-            exit();
-        } else {
-            header('Location: ../Candidature/personalInfos.php');
-            exit();
+        if ($role == 'rol1') {
+            $candidatAssocie = $xml->xpath("//candidat[@Utilisateur = '{$cinUtilisateur}']");
+            $_SESSION['candidat'] = true;
+            if (!$candidatAssocie) {
+                $_SESSION['AccesForm'] = true;
+                header('Location: ../Candidature/form.php');
+                exit();
+            } else {
+                header('Location: ../Candidature/personalInfos.php');
+                exit();
+            }
+        } elseif ($role == 'rol2') {
+            $_SESSION['chefDep'] = true;
+            $Departement = (string) $firstMatch['Dep'];
+            $Filiere = (string) $xml->xpath("//Departement[@sigle='" . $Departement . "']/@Filiere")[0];
+            $_SESSION['idFiliere'] = $Filiere;
+            $NomDep = (string) $xml->xpath("//Departement[@sigle='" . $Departement . "']/Nom")[0];
+            $_SESSION['NomDep'] = $NomDep;
+            $NomFiliere = (string) $xml->xpath("//FiliereSouhaite[@idFiliere='" . $Filiere . "']/intituleFiliere")[0];
+            $_SESSION['NomFiliere'] = $NomFiliere;
+            header('Location: ../ChefDepartement/index.php');
         }
     } else {
-        $ErrorMessage = urlencode("Le login n'existe pas. Veuillez vérifier vos informations.");
-        header('Location: ../connecter.php?messageError=' . $ErrorMessage);
+        $ErrorMessage = urlencode('Le login n existe pas. Veuillez vérifier vos informations.');
+        header('Location: ../Welcome/connecter.php?messageError=' . $ErrorMessage);
         exit();
     }
 } else {

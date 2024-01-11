@@ -1290,6 +1290,16 @@
             <login>maha@gmail.com</login>
             <password>yahyayahya</password>
         </Utilisateur>
+        <Utilisateur CIN="M356373" Langue="french" role="rol2" Dep="GI">
+            <nomComplet>Mogammed Essalih</nomComplet>
+            <login>me@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+        <Utilisateur CIN="M3563" Langue="french" role="rol2" Dep="GIM">
+            <nomComplet>amina fergani</nomComplet>
+            <login>af@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
     </Utilisateurs>
     <Langues>
         <Langue CodeLangues="arabic">
@@ -1314,7 +1324,8 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="btsBanque">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1323,7 +1334,7 @@
                 </InofsPremiereAnnee>
                 <InofsDeuxiemeAnnee>
                     <annee>2022-2023</annee>
-                    <NombreEtudiant>100</NombreEtudiant>
+                    <NombreEtudiant> 100</NombreEtudiant>
                     <moyenne>14.56</moyenne>
                     <classement>23</classement>
                 </InofsDeuxiemeAnnee>
@@ -1362,7 +1373,8 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1410,7 +1422,8 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1458,7 +1471,8 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1506,7 +1520,8 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1554,7 +1569,8 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1602,7 +1618,8 @@
                 <anneeBac>2021-2022</anneeBac>
                 <noteBac>20</noteBac>
             </bac>
-            <Diplome mentionDiplome="excellent" Etablissement="etab5" typeFormation="formation1" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="excellent" Etablissement="etab5" typeFormation="formation1"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2023-2024</annee>
                     <NombreEtudiant>121</NombreEtudiant>
@@ -1650,7 +1667,8 @@
                 <anneeBac>2022-2023</anneeBac>
                 <noteBac>12</noteBac>
             </bac>
-            <Diplome mentionDiplome="excellent" Etablissement="etab1" typeFormation="formation1" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="excellent" Etablissement="etab1" typeFormation="formation1"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2023-2024</annee>
                     <NombreEtudiant>122</NombreEtudiant>
@@ -1699,7 +1717,8 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>20</noteBac>
             </bac>
-            <Diplome mentionDiplome="excellent" Etablissement="etab5" typeFormation="formation5" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="excellent" Etablissement="etab5" typeFormation="formation5"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2018-2019</annee>
                     <NombreEtudiant>32</NombreEtudiant>
@@ -1739,7 +1758,7 @@
             </Document>
         </candidat>
         <candidat CNE="K21212321" appoge="23122" ville="v17" Utilisateur="MD990212">
-            <nomComplet>said</nomComplet>
+            <nomComplet>said ahmader</nomComplet>
             <email>said@gmail.com</email>
             <addresse1>zemaera</addresse1>
             <addresse2>sidi bennour</addresse2>
@@ -1749,7 +1768,8 @@
                 <anneeBac>2020-2021</anneeBac>
                 <noteBac>19</noteBac>
             </bac>
-            <Diplome mentionDiplome="assezBien" Etablissement="etab66" typeFormation="formation2" filiereDiplome="btsAssistantManager">
+            <Diplome mentionDiplome="assezBien" Etablissement="etab50" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2019-2020</annee>
                     <NombreEtudiant>211112</NombreEtudiant>
@@ -1764,7 +1784,7 @@
                 </InofsDeuxiemeAnnee>
             </Diplome>
             <experienceProfisonnelle>
-                <experiencePro>hhhhhhza</experiencePro>
+                <experiencePro>hhhhhhbbllkllk</experiencePro>
                 <nombreAnne>21</nombreAnne>
             </experienceProfisonnelle>
             <Document idTypeDocument="baccalaureat">
@@ -1774,7 +1794,7 @@
                 <file>../assets/imageCandidature/65988e9d5ec13_deliver.png</file>
             </Document>
             <Document idTypeDocument="releveeDeNotes1">
-                <file>../assets/imageCandidature/65988edc257e8_photo-transformed.jpeg</file>
+                <file>../assets/imageCandidature/659dbecfb345c_releveBacTest$.webp</file>
             </Document>
             <Document idTypeDocument="releveeDeNotes2">
                 <file>../assets/imageCandidature/65988f39db8ff_banner.jpg</file>
@@ -1797,7 +1817,8 @@
                 <anneeBac>2021-2022</anneeBac>
                 <noteBac>13</noteBac>
             </bac>
-            <Diplome mentionDiplome="assezBien" Etablissement="etab66" typeFormation="formation2" filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="assezBien" Etablissement="etab66" typeFormation="formation2"
+                filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2022-2023</annee>
                     <NombreEtudiant>213</NombreEtudiant>
@@ -1834,14 +1855,118 @@
                 <file>../assets/imageCandidature/6599bc7a50ccc_cin2.jpeg</file>
             </Document>
         </candidat>
-    <candidat CNE="K2132321" appoge="231" ville="v15" Utilisateur="MD324243"><nomComplet>maha</nomComplet><email>qq@gal.com</email><addresse1>aqqazz</addresse1><addresse2>dssdf</addresse2><dateNaissance>2024-01-18</dateNaissance><lieuNaissance>zerzer</lieuNaissance><bac mentionBac="tresBien" type="SVT" accadime="academie1"><anneeBac>2023-2024</anneeBac><noteBac>12</noteBac></bac><Diplome mentionDiplome="assezBien" Etablissement="centre31" typeFormation="formation4" filiereDiplome="dutTM"><InofsPremiereAnnee><annee>2023-2024</annee><NombreEtudiant>12</NombreEtudiant><moyenne>11</moyenne><classement>11</classement></InofsPremiereAnnee><InofsDeuxiemeAnnee><annee>2016-2017</annee><NombreEtudiant>    11</NombreEtudiant><moyenne>12</moyenne><classement>12</classement></InofsDeuxiemeAnnee></Diplome><experienceProfisonnelle><experiencePro>XSD</experiencePro><nombreAnne>21</nombreAnne></experienceProfisonnelle><Document idTypeDocument="baccalaureat"><file>../assets/imageCandidature/659b601372e9b_validerrr(1).jpg</file></Document><Document idTypeDocument="diplomeBac2"><file>../assets/imageCandidature/659b618acd63d_photo-transformed.jpeg</file></Document><Document idTypeDocument="releveeDeNotes1"><file>../assets/imageCandidature/659b6013731e9_validerrr(1).jpg</file></Document><Document idTypeDocument="releveeDeNotes2"><file>../assets/imageCandidature/659b601373397_validerrr(1).jpg</file></Document><Document idTypeDocument="photoProfil"><file>../assets/imageCandidature/659b601373818_validerrr(1).jpg</file></Document><Document idTypeDocument="copieCIN"><file>../assets/imageCandidature/659b601373e5c_validerrr(1).jpg</file></Document></candidat></Candidats>
+        <candidat CNE="K2132321" appoge="231" ville="v15" Utilisateur="MD324243">
+            <nomComplet>maha elidrissi</nomComplet>
+            <email>maha@gmail.com</email>
+            <addresse1>aqqazz</addresse1>
+            <addresse2>dssdf</addresse2>
+            <dateNaissance>2024-01-18</dateNaissance>
+            <lieuNaissance>zerzer</lieuNaissance>
+            <bac mentionBac="tresBien" type="SVT" accadime="academie1">
+                <anneeBac>2023-2024</anneeBac>
+                <noteBac>12</noteBac>
+            </bac>
+            <Diplome mentionDiplome="assezBien" Etablissement="etab24" typeFormation="formation3"
+                filiereDiplome="btsSIO">
+                <InofsPremiereAnnee>
+                    <annee>2023-2024</annee>
+                    <NombreEtudiant>12</NombreEtudiant>
+                    <moyenne>11</moyenne>
+                    <classement>11</classement>
+                </InofsPremiereAnnee>
+                <InofsDeuxiemeAnnee>
+                    <annee>2016-2017</annee>
+                    <NombreEtudiant> 11</NombreEtudiant>
+                    <moyenne>12</moyenne>
+                    <classement>12</classement>
+                </InofsDeuxiemeAnnee>
+            </Diplome>
+            <experienceProfisonnelle>
+                <experiencePro>XSD</experiencePro>
+                <nombreAnne>21</nombreAnne>
+            </experienceProfisonnelle>
+            <Document idTypeDocument="baccalaureat">
+                <file>../assets/imageCandidature/659b601372e9b_validerrr(1).jpg</file>
+            </Document>
+            <Document idTypeDocument="diplomeBac2">
+                <file>../assets/imageCandidature/659b618acd63d_photo-transformed.jpeg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes1">
+                <file>../assets/imageCandidature/659b6013731e9_validerrr(1).jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes2">
+                <file>../assets/imageCandidature/659b601373397_validerrr(1).jpg</file>
+            </Document>
+            <Document idTypeDocument="photoProfil">
+                <file>../assets/imageCandidature/659b601373818_validerrr(1).jpg</file>
+            </Document>
+            <Document idTypeDocument="copieCIN">
+                <file>../assets/imageCandidature/659b601373e5c_validerrr(1).jpg</file>
+            </Document>
+        </candidat>
+    </Candidats>
     <Roles>
         <Role IdRole="rol1">
             <role>Candidat</role>
         </Role>
+        <Role IdRole="rol2">
+            <role>Chef Departement</role>
+        </Role>
+
     </Roles>
     <Candidatures>
-
-
+        <candidature Candidat="MD990212">
+            <status>En cours de traitement</status>
+            <AnnneCandidature>2023-2024</AnnneCandidature>
+            <choix idFiliereSouhaite="Fil2">
+                <ordre>1</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil1">
+                <ordre>2</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil3">
+                <ordre>3</ordre>
+            </choix>
+        </candidature>
+        <candidature Candidat="MD324243">
+            <status>En cours de traitement</status>
+            <AnnneCandidature>2023-2024</AnnneCandidature>
+            <choix idFiliereSouhaite="Fil2">
+                <ordre>1</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil1">
+                <ordre>2</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil4">
+                <ordre>3</ordre>
+            </choix>
+        </candidature>
+        <candidature Candidat="MD223344">
+            <status>En cours de traitement</status>
+            <AnnneCandidature>2023-2024</AnnneCandidature>
+            <choix idFiliereSouhaite="Fil3">
+                <ordre>1</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil1">
+                <ordre>2</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil2">
+                <ordre>3</ordre>
+            </choix>
+        </candidature>
     </Candidatures>
+    <Departements>
+        <Departement sigle="GIM" Filiere="Fil1">
+            <Nom>MAINTENANCE INDUSTRIELLE</Nom>
+        </Departement>
+        <Departement sigle="GI" Filiere="Fil2">
+            <Nom>INFORMATIQUE</Nom>
+        </Departement>
+        <Departement sigle="TM" Filiere="Fil3">
+            <Nom>TECHNIQUES DE MANAGEMENT</Nom>
+        </Departement>
+        <Departement sigle="TIMQ" Filiere="Fil4">
+            <Nom>TECHNIQUES D’ANALYSES ET CONTRÔLE DE QUALITÉ</Nom>
+        </Departement>
+    </Departements>
 </root>

@@ -40,9 +40,28 @@
 
                 </li>
                 <?php
-                }
+        }
                 ?>
-                <?php if (isset($_SESSION["connect"]) && $_SESSION["connect"] == true) {?>
+                <?php if (isset($_SESSION["connect"]) && $_SESSION["connect"] == true && isset($_SESSION["chefDep"]) && $_SESSION['chefDep'] == true) {?>
+               
+                <li><a href="candidatureInfos.php">Liste des candidat</a></li>
+                <li><a href="../XmlOperations/DeconnexionAction.php">Quitter</a></li>
+                <li class="lang-selector">
+                    <select id="languageSelector">
+                        <option value="french" id="frenchButton" <?php if ($_SESSION['lang'] == 'french') {
+                            echo 'selected="selected"';
+                        } ?>>Français</option>
+                        <option value="english" id="englishButton" <?php if ($_SESSION['lang'] == 'english') {
+                            echo 'selected="selected"';
+                        } ?>>English</option>
+                        <option value="arabic" id="arabicButton" <?php if ($_SESSION['lang'] == 'arabic') {
+                            echo 'selected="selected"';
+                        } ?>>العربية</option>
+                    </select>
+
+                </li>
+                <?php } ?>
+                <?php if (isset($_SESSION["connect"]) && $_SESSION["connect"] == true && $_SESSION['candidat'] == true) {?>
                 <li class="dropdown">
                     <a href="#"><span></span> Mes informations<i class="bi bi-chevron-down"></i></a>
                     <ul>
