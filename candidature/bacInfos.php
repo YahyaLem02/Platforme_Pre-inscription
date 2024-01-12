@@ -46,7 +46,6 @@ include '../Translation/headerTranslationCandidatConnect.php';
     $xpath = new DOMXPath($xml);
     $candidatQuery = "//candidat[@Utilisateur='{$_SESSION['cin']}']";
     $candidat = $xpath->query($candidatQuery)->item(0);
-
     $mentionBac = '';
     $typeBac = '';
     $academie = '';

@@ -43,8 +43,8 @@
         }
                 ?>
                 <?php if (isset($_SESSION["connect"]) && $_SESSION["connect"] == true && isset($_SESSION["chefDep"]) && $_SESSION['chefDep'] == true) {?>
-               
-                <li><a href="candidatureInfos.php">Liste des candidat</a></li>
+                    <li><a href="MesActualites.php">Mes actualités</a></li>
+                <li><a href="index.php">Liste des candidat</a></li>
                 <li><a href="../XmlOperations/DeconnexionAction.php">Quitter</a></li>
                 <li class="lang-selector">
                     <select id="languageSelector">
@@ -62,6 +62,7 @@
                 </li>
                 <?php } ?>
                 <?php if (isset($_SESSION["connect"]) && $_SESSION["connect"] == true && $_SESSION['candidat'] == true) {?>
+                    <li><a href="index.php">Actualités</a></li>
                 <li class="dropdown">
                     <a href="#"><span></span> Mes informations<i class="bi bi-chevron-down"></i></a>
                     <ul>

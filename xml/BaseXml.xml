@@ -1275,7 +1275,7 @@
             <login>takwin@gmail.com</login>
             <password>yahyayahya</password>
         </Utilisateur>
-        <Utilisateur CIN="MD990212" Langue="french" role="rol1">
+        <Utilisateur CIN="MD990212" Langue="arabic" role="rol1">
             <nomComplet>said</nomComplet>
             <login>said@gmail.com</login>
             <password>yahyayahya</password>
@@ -1298,6 +1298,11 @@
         <Utilisateur CIN="M3563" Langue="french" role="rol2" Dep="GIM">
             <nomComplet>amina fergani</nomComplet>
             <login>af@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+        <Utilisateur CIN="M9563" Langue="french" role="rol2" Dep="TIMQ">
+            <nomComplet>admin  timq</nomComplet>
+            <login>timq@gmail.com</login>
             <password>yahyayahya</password>
         </Utilisateur>
     </Utilisateurs>
@@ -1324,8 +1329,7 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
-                filiereDiplome="btsBanque">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="btsBanque">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1356,7 +1360,7 @@
                 <file>/img658cd79884170_K_DA (@KDA_MUSIC) _ X.jpg</file>
             </Document>
             <Document idTypeDocument="photoProfil">
-                <file>/img658cd7988424e_EST_Safi-removebg-preview(2).png</file>
+                <file>../assets/imageCandidature/65a01690170c1_5294712.png</file>
             </Document>
             <Document idTypeDocument="copieCIN">
                 <file>/img658cd798844e6_EST_Safi-removebg-preview(1).png</file>
@@ -1373,8 +1377,7 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1422,8 +1425,7 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1471,8 +1473,7 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1520,8 +1521,7 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1569,8 +1569,7 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>15</noteBac>
             </bac>
-            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="bien" Etablissement="etab11" typeFormation="formation2" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2021-2022</annee>
                     <NombreEtudiant>35</NombreEtudiant>
@@ -1618,8 +1617,7 @@
                 <anneeBac>2021-2022</anneeBac>
                 <noteBac>20</noteBac>
             </bac>
-            <Diplome mentionDiplome="excellent" Etablissement="etab5" typeFormation="formation1"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="excellent" Etablissement="etab5" typeFormation="formation1" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2023-2024</annee>
                     <NombreEtudiant>121</NombreEtudiant>
@@ -1667,8 +1665,7 @@
                 <anneeBac>2022-2023</anneeBac>
                 <noteBac>12</noteBac>
             </bac>
-            <Diplome mentionDiplome="excellent" Etablissement="etab1" typeFormation="formation1"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="excellent" Etablissement="etab1" typeFormation="formation1" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2023-2024</annee>
                     <NombreEtudiant>122</NombreEtudiant>
@@ -1717,8 +1714,7 @@
                 <anneeBac>2019-2020</anneeBac>
                 <noteBac>20</noteBac>
             </bac>
-            <Diplome mentionDiplome="excellent" Etablissement="etab5" typeFormation="formation5"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="excellent" Etablissement="etab5" typeFormation="formation5" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2018-2019</annee>
                     <NombreEtudiant>32</NombreEtudiant>
@@ -1768,8 +1764,7 @@
                 <anneeBac>2020-2021</anneeBac>
                 <noteBac>19</noteBac>
             </bac>
-            <Diplome mentionDiplome="assezBien" Etablissement="etab50" typeFormation="formation2"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="assezBien" Etablissement="etab50" typeFormation="formation2" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2019-2020</annee>
                     <NombreEtudiant>211112</NombreEtudiant>
@@ -1817,8 +1812,7 @@
                 <anneeBac>2021-2022</anneeBac>
                 <noteBac>13</noteBac>
             </bac>
-            <Diplome mentionDiplome="assezBien" Etablissement="etab66" typeFormation="formation2"
-                filiereDiplome="dutGenieInfo">
+            <Diplome mentionDiplome="assezBien" Etablissement="etab66" typeFormation="formation2" filiereDiplome="dutGenieInfo">
                 <InofsPremiereAnnee>
                     <annee>2022-2023</annee>
                     <NombreEtudiant>213</NombreEtudiant>
@@ -1866,8 +1860,7 @@
                 <anneeBac>2023-2024</anneeBac>
                 <noteBac>12</noteBac>
             </bac>
-            <Diplome mentionDiplome="assezBien" Etablissement="etab24" typeFormation="formation3"
-                filiereDiplome="btsSIO">
+            <Diplome mentionDiplome="assezBien" Etablissement="etab24" typeFormation="formation3" filiereDiplome="btsSIO">
                 <InofsPremiereAnnee>
                     <annee>2023-2024</annee>
                     <NombreEtudiant>12</NombreEtudiant>
@@ -1898,7 +1891,7 @@
                 <file>../assets/imageCandidature/659b601373397_validerrr(1).jpg</file>
             </Document>
             <Document idTypeDocument="photoProfil">
-                <file>../assets/imageCandidature/659b601373818_validerrr(1).jpg</file>
+                <file>../assets/imageCandidature/65a016672082c_3404266.png</file>
             </Document>
             <Document idTypeDocument="copieCIN">
                 <file>../assets/imageCandidature/659b601373e5c_validerrr(1).jpg</file>
@@ -1969,4 +1962,21 @@
             <Nom>TECHNIQUES D’ANALYSES ET CONTRÔLE DE QUALITÉ</Nom>
         </Departement>
     </Departements>
+    <Actualites>
+      
+        
+        
+        <Actualite idActualite="EO924" idChef="M356373">
+            <Titre>la creme de la cerme</Titre>
+            <Description>rak khadam</Description>
+            <Image>../assets/imageCandidature/65a1c8db7095a_banner.jpg</Image>
+        </Actualite>
+        
+        <Actualite idActualite="WM108" idChef="M3563">
+            <Titre>ana gim</Titre>
+            <Description>desc gim</Description>
+            <Image>../assets/imageCandidature/65a08ad4586f9_validerrr(1).jpg</Image>
+        </Actualite>
+    <Actualite idActualite="OG403" idChef="M9563"><Titre>Annonce mouhem</Titre><Description>Li dfa3 l timq maraytqbalsh o l concours maratjibouch</Description><Image>../assets/imageCandidature/65a1b1a7e32a4_4373396.png</Image></Actualite><Actualite idActualite="UM391" idChef="M356373"><Titre>nenene</Titre><Description>qsqsdqsd</Description><Image>../assets/imageCandidature/65a1c304a772c_WhatsApp Image 2024-01-10 à 02.02.52_6b449236.jpg</Image></Actualite></Actualites>
+
 </root>

@@ -34,7 +34,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 header('Location: ../Candidature/form.php');
                 exit();
             } else {
-                header('Location: ../Candidature/personalInfos.php');
+                header('Location: ../Candidature/');
                 exit();
             }
         } elseif ($role == 'rol2') {
