@@ -1,7 +1,6 @@
 <?php
 session_start();    
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupérer les données du formulaire
     $anneeBac = $_POST["anneeBac"];
     $noteBac = $_POST["noteBac"];
     $academieBac = $_POST["academieBac"];
@@ -30,7 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $bac->setAttribute('accadime', $accadime);
     }
 
-    // Modifier les éléments enfants de <bac>
     $anneeBacElement = $bac->getElementsByTagName('anneeBac')->item(0);
     if ($anneeBacElement !== null && !empty($anneeBac)) {
         $anneeBacElement->nodeValue = $anneeBac;
@@ -48,7 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $cheminFichier = $dossierDestination . $nomFichier;
     
             if (move_uploaded_file($_FILES[$fileType]['tmp_name'], $cheminFichier)) {
-                // Trouver l'élément du fichier dans le XML et le remplacer
                 $fileNodes = $candidat->getElementsByTagName('Document');
                 foreach ($fileNodes as $node) {
                     if ($node->getAttribute('idTypeDocument') === $xmlId) {
@@ -60,7 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
     
-    // Utilisation de la fonction pour mettre à jour les différents fichiers
     updateFileInXml($candidat, 'bac', 'baccalaureat');
     
     $xml->save('../xml/baseXml.xml');

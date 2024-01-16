@@ -179,7 +179,7 @@
                 <xs:element name="Permissions" minOccurs="0">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element ref="Permission" maxOccurs="unbounded" />
+                            <xs:element name="Permission" type="Permission" maxOccurs="unbounded" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -246,7 +246,6 @@
             </xs:sequence>
             <xs:attribute name="CIN" type="xs:ID" use="required" />
             <xs:attribute name="Langue" type="xs:IDREF" use="optional" default="fr" />
-            <xs:attribute name="Permissions" type="xs:IDREFS" use="optional" />
             <xs:attribute name="role" type="xs:IDREF" use="required" />
             <xs:attribute name="Dep" type="xs:IDREF" use="optional" />
         </xs:complexType>
@@ -289,15 +288,16 @@
     <!-- entité Role -->
     <!--
     ********************************************************************************************* -->
-    <xs:element name="Permission">
-        <xs:complexType>
+    
+        <xs:complexType name="Permission">
             <xs:sequence>
-                <xs:element name="Permissions" type="xs:string" maxOccurs="1" />
+                <xs:element name="for" type="xs:string" maxOccurs="1" />
             </xs:sequence>
             <xs:attribute name="IdPermission" type="xs:ID" use="required" />
-            <xs:attribute name="Roles" type="xs:IDREFS" use="required" />
+            <xs:attribute name="state" type="xs:boolean" use="required" />
+            <xs:attribute name="Role" type="xs:IDREF" use="required" />
         </xs:complexType>
-    </xs:element>
+   
     <!-- entité departement -->
     <xs:element name="Departement">
         <xs:complexType>

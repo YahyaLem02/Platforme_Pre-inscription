@@ -1,5 +1,7 @@
 <?php
 include '../Translation/headerTranslationCandidatConnect.php';
+include '../XmlOperations/Permissions.php';
+redirectIfNotAuthorized($VoirInfosPersonnelles);
 ?>
 <!DOCTYPE html>
 <html <?php echo $_SESSION['lang'] === 'arabic' ? 'lang="ar" dir="rtl"' : 'lang="fr" dir="ltr"'; ?>>
@@ -40,22 +42,17 @@ include '../Translation/headerTranslationCandidatConnect.php';
 <body>
     <?php include '../Layouts/header.php'; ?>
     <?php
-    // Charger le fichier XML
-    $xmlFile = '../xml/BaseXml.xml'; // Mettez ici le chemin de votre fichier XML
+    $xmlFile = '../xml/BaseXml.xml'; 
     
-    // Charger le fichier XML en tant qu'objet DOMDocument
     $xml = new DOMDocument();
     $xml->load($xmlFile);
-    // Créer un objet DOMXPath
     $xpath = new DOMXPath($xml);
 
     $cin = $_SESSION['cin'];
     
-    // Récupérer le candidat spécifique avec la session CIN
     $candidat = $xpath->query("//candidat[@Utilisateur='$cin']")->item(0);
     
     if ($candidat !== null) {
-        // Récupérer les informations du diplôme
         $diplome = $xpath->query('Diplome', $candidat)->item(0);
         $etablissement = $diplome->getAttribute('Etablissement');
         $typeFormation = $diplome->getAttribute('typeFormation');
@@ -63,9 +60,7 @@ include '../Translation/headerTranslationCandidatConnect.php';
     
         if ($diplome !== null) {
             $mentionDiplome = $diplome->getAttribute('mentionDiplome');
-            // Supposons que $etablissementId, $typeFormationId et $filiereDiplomeId contiennent les IDREF respectifs
     
-            // Récupérer le nom de l'établissement à partir de son IDREF
             $etablissements = $xpath->query("//Etablissement[@idEtablissement='$etablissement']/nomEtablissement");
             if ($etablissements->length == 0) {
                 $etablissements = $xpath->query("//centre[@idCentre='$etablissement']/NomCentre");
@@ -76,7 +71,6 @@ include '../Translation/headerTranslationCandidatConnect.php';
                 $nomEtablissement = 'Établissement non trouvé';
             }
     
-            // Récupérer le nom du type de formation à partir de son IDREF
             $typesFormations = $xpath->query("//TypeFormation[@idFormation='$typeFormation']/NomFormation");
             if ($typesFormations->length > 0) {
                 $nomFormation = $typesFormations->item(0)->nodeValue;
@@ -84,7 +78,6 @@ include '../Translation/headerTranslationCandidatConnect.php';
                 $nomFormation = 'Type de formation non trouvé';
             }
     
-            // Récupérer l'intitulé de la filière de diplôme à partir de son IDREF
             $filieresDiplome = $xpath->query("//FiliereDiplome[@idFiliere='$filiereDiplome']/intitule");
             if ($filieresDiplome->length > 0) {
                 $intituleFiliere = $filieresDiplome->item(0)->nodeValue;
@@ -92,7 +85,6 @@ include '../Translation/headerTranslationCandidatConnect.php';
                 $intituleFiliere = 'Filière de diplôme non trouvée';
             }
     
-            // Récupérer les informations sur les différentes années du diplôme
             $infosPremiereAnnee = $xpath->query('InofsPremiereAnnee', $diplome)->item(0);
             $anneePremiereAnnee = $xpath->query('annee', $infosPremiereAnnee)->item(0)->nodeValue;
             $nombreEtudiantPremiereAnnee = $xpath->query('NombreEtudiant', $infosPremiereAnnee)->item(0)->nodeValue;
@@ -105,15 +97,11 @@ include '../Translation/headerTranslationCandidatConnect.php';
             $moyenneDeuxiemeAnnee = $xpath->query('moyenne', $infosDeuxiemeAnnee)->item(0)->nodeValue;
             $classementDeuxiemeAnnee = $xpath->query('classement', $infosDeuxiemeAnnee)->item(0)->nodeValue;
     
-            // Vous pouvez maintenant utiliser ces valeurs pour afficher ou manipuler les informations du diplôme dans votre modèle HTML
         } else {
-            // Le candidat n'a pas de diplôme enregistré
         }
     } else {
-        // La session CIN ne correspond à aucun candidat
     }
     
-    // Afficher les informations dans le modèle HTML
     
     ?>
 
@@ -128,20 +116,19 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                 <a href="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='diplomeBac2']/file")->item(0)->nodeValue; ?>" target="_blank">
                                     <img src="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='diplomeBac2']/file")->item(0)->nodeValue; ?>" alt="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='photoProfil']/file")->item(0)->nodeValue; ?>" id="fixed-size-image">
                                 </a>
-                                <h2 class="h3 mb-4">Informations Générales du Diplôme</h2>
+                                <h2 class="h3 mb-4"data-translate="diplomePage.Informations Générales du Diplôme"></h2>
                                 <ul class="list-unstyled mb-0">
                                     <li class="mb-2 mb-xl-3 display-28"><span
-                                            class="display-26 text-secondary me-2 font-weight-600">Mention:</span>
+                                            class="display-26 text-secondary me-2 font-weight-600"data-translate="diplomePage.Mention"></span>
                                         <?php echo $mentionDiplome; ?></li>
                                     <li class="mb-2 mb-xl-3 display-28"><span
-                                            class="display-26 text-secondary me-2 font-weight-600">Établissement:</span>
+                                            class="display-26 text-secondary me-2 font-weight-600"data-translate="diplomePage.Établissement"></span>
                                         <?php echo $nomEtablissement; ?></li>
                                     <li class="mb-2 mb-xl-3 display-28"><span
-                                            class="display-26 text-secondary me-2 font-weight-600">Type de
-                                            Formation:</span>
+                                            class="display-26 text-secondary me-2 font-weight-600"data-translate="diplomePage.Type de Formation</">span>
                                         <?php echo $nomFormation; ?></li>
                                     <li class="mb-2 mb-xl-3 display-28"><span
-                                            class="display-26 text-secondary me-2 font-weight-600">Filière:</span>
+                                            class="display-26 text-secondary me-2 font-weight-600"data-translate="diplomePage.Filière"></span>
                                         <?php echo $intituleFiliere; ?></li>
                                 </ul>
                             </div>
@@ -156,18 +143,18 @@ include '../Translation/headerTranslationCandidatConnect.php';
                             <a href="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='releveeDeNotes1']/file")->item(0)->nodeValue; ?>" target="_blank">
                                 <img src="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='releveeDeNotes1']/file")->item(0)->nodeValue; ?>" alt="Relevé de notes 1" id="fixed-size-image">
                             </a>
-                            <h2 class="h3 mb-4">Informations de la Première Année</h2>
+                            <h2 class="h3 mb-4"data-translate="diplomePage.Informations de la Première Année"></h2>
                             <ul class="list-unstyled mb-0">
                                 <!-- Affichage des détails de la première année -->
-                                <li><span class="text-secondary me-2 font-weight-600">Année:</span><?php echo $anneePremiereAnnee; ?>
+                                <li><span class="text-secondary me-2 font-weight-600" data-translate="diplomePage.Année"></span><?php echo $anneePremiereAnnee; ?>
                                 </li>
-                                <li><span class="text-secondary me-2 font-weight-600">Nombre
-                                        d'Étudiants:</span><?php echo $nombreEtudiantPremiereAnnee; ?></li>
+                                <li><span class="text-secondary me-2 font-weight-600"data-translate="diplomePage.Nombre
+                                        d'Étudiants"></span><?php echo $nombreEtudiantPremiereAnnee; ?></li>
                                 <li><span
-                                        class="text-secondary me-2 font-weight-600">Moyenne:</span><?php echo $moyennePremiereAnnee; ?>
+                                        class="text-secondary me-2 font-weight-600" data-translate="diplomePage.Moyenne"></span><?php echo $moyennePremiereAnnee; ?>
                                 </li>
                                 <li><span
-                                        class="text-secondary me-2 font-weight-600">Classement:</span><?php echo $classementPremiereAnnee; ?>
+                                        class="text-secondary me-2 font-weight-600" data-translate="diplomePage.Classement"></span><?php echo $classementPremiereAnnee; ?>
                                 </li>
                             </ul>
                         </div>
@@ -181,31 +168,32 @@ include '../Translation/headerTranslationCandidatConnect.php';
                             <a href="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='releveeDeNotes2']/file")->item(0)->nodeValue; ?>" target="_blank">
                                 <img src="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='releveeDeNotes2']/file")->item(0)->nodeValue; ?>" alt="Relevé de notes 2" id="fixed-size-image">
                             </a>
-                            <h2 class="h3 mb-4">Informations de la Deuxième Année</h2>
+                            <h2 class="h3 mb-4"data-translate="diplomePage.Informations de la Deuxième Année"></h2>
                             <ul class="list-unstyled mb-0">
                                 <!-- Affichage des détails de la deuxième année -->
-                                <li><span class="text-secondary me-2 font-weight-600">Année:</span><?php echo $anneeDeuxiemeAnnee; ?>
+                                <li><span class="text-secondary me-2 font-weight-600"data-translate="diplomePage.Année"></span><?php echo $anneeDeuxiemeAnnee; ?>
                                 </li>
-                                <li><span class="text-secondary me-2 font-weight-600">Nombre
-                                        d'Étudiants:</span><?php echo $nombreEtudiantDeuxiemeAnnee; ?></li>
+                                <li><span class="text-secondary me-2 font-weight-600"data-translate="diplomePage.Nombre
+                                        d'Étudiants"></span><?php echo $nombreEtudiantDeuxiemeAnnee; ?></li>
                                 <li><span
-                                        class="text-secondary me-2 font-weight-600">Moyenne:</span><?php echo $moyenneDeuxiemeAnnee; ?>
+                                        class="text-secondary me-2 font-weight-600"data-translate="diplomePage.Moyenne"></span><?php echo $moyenneDeuxiemeAnnee; ?>
                                 </li>
                                 <li><span
-                                        class="text-secondary me-2 font-weight-600">Classement:</span><?php echo $classementDeuxiemeAnnee; ?>
+                                        class="text-secondary me-2 font-weight-600"data-translate="diplomePage.Classement"></span><?php echo $classementDeuxiemeAnnee; ?>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Modifier les informations du diplome
+                <?php if($ModifierInfosPersonnelles){?>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-translate="diplomePage.Modifier les informations du diplome">
                 </button>
+                <?php }?>
                 <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modifier les informations
+                                <h5 class="modal-title" id="exampleModalLabel">
                                 </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
@@ -402,7 +390,7 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                                 </select>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="photoProfil" class="form-label">Baccalaureat</label>
+                                                <label for="photoProfil" class="form-label"data-translate="diplomePage.Baccalaureat"></label>
                                                 <input type="file" class="form-control" id="photoProfil"
                                                     name="bac">
                                             </div>
@@ -445,8 +433,8 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                                 name="InofsPremiereAnnee-classement" placeholder="Ex. 1er sur 100"
                                                 value="<?= $classementPremiereAnnee ?>">
                                             <div class="mb-3">
-                                                <label for="photoProfil" class="form-label">Relevé de notes de
-                                                    première année</label>
+                                                <label for="photoProfil" class="form-label"data-translate="diplomePage.Relevé de notes de
+                                                    première année"></label>
                                                 <input type="file" class="form-control" id="photoProfil"
                                                     name="rnpa">
                                             </div>
@@ -487,8 +475,8 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                                 name="InofsDouxiemeAnnee-classement" placeholder="Ex. 1er sur 100"
                                                 value="<?php echo $classementDeuxiemeAnnee; ?>">
                                             <div class="mb-3">
-                                                <label for="photoProfil" class="form-label">Relevé de notes de
-                                                    deuxième année</label>
+                                                <label for="photoProfil" class="form-label"data-translate="diplomePage.Relevé de notes de
+                                                    deuxième année"></label>
                                                 <input type="file" class="form-control" id="photoProfil"
                                                     name="rnda">
                                             </div>
@@ -496,9 +484,8 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Fermer</button>
-                                        <button type="submit" class="btn btn-primary">Enregistrer les
-                                            modifications</button>
+                                            data-bs-dismiss="modal"data-translate="candidaturePage.Modification.Fermer"></button>
+                                        <button type="submit" class="btn btn-primary"data-translate="candidaturePage.Modification.Enregistrer les changements"></button>
                                     </div>
                                 </form>
                             </div>
@@ -555,12 +542,8 @@ include '../Translation/headerTranslationCandidatConnect.php';
 
         #cadre {
             border: 1px solid #15395A;
-            /* Ajoute une bordure grise autour de chaque section */
             border-radius: 5px;
-            /* Arrondit les coins de la bordure */
-            margin-bottom: 20px;
-            /* Ajoute un espacement entre les sections */
-        }
+            margin-bottom: 20px;        }
 
         .mb-2-3,
         .my-2-3 {
@@ -669,7 +652,6 @@ include '../Translation/headerTranslationCandidatConnect.php';
             border-radius: 0.25rem !important;
         }
 
-        /* Nouveaux styles pour les images */
         .card img {
             width: 100%;
             height: auto;

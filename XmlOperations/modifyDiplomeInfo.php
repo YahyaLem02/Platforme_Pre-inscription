@@ -1,7 +1,6 @@
 <?php
 session_start();    
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupérer les données du formulaire
     $mentionDiplome = $_POST["mentionDiplome"];
     $typeFormation = $_POST["TypeFormation"];
     $etablissement = $_POST["etablissement"];
@@ -77,7 +76,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $cheminFichier = $dossierDestination . $nomFichier;
     
             if (move_uploaded_file($_FILES[$fileType]['tmp_name'], $cheminFichier)) {
-                // Trouver l'élément du fichier dans le XML et le remplacer
                 $fileNodes = $candidat->getElementsByTagName('Document');
                 foreach ($fileNodes as $node) {
                     if ($node->getAttribute('idTypeDocument') === $xmlId) {
@@ -89,7 +87,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
     
-    // Utilisation de la fonction pour mettre à jour les différents fichiers
     updateFileInXml($candidat, 'bac', 'diplomeBac2');
     updateFileInXml($candidat, 'rnpa', 'releveeDeNotes1');
     updateFileInXml($candidat, 'rnda', 'releveeDeNotes2');

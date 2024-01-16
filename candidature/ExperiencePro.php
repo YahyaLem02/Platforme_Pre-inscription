@@ -1,5 +1,7 @@
 <?php
 include '../Translation/headerTranslationCandidatConnect.php';
+include '../XmlOperations/Permissions.php';
+redirectIfNotAuthorized($VoirInfosPersonnelles);
 ?>
 <!DOCTYPE html>
 <html <?php echo $_SESSION['lang'] === 'arabic' ? 'lang="ar" dir="rtl"' : 'lang="fr" dir="ltr"'; ?>>
@@ -38,29 +40,22 @@ include '../Translation/headerTranslationCandidatConnect.php';
 <body>
     <?php include '../Layouts/header.php'; ?>
     <?php
-    // Charger le fichier XML
-    $xmlFile = '../xml/BaseXml.xml'; // Chemin vers le fichier XML
+    $xmlFile = '../xml/BaseXml.xml'; 
     
-    // Charger le fichier XML en tant qu'objet DOMDocument
     $xml = new DOMDocument();
     $xml->load($xmlFile);
     
-    // Créer un objet DOMXPath
     $xpath = new DOMXPath($xml);
     
-    // Utiliser XPath pour récupérer les informations du candidat
     $candidat = $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']")->item(0);
     
-    // Récupérer les informations d'expérience professionnelle du candidat
     $experiencePro = $xpath->query('experienceProfisonnelle', $candidat)->item(0);
     
-    // Vérifier si l'élément experienceProfisonnelle existe pour ce candidat
     if ($experiencePro !== null) {
         $experience = $xpath->query('experiencePro', $experiencePro)->item(0)->nodeValue;
         $nombreAnnees = $xpath->query('nombreAnne', $experiencePro)->item(0)->nodeValue;
     } else {
         $erreur = 'Aucune expérience professionnelle trouvée pour ce candidat.';
-        // Gérer le cas où aucune expérience professionnelle n'est disponible pour ce candidat
     }
     ?>
     <div class="bg-light">
@@ -76,9 +71,9 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
-                                                    <th>Expérience</th>
-                                                    <th>Nombre d'années</th>
-                                                    <th>Actions</th>
+                                                    <th data-translate="experiencePage.Expérience"></th>
+                                                    <th data-translate="experiencePage.Nombre d'années"></th>
+                                                    <th data-translate="experiencePage.Actions"></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -86,15 +81,20 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                                 <tr>
                                                     <td><?php echo $xpath->query('experiencePro', $experiencePro)->item(0)->nodeValue; ?></td>
                                                     <td><?php echo $xpath->query('nombreAnne', $experiencePro)->item(0)->nodeValue; ?></td>
-                                                    <td> <button type="button"
+                                                    <td>
+                                                        <?php if($ModifierInfosPersonnelles){?>
+                                                        <button type="button"
                                                             class="btn btn-primary d-block d-lg-inline-block"
-                                                            data-bs-toggle="modal" data-bs-target="#experienceModal">
-                                                            Modifier les informations
-                                                        </button></td>
+                                                            data-bs-toggle="modal" data-bs-target="#experienceModal"
+                                                            data-translate="experiencePage.Modifier les informations">
+                                                        </button>
+                                                        <?php }?>
+                                                    </td>
                                                 </tr>
                                                 <?php else : ?>
                                                 <tr>
-                                                    <td colspan="2">Aucune expérience professionnelle disponible.
+                                                    <td colspan="2"
+                                                        data-translate="experiencePage.Aucune expérience professionnelle disponible">
                                                     </td>
                                                 </tr>
                                                 <?php endif; ?>
@@ -110,95 +110,82 @@ include '../Translation/headerTranslationCandidatConnect.php';
             </div>
         </div>
     </div>
-    <div class="modal fade" id="experienceModal" tabindex="-1" aria-labelledby="experienceModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="experienceModalLabel">Modifier l'expérience professionnelle</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Form to edit experience details -->
-                <form method="POST" action="../XmlOperations/modifyExperiencePro.php">
-                    <div class="mb-3">
-                        <label for="expDetail" class="form-label">Détails de l'expérience</label>
-                        <textarea class="form-control" id="expDetail" name="expDetail"><?php echo $xpath->query('experiencePro', $experiencePro)->item(0)->nodeValue; ?></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="expYears" class="form-label">Nombre d'années</label>
-                        <input type="text" class="form-control" id="expYears" name="expYears" value="<?php echo $xpath->query('nombreAnne', $experiencePro)->item(0)->nodeValue; ?>">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                        <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
-                    </div>
-                </form>
+    <div class="modal fade" id="experienceModal" tabindex="-1" aria-labelledby="experienceModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"
+                        id="experienceModalLabel"data-translate="experiencePage.Modifier l'expérience professionnelle">
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="../XmlOperations/modifyExperiencePro.php">
+                        <div class="mb-3">
+                            <label for="expDetail"
+                                class="form-label"data-translate="experiencePage.Détails de l'expérience"></label>
+                            <textarea class="form-control" id="expDetail" name="expDetail"><?php echo $xpath->query('experiencePro', $experiencePro)->item(0)->nodeValue; ?></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="expYears" class="form-label"
+                                data-translate="experiencePage.Nombre d'années"></label>
+                            <input type="text" class="form-control" id="expYears" name="expYears"
+                                value="<?php echo $xpath->query('nombreAnne', $experiencePro)->item(0)->nodeValue; ?>">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                data-bs-dismiss="modal"data-translate="candidaturePage.Modification.Fermer"></button>
+                            <button type="submit"
+                                class="btn btn-primary"data-translate="candidaturePage.Modification.Enregistrer les changements"></button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
 
     <style>
         .profile-pic {
             width: 300px;
-            /* ajustez la taille du cercle selon vos besoins */
             height: 300px;
-            /* ajustez la taille du cercle selon vos besoins */
             border-radius: 50%;
-            /* rend l'image circulaire */
             overflow: hidden;
-            /* masque les parties de l'image qui dépassent du cercle */
             border: 2px solid #000;
             margin-left: 180px;
-            /* couleur et épaisseur de la bordure */
         }
 
         @media (max-width: 767px) {
             .profile-pic {
                 width: 150px;
-                /* Taille pour les écrans plus petits */
                 height: 150px;
-                /* Taille pour les écrans plus petits */
                 margin-left: 50px;
-                /* Marge ajustée pour les écrans plus petits */
                 margin-right: 50px;
-                /* Marge ajustée pour les écrans plus petits */
             }
         }
 
-        /* Pour les tablettes et les ordinateurs de bureau */
         @media (min-width: 768px) {
             .profile-pic {
                 width: 200px;
-                /* Taille pour les tablettes et les ordinateurs de bureau */
                 height: 200px;
-                /* Taille pour les tablettes et les ordinateurs de bureau */
                 margin-left: 100px;
-                /* Marge ajustée pour les tablettes et les ordinateurs de bureau */
                 margin-right: 100px;
-                /* Marge ajustée pour les tablettes et les ordinateurs de bureau */
             }
         }
 
-        /* Pour les écrans plus larges (par exemple, les grands ordinateurs de bureau) */
         @media (min-width: 1200px) {
             .profile-pic {
                 width: 250px;
-                /* Taille pour les grands écrans */
                 height: 250px;
-                /* Taille pour les grands écrans */
                 margin-left: 150px;
-                /* Marge ajustée pour les grands écrans */
                 margin-right: 150px;
-                /* Marge ajustée pour les grands écrans */
             }
         }
 
         .profile-pic img {
             width: 100%;
-            /* assurez-vous que l'image remplit le cercle */
             height: auto;
             display: block;
         }
@@ -343,19 +330,19 @@ include '../Translation/headerTranslationCandidatConnect.php';
         $messageSuccess = urldecode($_GET['messageSuccess']);
         echo "<script src='../node_modules/sweetalert/dist/sweetalert.min.js'></script>";
         echo "<script>
-                                                                                document.addEventListener('DOMContentLoaded', function() {
-                                                                                    swal('Succès', '$messageSuccess', 'success');
-                                                                                });
-                                                                                </script>";
+                                                                                    document.addEventListener('DOMContentLoaded', function() {
+                                                                                        swal('Succès', '$messageSuccess', 'success');
+                                                                                    });
+                                                                                    </script>";
     }
     if (isset($_GET['messageError'])) {
         $messageError = urldecode($_GET['messageError']);
         echo "<script src='node_modules/sweetalert/dist/sweetalert.min.js'></script>";
         echo "<script>
-                                                                                document.addEventListener('DOMContentLoaded', function() {
-                                                                                    swal('Erreur', '$messageError', 'error');
-                                                                                });
-                                                                                </script>";
+                                                                                    document.addEventListener('DOMContentLoaded', function() {
+                                                                                        swal('Erreur', '$messageError', 'error');
+                                                                                    });
+                                                                                    </script>";
     }
     ?>
     <script>

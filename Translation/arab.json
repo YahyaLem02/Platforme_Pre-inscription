@@ -1,88 +1,85 @@
 {
-    "hero_section": {
-        "preinscription_button": "بدء التسجيل المسبق"
-    },
-    "contact_section": {
-        "contact_us": "اتصل بنا"
-    },
-    "menu": {
-        "home": "الصفحة الرئيسية",
-        "our_programs": "برامجنا",
-        "mechatronics": "الميكاترونيكا",
-        "systems_engineering": "هندسة نظم المعلومات والشبكات",
-        "accounting_management": "إدارة المحاسبة والمالية",
-        "metrology_quality": "علم القياس والجودة والسلامة والبيئة",
-        "register": "التسجيل",
-        "login": "تسجيل الدخول"
-    },
-    "footer": {
-        "contact": {
-            "title": "EST SAFI",
-            "address": "التسجيل المسبق للدورة الجامعية المهنية بسافي، المغرب",
-            "phone": "(+212) 5 589 55488 55",
-            "email": "info@example.com"
-        },
-        "useful_links": {
-            "title": "روابط مفيدة",
-            "links": [
-                { "text": "الصفحة الرئيسية", "url": "#hero" },
-                { "text": "البرامج", "url": "#filiere" },
-                { "text": "حول", "url": "#contact" }
-            ]
-        },
-        "stay_connected": {
-            "title": "ابقَ على اتصال",
-            "description": "تابعنا على وسائل التواصل الاجتماعي لتبقى على اطلاع بآخر الأخبار والفعاليات:",
-
-            "social_media": [
-                { "icon": "bx bxl-twitter", "url": "#" },
-                { "icon": "bx bxl-facebook", "url": "#" },
-                { "icon": "bx bxl-instagram", "url": "#" },
-                { "icon": "bx bxl-linkedin", "url": "#" }
-            ]
-        },
-        "credits": {
-            "text": "@2023 EST Safi. كل الحقوق محفوظة. تم تطويره بواسطة يحيى المخربش وعبد المغيث العماري، طلاب في EST Safi"
-        }
-        
-        
-    },
+  "hero_section": {
+    "preinscription_button": "بدء التسجيل المسبق"
+  },
+  "contact_section": {
+    "contact_us": "اتصل بنا"
+  },
+  "menu": {
+    "home": "الصفحة الرئيسية",
+    "our_programs": "برامجنا",
+    "mechatronics": "الميكاترونيكا",
+    "systems_engineering": "هندسة نظم المعلومات والشبكات",
+    "accounting_management": "إدارة المحاسبة والمالية",
+    "metrology_quality": "علم القياس والجودة والسلامة والبيئة",
+    "register": "التسجيل",
+    "login": "تسجيل الدخول"
+  },
+  "footer": {
     "contact": {
-        "title": "الاتصال",
-        "subtitle": "اتصل بنا",
-        "content": "لأي طلب لمعلومات إضافية، أو استفسار حول برامج التدريب لدينا، أو أي سؤال آخر، فلا تتردد في التواصل معنا. سنكون سعداء بالرد عليكم.",
-        "address": {
-            "label": "العنوان",
-            "value": "طريق دار سي عيسى، ص.ب. 89، 46000 – آسفي"
-        },
-        "email": {
-            "label": "البريد الإلكتروني",
-            "value": "contact.ests@uca.ma"
-        },
-        "phone": {
-            "label": "الهاتف",
-            "value": "(+212) 5 24 62 50 53"
-        },
-        "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.150481872137!2d-9.218748884861483!3d32.30781068111619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdac20c13554a6a3%3A0xe0bcd1e33a700800!2sEcole+Sup%C3%A9rieure+de+T%C3%A9chnologie!5e0!3m2!1sfr!2sma!4v1560955562472!5m2!1sfr!2sma",
-        "placeholders": {
-            "name": "اسمك",
-            "email": "بريدك الإلكتروني",
-            "subject": "الموضوع",
-            "message": "الرسالة",
-            "loading": "جار التحميل",
-            "error_message": "لم يتم إرسال رسالتك. يرجى المحاولة مرة أخرى.",
-            "sent_message": "تم إرسال رسالتك. شكرا لك!",
-            "send_button": "إرسال الرسالة"
-        }
-  
+      "title": "EST SAFI",
+      "address": "التسجيل المسبق للدورة الجامعية المهنية بسافي، المغرب",
+      "phone": "(+212) 5 589 55488 55",
+      "email": "info@example.com"
     },
-    "counts": {
-        "happy_clients": "العملاء السعداء",
-        "projects": "المشاريع",
-        "hours_of_support": "ساعات الدعم",
-        "hard_workers": "العمال الجادين"
+    "useful_links": {
+      "title": "روابط مفيدة",
+      "links": [
+        { "text": "الصفحة الرئيسية", "url": "#hero" },
+        { "text": "البرامج", "url": "#filiere" },
+        { "text": "حول", "url": "#contact" }
+      ]
     },
-    "form":{
+    "stay_connected": {
+      "title": "ابقَ على اتصال",
+      "description": "تابعنا على وسائل التواصل الاجتماعي لتبقى على اطلاع بآخر الأخبار والفعاليات:",
+
+      "social_media": [
+        { "icon": "bx bxl-twitter", "url": "#" },
+        { "icon": "bx bxl-facebook", "url": "#" },
+        { "icon": "bx bxl-instagram", "url": "#" },
+        { "icon": "bx bxl-linkedin", "url": "#" }
+      ]
+    },
+    "credits": {
+      "text": "@2023 EST Safi. كل الحقوق محفوظة. تم تطويره بواسطة يحيى المخربش وعبد المغيث العماري، طلاب في EST Safi"
+    }
+  },
+  "contact": {
+    "title": "الاتصال",
+    "subtitle": "اتصل بنا",
+    "content": "لأي طلب لمعلومات إضافية، أو استفسار حول برامج التدريب لدينا، أو أي سؤال آخر، فلا تتردد في التواصل معنا. سنكون سعداء بالرد عليكم.",
+    "address": {
+      "label": "العنوان",
+      "value": "طريق دار سي عيسى، ص.ب. 89، 46000 – آسفي"
+    },
+    "email": {
+      "label": "البريد الإلكتروني",
+      "value": "contact.ests@uca.ma"
+    },
+    "phone": {
+      "label": "الهاتف",
+      "value": "(+212) 5 24 62 50 53"
+    },
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.150481872137!2d-9.218748884861483!3d32.30781068111619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdac20c13554a6a3%3A0xe0bcd1e33a700800!2sEcole+Sup%C3%A9rieure+de+T%C3%A9chnologie!5e0!3m2!1sfr!2sma!4v1560955562472!5m2!1sfr!2sma",
+    "placeholders": {
+      "name": "اسمك",
+      "email": "بريدك الإلكتروني",
+      "subject": "الموضوع",
+      "message": "الرسالة",
+      "loading": "جار التحميل",
+      "error_message": "لم يتم إرسال رسالتك. يرجى المحاولة مرة أخرى.",
+      "sent_message": "تم إرسال رسالتك. شكرا لك!",
+      "send_button": "إرسال الرسالة"
+    }
+  },
+  "counts": {
+    "happy_clients": "العملاء السعداء",
+    "projects": "المشاريع",
+    "hours_of_support": "ساعات الدعم",
+    "hard_workers": "العمال الجادين"
+  },
+  "form": {
     "title": "أنشئ حسابك",
     "name": "الاسم الكامل",
     "cin": "رقم الهوية",
@@ -95,73 +92,222 @@
     "link": "ليس لدي حساب",
     "login": "تسجيل الدخول",
     "title-conncet": "تسجيل الدخول"
+  },
+  "Informations personnelles": "المعلومات الشخصية",
+  "Informations du Baccalauréat": "معلومات البكالوريا",
+  "Informations du diplôme": "معلومات الشهادة",
+  "Les expériences professionnelles": "الخبرات المهنية",
+  "Documents à uploader": "تحميل المستندات",
+  "CNE": "رقم مسار:",
+  "Apogée (Facultatif)": "أبوجي (اختياري):",
+  "Région :": "المنطقة:",
+  "Ville :": "المدينة:",
+  "Email": "البريد الإلكتروني:",
+  "Confirmer Email": "تأكيد البريد الإلكتروني:",
+  "Adresse 1": "العنوان 1:",
+  "Adresse 2": "العنوان 2:",
+  "Date de Naissance": "تاريخ الميلاد:",
+  "Lieu de Naissance": "مكان الميلاد:",
+  "Année du Baccalauréat:": "سنة البكالوريا:",
+  "Choisissez une année": "اختر سنة",
+  "Note au Baccalauréat:": "درجة البكالوريا:",
+  "Académie :": "الأكاديمية:",
+  "Choisissez une option": "اختر خيارًا",
+  "Type de Bac :": "نوع البكالوريا:",
+  "Mention :": "الميزة:",
+  "Prev": "السابق",
+  "Next": "التالي",
+  "mention_label": "الميزة:",
+  "type_formation_label": "نوع التكوين:",
+  "university_label": "الجامعة:",
+  "type_etablissement_label": "نوع المؤسسة:",
+  "etablissement_label": "المؤسسة:",
+  "ville_label": "المدينة:",
+  "type_centre_label": "نوع المركز:",
+  "centre_label": "المركز:",
+  "filiere_diplome_label": "تخصص الدبلوم:",
+  "diplome_details": "تفاصيل الشهادة",
+  "Première Année": "السنة الأولى",
+  "Année": "السنة:",
+  "Nombre d'Étudiants": "عدد الطلاب:",
+  "Moyenne": "المتوسط:",
+  "Classement": "الترتيب:",
+  "Deuxième Année": "السنة الثانية",
+  "Année:": "السنة:",
+  "Nombre d'Étudiants :": "عدد الطلاب:",
+  "Moyenne :": "متوسط ​​الدرجات:",
+  "Classement :": "التصنيف:",
+  "Expérience Professionnelle": "الخبرة المهنية",
+  "Expérience Professionnelle:": "الخبرة المهنية :",
+  "Nombre d'années d'expérience:": "عدد سنوات الخبرة :",
 
-    
-
+  "Fichiers": "الملفات",
+  "Baccalauréat:": "الباكالوريا:",
+  "Attestation de réussite ou diplôme:": "شهادة النجاح أو الدبلوم:",
+  "Relevé de notes S1:": "سجل الدرجات S1:",
+  "Relevé de notes S2:": "سجل الدرجات S2:",
+  "Photo personnel:": "الصورة الشخصية:",
+  "Copie de CIN:": "نسخة من البطاقة الوطنية:",
+  "send": "حفظ",
+  "modal": {
+    "h5": "تعديل المعلومات",
+    "nomComplet": "الاسم الكامل",
+    "mail": "البريد الإلكتروني",
+    "adress1": "العنوان 1",
+    "adress2": "العنوان 2",
+    "dateNaissance": "تاريخ الميلاد",
+    "lieuNaissance": "مكان الميلاد",
+    "photoProfile": "صورة الملف الشخصي",
+    "fermer": "إغلاق",
+    "modify": "حفظ التعديلات"
+  },
+  "mail": "البريد الإلكتروني:",
+  "adress": "العنوان :",
+  "dateNaissance": "تاريخ الميلاد :",
+  "lieuNaissance": "مكان الميلاد :",
+  "botona": "تعديل المعلومات",
+  "headerCandidat": {
+    "Mes informations": "معلوماتي",
+    "Les informations personnelles": "المعلومات الشخصية",
+    "Les informations diplômes": "معلومات الشهادات",
+    "Les informations bac": "معلومات الباكالوريا",
+    "Les informations expériences professionnelles": "معلومات الخبرات العملية",
+    "Mes candidatures": "طلباتي",
+    "Quitter": "خروج",
+    "Actualités": "أخبار"
+  },
+  "candidaturePage": {
+    "Filière": "التخصص",
+    "Choix": "الاختيار",
+    "Année de candidature": "سنة التقديم",
+    "Status": "الحالة",
+    "Supprimer votre candidature": "حذف طلبك",
+    "Modifier votre candidature": "تعديل طلبك",
+    "Ordre": "ترتيب :",
+    "Modification": {
+      "Choisissez une filière": "اختر تخصصًا:",
+      "Choix 2": "الاختيار 2",
+      "Choix 3": "الاختيار 3",
+      "Fermer": "إغلاق",
+      "Enregistrer les changements": "حفظ التغييرات",
+      "title": "تعديل الطلب"
     },
-    "Informations personnelles": "المعلومات الشخصية",
-    "Informations du Baccalauréat": "معلومات البكالوريا",
-    "Informations du diplôme": "معلومات الشهادة",
-    "Les expériences professionnelles": "الخبرات المهنية",
-    "Documents à uploader": "تحميل المستندات",
-    "CNE": "رقم مسار:",
-    "Apogée (Facultatif)": "أبوجي (اختياري):",
-    "Région :": "المنطقة:",
-    "Ville :": "المدينة:",
-    "Email": "البريد الإلكتروني:",
-    "Confirmer Email": "تأكيد البريد الإلكتروني:",
-    "Adresse 1": "العنوان 1:",
-    "Adresse 2": "العنوان 2:",
-    "Date de Naissance": "تاريخ الميلاد:",
-    "Lieu de Naissance": "مكان الميلاد:",
-    "Année du Baccalauréat:": "سنة البكالوريا:",
-    "Choisissez une année": "اختر سنة",
-    "Note au Baccalauréat:": "درجة البكالوريا:",
-    "Académie :": "الأكاديمية:",
-    "Choisissez une option": "اختر خيارًا",
-    "Type de Bac :": "نوع البكالوريا:",
-    "Mention :": "الميزة:",
-    "Prev": "السابق",
-    "Next": "التالي",  
-    "mention_label": "الميزة:",
-    "type_formation_label": "نوع التكوين:",
-    "university_label": "الجامعة:",
-    "type_etablissement_label": "نوع المؤسسة:",
-    "etablissement_label": "المؤسسة:",
-    "ville_label": "المدينة:",
-    "type_centre_label": "نوع المركز:",
-    "centre_label": "المركز:",
-    "filiere_diplome_label": "تخصص الدبلوم:",
-    "diplome_details": "تفاصيل الشهادة",
-    "Première Année": "السنة الأولى",
-    "Année": "السنة:",
-    "Nombre d'Étudiants": "عدد الطلاب:",
-    "Moyenne": "المتوسط:",
-    "Classement": "الترتيب:",
-    "Deuxième Année": "السنة الثانية",
-    "Année:": "السنة:",
-    "Nombre d'Étudiants :": "عدد الطلاب:",
-    "Moyenne :": "متوسط ​​الدرجات:",
-    "Classement :": "التصنيف:",
+    "Suppression": {
+      "Confirmation": "تأكيد",
+      "Supprimer": "حذف",
+      "Annuler": "إلغاء",
+      "Êtes-vous sûr de vouloir supprimer votre candidature ?": "هل أنت متأكد أنك تريد حذف طلبك؟"
+    }
+  },
+  "diplomePage": {
+    "Informations de la Deuxième Année": "معلومات السنة الثانية : ",
+    "Classement": " الترتيب: ",
+    "Moyenne": "المعدل: ",
+    "Nombre d'Étudiants": "عدد الطلاب : ",
+    "Année": "السنة :",
+    "Informations de la Première Année": "معلومات السنة الأولى :",
+    "Filière": "التخصص :",
+    "Type de Formation": "نوع التكوين : ",
+    "Établissement": "المؤسسة : ",
+    "Mention": "التقدير: ",
+    "Informations Générales du Diplôme": "معلومات عامة عن الشهادة : ",
+    "Modifier les informations du diplome": "تعديل معلومات الشهادة",
+    "Modifier les informations": "تعديل المعلومات",
+    "Baccalaureat": "البكالوريا",
+    "Relevé de notes de première année": "كشف الدرجات للسنة الأولى",
+    "Relevé de notes de deuxième année": "كشف الدرجات للسنة الثانية"
+  },
+  "bacPage": {
+    "Type de Bac": "نوع البكالوريا :",
+    "Académie de Bac": "أكاديمية البكالوريا :",
+    "Mention Bac": "تقدير البكالوريا :",
+    "Année du Bac": "سنة البكالوريا :",
+    "Modifier les informations du Bac": "تعديل معلومات البكالوريا",
+    "Note Bac": "درجة البكالوريا :"
+  },
+  "experiencePage": {
+    "Modifier l'expérience professionnelle": "تعديل الخبرة المهنية",
+    "Détails de l'expérience": "تفاصيل الخبرة",
+    "Nombre d'années": "عدد السنوات",
+    "Expérience": "الخبرة",
+    "Actions": "الإجراءات",
+    "Modifier les informations": "تعديل المعلومات",
+    "Aucune expérience professionnelle disponible": "لا توجد خبرة مهنية متاحة"
+  },
+  "actualitePage": {
+    "Description de l'Actualité": "وصف الأخبار",
+    "Voir plus": "عرض المزيد"
+  },
+  "headerChef": {
+    "Liste des candidat": "قائمة المرشحين",
+    "Mes actualités": "أخباري"
+  },
+  "chefindex": {
+    "Experience Pro": "الخبرة المهنية",
+    "Infos diplome": "معلومات الدبلوم",
+    "Infos bac": "معلومات البكالوريا",
+    "Ordre de choix": "ترتيب الاختيار",
+    "Année Candidature": "سنة الترشيح",
+    "Status Candidature": "حالة الترشيح",
+    "Addresse": "العنوان",
+    "Email": "البريد الإلكتروني",
+    "Nom Complet": "الاسم الكامل",
+    "CIN": "البطاقة الوطنية",
+    "Photo": "الصورة",
+    "Détails du Bac": "تفاصيل البكالوريا",
+    "Copie du Bac": "نسخة من البكالوريا",
+    "Détails du Diplôme": "تفاصيل الدبلوم",
+    "Etablissement": "المؤسسة",
+    "Type de Formation": "نوع التكوين",
+    "Documents": "الوثائق",
+    "Diplome": "الدبلوم",
+    "le relevé de notes première année": "كشف الدرجات للسنة الأولى",
+    "le relevé de notes deuxième année": "كشف الدرجات للسنة الثانية",
+    "Détails de l'Expérience Professionnelle": "تفاصيل الخبرة المهنية",
     "Expérience Professionnelle": "الخبرة المهنية",
-    "Expérience Professionnelle:": "الخبرة المهنية :",
-    "Nombre d'années d'expérience:": "عدد سنوات الخبرة :",
-        
-    "Fichiers": "الملفات",
-    "Baccalauréat:": "الباكالوريا:",
-    "Attestation de réussite ou diplôme:": "شهادة النجاح أو الدبلوم:",
-    "Relevé de notes S1:": "سجل الدرجات S1:",
-    "Relevé de notes S2:": "سجل الدرجات S2:",
-    "Photo personnel:": "الصورة الشخصية:",
-    "Copie de CIN:": "نسخة من البطاقة الوطنية:",
-    "send":"حفظ"
-          
-          
-      
-      
-   
-    
-
-   
-    
+    "Nombre d'Années": "عدد السنوات",
+    "Aucune expérience professionnelle": "لا توجد خبرة مهنية"
+  },
+  "chefActualites": {
+    "Ajouter Actualité": "إضافة خبر",
+    "Actions": "الإجراءات",
+    "Image": "الصورة",
+    "Description": "الوصف",
+    "Titre": "العنوان",
+    "Voir": "عرض",
+    "Supprimer": "حذف",
+    "Modifier": "تعديل",
+    "Modifier Actualité": "تعديل الخبر",
+    "Confirmer la Modification": "تأكيد التعديل",
+    "Êtes-vous sûr de vouloir supprimer cette actualité": "هل أنت متأكد أنك تريد حذف هذا الخبر؟",
+    "Ajouter": "إضافة"
+  },
+  "gestionUtilisateurs": {
+    "Ajouter Utilisateur": "إضافة مستخدم",
+    "Nom Complet": "الاسم الكامل",
+    "Login": "تسجيل الدخول",
+    "motModifier": "تعديل",
+    "Actions": "الإجراءات",
+    "Numero de CIN": "رقم بطاقة الهوية",
+    "Password": "كلمة السر",
+    "Confirmer l'Ajout": "تأكيد الإضافة",
+    "Suppression": {
+      "Confirmation": "تأكيد",
+      "Annuler": "إلغاء",
+      "Supprimer": "حذف"
+    }
+  },
+  "Are you sure you want to delete this user": "هل أنت متأكد أنك تريد حذف هذا المستخدم",
+  "indexAgentScolarite": {
+    "Filière": "التخصص",
+    "Année": "السنة",
+    "All": "الكل",
+    "Annee Candidature": "سنة الترشيح",
+    "Filière Candidature": "تخصص الترشيح",
+    "CIN": "البطاقة الوطنية",
+    "Nom Complet": "الاسم الكامل"
+  },
+  "bienvuenue": "مرحبًا"
+  
 }
+

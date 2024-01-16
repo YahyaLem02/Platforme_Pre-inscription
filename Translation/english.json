@@ -1,164 +1,305 @@
 {
-    "hero_section": {
-        "preinscription_button": "Start Pre-registration"
+  "hero_section": {
+    "preinscription_button": "Start Pre-registration"
+  },
+  "contact_section": {
+    "contact_us": "Contact Us"
+  },
+  "menu": {
+    "home": "Home",
+    "our_programs": "Our Programs",
+    "mechatronics": "Mechatronics",
+    "systems_engineering": "Systems Engineering and Networks",
+    "accounting_management": "Accounting and Financial Management",
+    "metrology_quality": "Metrology, Quality, Safety, and Environment",
+    "register": "Register",
+    "login": "Login"
+  },
+  "footer": {
+    "contact": {
+      "title": "EST SAFI",
+      "address": "Pre-registration for Professional Bachelor's Degree SAFI, Morocco",
+      "phone": "(+212) 5 589 55488 55",
+      "email": "info@example.com"
     },
-    "contact_section": {
-        "contact_us": "Contact Us"
-       
+    "useful_links": {
+      "title": "Useful Links",
+      "links": [
+        { "text": "Home", "url": "#hero" },
+        { "text": "Programs", "url": "#filiere" },
+        { "text": "About", "url": "#contact" }
+      ]
     },
-    "menu": {
-        "home": "Home",
-        "our_programs": "Our Programs",
-        "mechatronics": "Mechatronics",
-        "systems_engineering": "Systems Engineering and Networks",
-        "accounting_management": "Accounting and Financial Management",
-        "metrology_quality": "Metrology, Quality, Safety, and Environment",
-        "register": "Register",
-        "login": "Login"
-      },
-      "footer": {
-        "contact": {
-          "title": "EST SAFI",
-          "address": "Pre-registration for Professional Bachelor's Degree SAFI, Morocco",
-          "phone": "(+212) 5 589 55488 55",
-          "email": "info@example.com"
-        },
-        "useful_links": {
-            "title": "Useful Links",
-            "links": [
-              { "text": "Home", "url": "#hero" },
-              { "text": "Programs", "url": "#filiere" },
-              { "text": "About", "url": "#contact" }
-            ]
-          },
-        "stay_connected": {
-          "title": "Stay Connected",
-          "description": "Follow us on our social media to stay informed about the latest news and events:",
-          "social_media": [
-            { "icon": "bx bxl-twitter", "url": "#" },
-            { "icon": "bx bxl-facebook", "url": "#" },
-            { "icon": "bx bxl-instagram", "url": "#" },
-            { "icon": "bx bxl-linkedin", "url": "#" }
-          ]
-        },
-        "credits": {
-          "text": " @2023 EST Safi. All rights reserved. Developed by Yahya Lemkharbech and Abdelmoughit El Aoumari, students at EST Safi"
-        }
-      },
-      "contact": {
-        "title": "Contact",
-        "subtitle": "Contact Us",
-        "content": "For any further information request, information about our training programs, or for any other questions, feel free to contact us. We will be happy to assist you.",
-        "address": {
-          "label": "Address",
-          "value": "Route Dar Si Aïssa, B.P. 89, 46000 – Safi"
-        },
-        "email": {
-          "label": "Email",
-          "value": "contact.ests@uca.ma"
-        },
-        "phone": {
-          "label": "Phone",
-          "value": "(+212) 5 24 62 50 53"
-        },
-        "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.150481872137!2d-9.218748884861483!3d32.30781068111619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdac20c13554a6a3%3A0xe0bcd1e33a700800!2sEcole+Sup%C3%A9rieure+de+T%C3%A9chnologie!5e0!3m2!1sfr!2sma!4v1560955562472!5m2!1sfr!2sma",
-        "placeholders": {
-            "name": "Your Name",
-            "email": "Your Email",
-            "subject": "Subject",
-            "message": "Message",
-            "loading": "Loading",
-            "error_message": "Your message has not been sent. Please try again.",
-            "sent_message": "Your message has been sent. Thank you!",
-            "send_button": "Send Message"
-        }
-          },
-          "counts": {
-            "happy_clients": "Happy Clients",
-            "projects": "Projects",
-            "hours_of_support": "Hours Of Support",
-            "hard_workers": "Hard Workers"
-        },
-        "form":{
-        "title": "Create your account",
-        "name": "Full Name",
-        "cin": "ID Number",
-        "confirm_password": "Confirm Password",
-        "register": "Register",
-        "emailLabel": "Email Address",
-        "passwordLabel": "Password",
-        "email": "Email Address",
-        "password": "Password",
-        "link": "I don't have an account",
-        "login": "Log In",
-        "title-conncet": "Log In"
+    "stay_connected": {
+      "title": "Stay Connected",
+      "description": "Follow us on our social media to stay informed about the latest news and events:",
+      "social_media": [
+        { "icon": "bx bxl-twitter", "url": "#" },
+        { "icon": "bx bxl-facebook", "url": "#" },
+        { "icon": "bx bxl-instagram", "url": "#" },
+        { "icon": "bx bxl-linkedin", "url": "#" }
+      ]
+    },
+    "credits": {
+      "text": " @2023 EST Safi. All rights reserved. Developed by Yahya Lemkharbech and Abdelmoughit El Aoumari, students at EST Safi"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Contact Us",
+    "content": "For any further information request, information about our training programs, or for any other questions, feel free to contact us. We will be happy to assist you.",
+    "address": {
+      "label": "Address",
+      "value": "Route Dar Si Aïssa, B.P. 89, 46000 – Safi"
+    },
+    "email": {
+      "label": "Email",
+      "value": "contact.ests@uca.ma"
+    },
+    "phone": {
+      "label": "Phone",
+      "value": "(+212) 5 24 62 50 53"
+    },
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.150481872137!2d-9.218748884861483!3d32.30781068111619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdac20c13554a6a3%3A0xe0bcd1e33a700800!2sEcole+Sup%C3%A9rieure+de+T%C3%A9chnologie!5e0!3m2!1sfr!2sma!4v1560955562472!5m2!1sfr!2sma",
+    "placeholders": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Message",
+      "loading": "Loading",
+      "error_message": "Your message has not been sent. Please try again.",
+      "sent_message": "Your message has been sent. Thank you!",
+      "send_button": "Send Message"
+    }
+  },
+  "counts": {
+    "happy_clients": "Happy Clients",
+    "projects": "Projects",
+    "hours_of_support": "Hours Of Support",
+    "hard_workers": "Hard Workers"
+  },
+  "form": {
+    "title": "Create your account",
+    "name": "Full Name",
+    "cin": "ID Number",
+    "confirm_password": "Confirm Password",
+    "register": "Register",
+    "emailLabel": "Email Address",
+    "passwordLabel": "Password",
+    "email": "Email Address",
+    "password": "Password",
+    "link": "I don't have an account",
+    "login": "Log In",
+    "title-conncet": "Log In"
+  },
+  "Informations personnelles": "Personal Information",
+  "Informations du Baccalauréat": "Baccalaureate Information",
+  "Informations du diplôme": "Diploma Information",
+  "Les expériences professionnelles": "Professional Experiences",
+  "Documents à uploader": "Upload Documents",
 
-        },
-        "Informations personnelles": "Personal Information",
-        "Informations du Baccalauréat": "Baccalaureate Information",
-        "Informations du diplôme": "Diploma Information",
-        "Les expériences professionnelles": "Professional Experiences",
-        "Documents à uploader": "Upload Documents",
-        
-          "CNE": "CNE:",
-          "Apogée (Facultatif)": "Apogee (Optional):",
-          "Région :": "Region:",
-          "Ville :": "City:",
-          "Email": "Email:",
-          "Confirmer Email": "Confirm Email:",
-          "Adresse 1": "Address 1:",
-          "Adresse 2": "Address 2:",
-          "Date de Naissance": "Date of Birth:",
-          "Lieu de Naissance": "Place of Birth:",
-          "Année du Baccalauréat:": "Year of Baccalaureate:",
-          "Choisissez une année": "Choose a year",
-          "Note au Baccalauréat:": "Grade in Baccalaureate:",
-          "Académie :": "Academy:",
-          "Choisissez une option": "Choose an option",
-          "Type de Bac :": "Type of Baccalaureate:",
-          "Mention :": "Mention:",
-          "Prev": "Previous",
-          "Next": "Next",
-          "mention_label": "Mention:",
-          "type_formation_label": "Type of Training:",
-          "university_label": "University:",
-          "type_etablissement_label": "Type of Institution:",
-          "etablissement_label": "Institution:",
-          "ville_label": "City:",
-          "type_centre_label": "Type of Center:",
-          "centre_label": "Center:",
-          "filiere_diplome_label": "Diploma Field:",
-          "diplome_details": "Diploma Details",
-          "Première Année": "First Year",
-          "Année": "Year:",
-          "Nombre d'Étudiants": "Number of Students:",
-          "Moyenne": "Average:",
-          "Classement": "Ranking:",
-          "Deuxième Année": "Second Year",
-          "Année:": "Year:",
-          "Nombre d'Étudiants :": "Number of Students:",
-          "Moyenne :": "Average:",
-          "Classement :": "Ranking:",
-          "Expérience Professionnelle": "Professional Experience",
-          "Expérience Professionnelle:": "Professional Experience:",
-          "Nombre d'années d'expérience:": "Years of Experience:",
-          "Fichiers": "Files",
-          "Baccalauréat:": "Baccalaureate:",
-          "Attestation de réussite ou diplôme:": "Success certificate or diploma:",
-          "Relevé de notes S1:": "Grade report S1:",
-          "Relevé de notes S2:": "Grade report S2:",
-          "Photo personnel:": "Personal photo:",
-          "Copie de CIN:": "Copy of ID card:",
-          "send":"Save"
-          
-        
-        
-        
- 
-    
-        
-      
-     
-      
-      
+  "CNE": "CNE:",
+  "Apogée (Facultatif)": "Apogee (Optional):",
+  "Région :": "Region:",
+  "Ville :": "City:",
+  "Email": "Email:",
+  "Confirmer Email": "Confirm Email:",
+  "Adresse 1": "Address 1:",
+  "Adresse 2": "Address 2:",
+  "Date de Naissance": "Date of Birth:",
+  "Lieu de Naissance": "Place of Birth:",
+  "Année du Baccalauréat:": "Year of Baccalaureate:",
+  "Choisissez une année": "Choose a year",
+  "Note au Baccalauréat:": "Grade in Baccalaureate:",
+  "Académie :": "Academy:",
+  "Choisissez une option": "Choose an option",
+  "Type de Bac :": "Type of Baccalaureate:",
+  "Mention :": "Mention:",
+  "Prev": "Previous",
+  "Next": "Next",
+  "mention_label": "Mention:",
+  "type_formation_label": "Type of Training:",
+  "university_label": "University:",
+  "type_etablissement_label": "Type of Institution:",
+  "etablissement_label": "Institution:",
+  "ville_label": "City:",
+  "type_centre_label": "Type of Center:",
+  "centre_label": "Center:",
+  "filiere_diplome_label": "Diploma Field:",
+  "diplome_details": "Diploma Details",
+  "Première Année": "First Year",
+  "Année": "Year:",
+  "Nombre d'Étudiants": "Number of Students:",
+  "Moyenne": "Average:",
+  "Classement": "Ranking:",
+  "Deuxième Année": "Second Year",
+  "Année:": "Year:",
+  "Nombre d'Étudiants :": "Number of Students:",
+  "Moyenne :": "Average:",
+  "Classement :": "Ranking:",
+  "Expérience Professionnelle": "Professional Experience",
+  "Expérience Professionnelle:": "Professional Experience:",
+  "Nombre d'années d'expérience:": "Years of Experience:",
+  "Fichiers": "Files",
+  "Baccalauréat:": "Baccalaureate:",
+  "Attestation de réussite ou diplôme:": "Success certificate or diploma:",
+  "Relevé de notes S1:": "Grade report S1:",
+  "Relevé de notes S2:": "Grade report S2:",
+  "Photo personnel:": "Personal photo:",
+  "Copie de CIN:": "Copy of ID card:",
+  "send": "Save",
+  "modal": {
+    "h5": "Edit Information",
+    "nomComplet": "Full Name",
+    "mail": "Email",
+    "adress1": "Address 1",
+    "adress2": "Address 2",
+    "dateNaissance": "Date of Birth",
+    "lieuNaissance": "Place of Birth",
+    "photoProfile": "Profile Picture",
+    "fermer": "Close",
+    "modify": "Save Changes"
+  },
+  "mail": "Email :",
+  "adress": "Address :",
+  "dateNaissance": "Date of Birth :",
+  "lieuNaissance": "Place of Birth :",
+  "botona": "Edit Information",
+  "headerCandidat": {
+    "Mes informations": "My Information",
+    "Les informations personnelles": "Personal Information",
+    "Les informations diplômes": "Education Information",
+    "Les informations bac": "High School Information",
+    "Les informations expériences professionnelles": "Professional Experience Information",
+    "Mes candidatures": "My Applications",
+    "Quitter": "Quit",
+    "Actualités": "News"
+  },
+  "candidaturePage": {
+    "Filière": "Major",
+    "Choix": "Choice",
+    "Année de candidature": "Application Year",
+    "Status": "Status",
+    "Supprimer votre candidature": "Delete Your Application",
+    "Modifier votre candidature": "Edit Your Application",
+    "Ordre": "Order :",
+    "Modification": {
+      "Choisissez une filière": "Choose a Major:",
+      "Choix 2": "Choice 2",
+      "Choix 3": "Choice 3",
+      "Fermer": "Close",
+      "Enregistrer les changements": "Save Changes",
+      "title": "Edit Application"
+    },
+    "Suppression": {
+      "Confirmation": "Confirmation",
+      "Supprimer": "Delete",
+      "Annuler": "Cancel",
+      "Êtes-vous sûr de vouloir supprimer votre candidature ?": "Are you sure you want to delete your application?"
+    }
+  },
+  "diplomePage": {
+    "Informations de la Deuxième Année": "Second Year Information :",
+    "Classement": "Ranking :",
+    "Moyenne": "Average :",
+    "Nombre d'Étudiants": "Number of Students :",
+    "Année": "Year :",
+    "Informations de la Première Année": "First Year Information :",
+    "Filière": "Major :",
+    "Type de Formation": "Training Type :",
+    "Établissement": "Institution :",
+    "Mention": "Honors :",
+    "Informations Générales du Diplôme": "General Diploma Information :",
+    "Modifier les informations du diplome": "Edit Diploma Information",
+    "Modifier les informations": "Edit Information",
+    "Baccalaureat": "Baccalaureate",
+    "Relevé de notes de première année": "First Year Transcript",
+    "Relevé de notes de deuxième année": "Second Year Transcript"
+  },
+  "bacPage": {
+    "Type de Bac": "Type of Baccalaureate :",
+    "Académie de Bac": "Baccalaureate Academy :",
+    "Mention Bac": "Baccalaureate Honors :",
+    "Année du Bac": "Year of Baccalaureate :",
+    "Modifier les informations du Bac": "Edit Baccalaureate Information",
+    "Note Bac": "Baccalaureate Grade"
+  },
+  "experiencePage": {
+    "Modifier l'expérience professionnelle": "Edit Professional Experience",
+    "Détails de l'expérience": "Experience Details",
+    "Nombre d'années": "Number of Years",
+    "Expérience": "Experience",
+    "Actions": "Actions",
+    "Modifier les informations": "Edit Information",
+    "Aucune expérience professionnelle disponible": "No professional experience available."
+  },
+  "actualitePage": {
+    "Description de l'Actualité": "News Description",
+    "Voir plus": "See More"
+  },
+  "headerChef": {
+    "Liste des candidat": "List of Candidates",
+    "Mes actualités": "My News"
+  },
+  "chefindex":{
+    "Experience Pro": "Professional Experience",
+    "Infos diplome": "Diploma Information",
+    "Infos bac": "High School Information",
+    "Ordre de choix": "Choice Order",
+    "Année Candidature": "Application Year",
+    "Status Candidature": "Application Status",
+    "Addresse": "Address",
+    "Email": "Email",
+    "Nom Complet": "Full Name",
+    "CIN": "National ID",
+    "Photo": "Photo",
+    "Détails du Bac": "Details of the Baccalaureate",
+    "Copie du Bac": "Copy of the Baccalaureate",
+    "Expérience Professionnelle": "Professional Experience",
+    "Nombre d'Années": "Number of Years",
+    "Aucune expérience professionnelle": "No professional experience"
+  },
+  "chefActualites":{
+    "Ajouter Actualité": "Add News",
+    "Actions": "Actions",
+    "Image": "Image",
+    "Description": "Description",
+    "Titre": "Title",
+    "Voir": "View",
+    "Supprimer": "Delete",
+    "Modifier": "Edit",
+    "Modifier Actualité": "Edit News",
+    "Confirmer la Modification": "Confirm Modification",
+    "Numero de CIN": "ID Card Number",
+    "motModifier": "Modify",
+    "Êtes-vous sûr de vouloir supprimer cette actualité": "Are you sure you want to delete this news?",
+    "Ajouter": "Add"
+  },
+    "gestionUtilisateurs": {
+      "Add User": "Add User",
+      "Full Name": "Full Name",
+      "Login": "Login",
+      "Password": "Password",
+      "Confirm Add": "Confirm Add",
+      "Deletion": {
+        "Confirmation": "Confirmation",
+        "Cancel": "Cancel",
+        "Delete": "Delete"
+      }
+    },
+    "Are you sure you want to delete this user": "Are you sure you want to delete this user",
+    "indexAgentScolarite": {
+      "Filière": "Major",
+      "Année": "Year",
+      "All": "All",
+      "Annee Candidature": "Application Year",
+      "Filière Candidature": "Application Major",
+      "CIN": "National ID",
+      "Nom Complet": "Full Name"
+    },
+    "bienvuenue": "Welcome"
+
+  
+  
 }
+

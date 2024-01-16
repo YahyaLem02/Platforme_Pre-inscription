@@ -1,7 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     session_start();
-    // Capturer les données du formulaire
 
     $cne = $_POST['CNE'];
     $appoge = isset($_POST['appoge']) ? $_POST['appoge'] : '';
@@ -35,7 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $moyenneDeuxiemeAnnee = $_POST['InofsDouxiemeAnnee-moyenne'];
     $classementDeuxiemeAnnee = $_POST['InofsDouxiemeAnnee-classement'];
 
-    // Charger le fichier XML
     $xmlFile = '../xml/baseXml.xml';
     $xml = new DOMDocument();
     $xml->load($xmlFile);
@@ -54,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $candidat->setAttribute('Utilisateur', $_SESSION['cin']);
 
     // Créer et ajouter des éléments pour le candidat
-    $candidat->appendChild($xml->createElement('nomComplet', $_SESSION['name'])); // Remplacez 'Nom Complet' par la valeur réelle
+    $candidat->appendChild($xml->createElement('nomComplet', $_SESSION['name']));
     $candidat->appendChild($xml->createElement('email', $email));
     $candidat->appendChild($xml->createElement('addresse1', $adresse1));
     $candidat->appendChild($xml->createElement('addresse2', $adresse2));
@@ -127,16 +125,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $cheminFichier = $dossierDestination . $nomFichier;
 
         if (move_uploaded_file($file['tmp_name'], $cheminFichier)) {
-            // Ici, vous devrez insérer le chemin $cheminFichier dans votre XML
-            // Utilisez les informations sur le type de document correspondant à $inputName
+        
             $idTypeDocument = $inputName;
-
-            // Insérer dans le XML en utilisant DOMDocument ou SimpleXML
-            // ...
 
             $document = $xml->createElement('Document');
 
-            // Créer et ajouter des éléments pour le bac
             $document->appendChild($xml->createElement('file', $cheminFichier));
             $document->setAttribute('idTypeDocument', $idTypeDocument);
         }
@@ -148,7 +141,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $messageSuccess = 'Données insérées avec succès.';
     header('Location: ../candidature/personalInfos?messageSuccess=' . urlencode($messageSuccess));
 
-    // Gérer les erreurs et envoyer une réponse à l'utilisateur
-    // Vous pouvez ajouter ici la logique pour la gestion des erreurs ou la confirmation d'insertion
 }
 ?>

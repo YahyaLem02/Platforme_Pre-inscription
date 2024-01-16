@@ -1,5 +1,7 @@
 <?php
 include '../Translation/headerTranslationCandidatConnect.php';
+include '../XmlOperations/Permissions.php';
+redirectIfNotAuthorized($VoirInfosPersonnelles);
 ?>
 <!DOCTYPE html>
 <html <?php echo $_SESSION['lang'] === 'arabic' ? 'lang="ar" dir="rtl"' : 'lang="fr" dir="ltr"'; ?>>
@@ -51,13 +53,13 @@ include '../Translation/headerTranslationCandidatConnect.php';
     $academie = '';
     $anneeBac = '';
     $noteBac = '';
-
+    
     if ($candidat) {
         $mentionBacNode = $xpath->query('bac/@mentionBac', $candidat)->item(0);
         if ($mentionBacNode) {
             $mentionBac = $mentionBacNode->nodeValue;
         }
-
+    
         $idTypeBacNode = $xpath->query('bac/@type', $candidat)->item(0);
         if ($idTypeBacNode) {
             $idTypeBac = $idTypeBacNode->nodeValue;
@@ -67,7 +69,7 @@ include '../Translation/headerTranslationCandidatConnect.php';
                 $typeBac = $typeBacNode->nodeValue;
             }
         }
-
+    
         $idAcademieNode = $xpath->query('bac/@accadime', $candidat)->item(0);
         if ($idAcademieNode) {
             $idAcademie = $idAcademieNode->nodeValue;
@@ -77,12 +79,12 @@ include '../Translation/headerTranslationCandidatConnect.php';
                 $academie = $academieNode->nodeValue;
             }
         }
-
+    
         $anneeBacNode = $xpath->query('bac/anneeBac', $candidat)->item(0);
         if ($anneeBacNode) {
             $anneeBac = $anneeBacNode->nodeValue;
         }
-
+    
         $noteBacNode = $xpath->query('bac/noteBac', $candidat)->item(0);
         if ($noteBacNode) {
             $noteBac = $noteBacNode->nodeValue;
@@ -98,10 +100,9 @@ include '../Translation/headerTranslationCandidatConnect.php';
                             <div class="row align-items-center">
                                 <div class="col-lg-6 mb-3 mb-lg-0">
                                     <div class="profile-pic">
-                                        <a href="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='baccalaureat']/file")->item(0)->nodeValue; ?>"
-                                            target="_blank">
-                                            <img src="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='baccalaureat']/file")->item(0)->nodeValue; ?>"
-                                                alt="Relevé de notes 1" id="fixed-size-image">
+                                        <a href="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='baccalaureat']/file")->item(0)->nodeValue; ?>" target="_blank">
+                                            <img src="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='baccalaureat']/file")->item(0)->nodeValue; ?>" alt="Relevé de notes 1"
+                                                id="fixed-size-image">
                                         </a>
                                     </div>
                                 </div>
@@ -109,53 +110,50 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                     <!-- Informations du Bac -->
                                     <ul class="list-unstyled mb-1-9">
                                         <li class="mb-2 mb-xl-3 display-28"><span
-                                                class="display-26 text-secondary me-2 font-weight-600">Type de
-                                                Bac:</span>
+                                                class="display-26 text-secondary me-2 font-weight-600"
+                                                data-translate="bacPage.Type de Bac"></span>
                                             <?php echo $typeBac; ?>
                                         </li>
                                         <li class="mb-2 mb-xl-3 display-28"><span
-                                                class="display-26 text-secondary me-2 font-weight-600">Académie de
-                                                Bac:</span>
+                                                class="display-26 text-secondary me-2 font-weight-600"
+                                                data-translate="bacPage.Académie de Bac"></span>
                                             <?php echo $academie; ?>
                                         </li>
                                         <li class="mb-2 mb-xl-3 display-28"><span
-                                                class="display-26 text-secondary me-2 font-weight-600">Mention
-                                                Bac:</span>
+                                                class="display-26 text-secondary me-2 font-weight-600"data-translate="bacPage.Mention Bac"></span>
                                             <?php echo $mentionBac; ?>
                                         </li>
                                         <li class="mb-2 mb-xl-3 display-28"><span
-                                                class="display-26 text-secondary me-2 font-weight-600">Année du
-                                                Bac:</span>
+                                                class="display-26 text-secondary me-2 font-weight-600"data-translate="bacPage.Année du Bac"></span>
                                             <?php echo $anneeBac; ?>
                                         </li>
                                         <li class="display-28"><span
-                                                class="display-26 text-secondary me-2 font-weight-600">Note Bac:</span>
+                                                class="display-26 text-secondary me-2 font-weight-600"data-translate="bacPage.Note Bac"></span>
                                             <?php echo $noteBac; ?>
                                         </li>
                                     </ul>
-                                    <!-- Bouton pour modifier les informations -->
+                                    <?php if($ModifierInfosPersonnelles){?>
                                     <button type="button" class="btn btn-primary d-block d-lg-inline-block"
-                                        data-bs-toggle="modal" data-bs-target="#modalBac">
-                                        Modifier les informations du Bac
+                                        data-bs-toggle="modal" data-bs-target="#modalBac"
+                                        data-translate="bacPage.Modifier les informations du Bac">
                                     </button>
+                                    <?php }?>
+
                                     <div class="modal fade" id="modalBac" tabindex="-1"
                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Modifier les
-                                                        informations
-                                                        du Bac</h5>
+                                                    <h5 class="modal-title" id="exampleModalLabel"
+                                                        data-translate="bacPage.Modifier les informations du Bac"></h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     <form method="POST" action="../XmlOperations/modifyBacInfos.php"
                                                         enctype="multipart/form-data">
-                                                        <!-- Ajoutez ici les champs pour modifier les informations du Bac -->
                                                         <div class="mb-3">
-                                                            <label for="anneeBac" class="form-label">Année du
-                                                                Baccalauréat</label>
+                                                            <label for="anneeBac" class="form-label" data-translate="bacPage.Année du Bac"></label>
                                                             <select id="anneeBac" name="anneeBac">
                                                                 <option value="" selected disabled>
                                                                     <?php echo $anneeBac; ?>
@@ -170,10 +168,10 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                                             </select>
                                                         </div>
                                                         <div class="mb-3">
-                                                            <label for="noteBac" class="form-label">Note au
-                                                                Baccalauréat</label>
+                                                            <label for="noteBac" class="form-label"data-translate="bacPage.Note Bac"></label>
                                                             <input type="number" class="form-control" id="noteBac"
-                                                                name="noteBac" value="<?php echo $noteBac; ?>" max="20">
+                                                                name="noteBac" value="<?php echo $noteBac; ?>"
+                                                                max="20">
                                                         </div>
                                                         <div class="bac-details mt-3">
                                                             <div class="input-group">
@@ -190,10 +188,9 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                                                         <?php echo $academie; ?>
                                                                     </option>
                                                                     <?php foreach ($academies as $academie): ?>
-                                                                        <option
-                                                                            value="<?php echo $academie->getAttribute('idAcademie'); ?>">
-                                                                            <?php echo $academie->nodeValue; ?>
-                                                                        </option>
+                                                                    <option value="<?php echo $academie->getAttribute('idAcademie'); ?>">
+                                                                        <?php echo $academie->nodeValue; ?>
+                                                                    </option>
                                                                     <?php endforeach; ?>
                                                                 </select>
                                                             </div>
@@ -204,7 +201,8 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                                                 $xpath = new DOMXPath($xml);
                                                                 $typesBac = $xpath->query('//TypeBac');
                                                                 ?>
-                                                                <label for="typeBac" data-translate="Type de Bac :">Type
+                                                                <label for="typeBac"
+                                                                    data-translate="Type de Bac :">Type
                                                                     de
                                                                     Bac :</label>
                                                                 <select name="typeBac" id="typeBac">
@@ -212,10 +210,9 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                                                         <?php echo $typeBac; ?>
                                                                     </option>
                                                                     <?php foreach ($typesBac as $typeBac): ?>
-                                                                        <option
-                                                                            value="<?php echo $typeBac->getAttribute('idType'); ?>">
-                                                                            <?php echo $typeBac->nodeValue; ?>
-                                                                        </option>
+                                                                    <option value="<?php echo $typeBac->getAttribute('idType'); ?>">
+                                                                        <?php echo $typeBac->nodeValue; ?>
+                                                                    </option>
                                                                     <?php endforeach; ?>
                                                                 </select>
                                                             </div>
@@ -226,33 +223,32 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                                                 $xpath = new DOMXPath($xml);
                                                                 $mentions = $xpath->query('//Mention');
                                                                 ?>
-                                                                <label for="mention1" data-translate="Mention :">Mention
+                                                                <label for="mention1"
+                                                                    data-translate="Mention :">Mention
                                                                     :</label>
                                                                 <select name="mentionBac" id="mention1">
                                                                     <option value="">
                                                                         <?php echo $mentionBac; ?>
                                                                     </option>
                                                                     <?php foreach ($mentions as $mention): ?>
-                                                                        <option
-                                                                            value="<?php echo $mention->getAttribute('idMention'); ?>">
-                                                                            <?php echo $mention->nodeValue; ?>
-                                                                        </option>
+                                                                    <option value="<?php echo $mention->getAttribute('idMention'); ?>">
+                                                                        <?php echo $mention->nodeValue; ?>
+                                                                    </option>
                                                                     <?php endforeach; ?>
                                                                 </select>
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label for="photoProfil"
-                                                                    class="form-label">Baccalaureat</label>
-                                                                <input type="file" class="form-control" id="photoProfil"
-                                                                    name="bac">
+                                                                    class="form-label" data-translate="diplomePage.Baccalaureat"></label>
+                                                                <input type="file" class="form-control"
+                                                                    id="photoProfil" name="bac">
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary"
-                                                                data-bs-dismiss="modal">Fermer</button>
-                                                            <button type="submit" class="btn btn-primary">Enregistrer
-                                                                les
-                                                                modifications</button>
+                                                                data-bs-dismiss="modal"data-translate="candidaturePage.Modification.Fermer"></button>
+                                                            <button type="submit"
+                                                                class="btn btn-primary"data-translate="candidaturePage.Modification.Enregistrer les changements"></button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -279,37 +275,27 @@ include '../Translation/headerTranslationCandidatConnect.php';
         @media (max-width: 767px) {
             .profile-pic {
                 width: 150px;
-                /* Taille pour les écrans plus petits */
                 height: 150px;
-                /* Taille pour les écrans plus petits */
                 margin-left: 50px;
-                /* Marge ajustée pour les écrans plus petits */
                 margin-right: 50px;
-                /* Marge ajustée pour les écrans plus petits */
             }
         }
 
-        /* Pour les tablettes et les ordinateurs de bureau */
         @media (min-width: 768px) {
             .profile-pic {
                 width: 200px;
-                /* Taille pour les tablettes et les ordinateurs de bureau */
                 height: 200px;
-                /* Taille pour les tablettes et les ordinateurs de bureau */
                 margin-left: 100px;
-                /* Marge ajustée pour les tablettes et les ordinateurs de bureau */
                 margin-right: 100px;
-                /* Marge ajustée pour les tablettes et les ordinateurs de bureau */
             }
         }
 
-        /* Pour les écrans plus larges (par exemple, les grands ordinateurs de bureau) */
         @media (min-width: 1200px) {
             .profile-pic {
                 width: 250px;
-                /* Taille pour les grands écrans */
+           
                 height: 250px;
-                /* Taille pour les grands écrans */
+       
                 margin-left: 150px;
                 /* Marge ajustée pour les grands écrans */
                 margin-right: 150px;
@@ -319,7 +305,6 @@ include '../Translation/headerTranslationCandidatConnect.php';
 
         .profile-pic img {
             width: 100%;
-            /* assurez-vous que l'image remplit le cercle */
             height: auto;
             display: block;
         }
@@ -459,24 +444,24 @@ include '../Translation/headerTranslationCandidatConnect.php';
     </style>
     <?php include '../Layouts/footer.html'; ?>
     <?php
-
+    
     if (isset($_GET['messageSuccess'])) {
         $messageSuccess = urldecode($_GET['messageSuccess']);
         echo "<script src='../node_modules/sweetalert/dist/sweetalert.min.js'></script>";
         echo "<script>
-                                                                                                                            document.addEventListener('DOMContentLoaded', function() {
-                                                                                                                                swal('Succès', '$messageSuccess', 'success');
-                                                                                                                            });
-                                                                                                                            </script>";
+                                                                                                                                document.addEventListener('DOMContentLoaded', function() {
+                                                                                                                                    swal('Succès', '$messageSuccess', 'success');
+                                                                                                                                });
+                                                                                                                                </script>";
     }
     if (isset($_GET['messageError'])) {
         $messageError = urldecode($_GET['messageError']);
         echo "<script src='node_modules/sweetalert/dist/sweetalert.min.js'></script>";
         echo "<script>
-                                                                                                                            document.addEventListener('DOMContentLoaded', function() {
-                                                                                                                                swal('Erreur', '$messageError', 'error');
-                                                                                                                            });
-                                                                                                                            </script>";
+                                                                                                                                document.addEventListener('DOMContentLoaded', function() {
+                                                                                                                                    swal('Erreur', '$messageError', 'error');
+                                                                                                                                });
+                                                                                                                                </script>";
     }
     ?>
     <script>
@@ -489,6 +474,11 @@ include '../Translation/headerTranslationCandidatConnect.php';
         const lang = <?php echo json_encode($lang); ?>;
     </script>
     <script src="../Translation/languageConncet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+<script src="../Translation/languageConncet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

@@ -9,10 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nouveauChoixFiliere2 = $_POST['choixFiliere2'];
     $nouveauChoixFiliere3 = $_POST['choixFiliere3'];
 
-    // Rechercher la candidature du candidat
     $candidature = $xml->xpath("//Candidatures/candidature[@Candidat='$candidat']")[0];
 
-    // Vérifier et modifier les choix de filière s'ils ne sont pas vides
     if (!empty($nouveauChoixFiliere1)) {
         $choix1 = $candidature->choix[0];
         $choix1['idFiliereSouhaite'] = $nouveauChoixFiliere1;
@@ -28,11 +26,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $choix3['idFiliereSouhaite'] = $nouveauChoixFiliere3;
     }
 
-    // Enregistrement des modifications dans le fichier XML
     $xml->asXML($xmlFile);
     
     $messageSuccess = 'Les informations ont été mises à jour avec succès !';
     header('Location: ../candidature/candidatureInfos?messageSuccess=' . urlencode($messageSuccess));
-    exit(); // Assurez-vous de terminer l'exécution du script après la redirection
+    exit(); 
 }
 ?>

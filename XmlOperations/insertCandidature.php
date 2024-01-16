@@ -10,13 +10,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $candidatures = $xml->xpath("//Candidatures")[0];
     $candidature = $candidatures->addChild('candidature');
-    $candidature->addAttribute('Candidat', $_SESSION['cin']); // Année actuelle
+    $candidature->addAttribute('Candidat', $_SESSION['cin']);
 
 
     $candidature->addChild('status', 'En cours de traitement');
     $candidature->addChild('AnnneCandidature', (date("Y") - 1) . '-' . date("Y")); 
 
-    // Ajouter les éléments 'choix' dans 'candidature'
     $choix1 = $candidature->addChild('choix');
     $choix1->addAttribute('idFiliereSouhaite', $choixFiliere1);
     $choix1->addChild('ordre', 1);
@@ -29,9 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $choix3->addAttribute('idFiliereSouhaite', $choixFiliere3);
     $choix3->addChild('ordre', 3);
 
-    // Attribut 'Candidat' est requis dans le schéma, veuillez l'ajouter avec la valeur appropriée
 
-    // Enregistrement des modifications dans le fichier XML
     $xml->asXML($xmlFile);
     $messageSuccess = 'Données insérées avec succès.';
     header('Location: ../candidature/candidatureInfos?messageSuccess=' . urlencode($messageSuccess));}

@@ -47,17 +47,19 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             $NomFiliere = (string) $xml->xpath("//FiliereSouhaite[@idFiliere='" . $Filiere . "']/intituleFiliere")[0];
             $_SESSION['NomFiliere'] = $NomFiliere;
             header('Location: ../ChefDepartement/index.php');
+
+        } elseif ($role == 'rol3') {
+            $_SESSION['root'] = true;
+            header('Location: ../SuperAdmin/index.php');
+        }
+        elseif ($role == 'rol4') {
+            $_SESSION['agentScolarite'] = true;
+            header('Location: ../agentScolarite/index.php');
         }
     } else {
         $ErrorMessage = urlencode('Le login n existe pas. Veuillez vérifier vos informations.');
         header('Location: ../Welcome/connecter.php?messageError=' . $ErrorMessage);
         exit();
     }
-} else {
-    // Les paramètres email ou password ne sont pas définis dans $_POST
-    // Peut-être afficher un message d'erreur ou rediriger vers une page d'erreur appropriée
-    // Par exemple :
-    // header('Location: ../error.php');
-    // exit;
 }
 ?>

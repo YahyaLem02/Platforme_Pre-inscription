@@ -1271,12 +1271,12 @@
             <password>yahyayahya</password>
         </Utilisateur>
         <Utilisateur CIN="MD222222" Langue="french" role="rol1">
-            <nomComplet>takwin</nomComplet>
+            <nomComplet>Mourad</nomComplet>
             <login>takwin@gmail.com</login>
             <password>yahyayahya</password>
         </Utilisateur>
         <Utilisateur CIN="MD990212" Langue="arabic" role="rol1">
-            <nomComplet>said</nomComplet>
+            <nomComplet>said sahnouni</nomComplet>
             <login>said@gmail.com</login>
             <password>yahyayahya</password>
         </Utilisateur>
@@ -1291,7 +1291,7 @@
             <password>yahyayahya</password>
         </Utilisateur>
         <Utilisateur CIN="M356373" Langue="french" role="rol2" Dep="GI">
-            <nomComplet>Mogammed Essalih</nomComplet>
+            <nomComplet>Mohammed Essalih</nomComplet>
             <login>me@gmail.com</login>
             <password>yahyayahya</password>
         </Utilisateur>
@@ -1301,8 +1301,19 @@
             <password>yahyayahya</password>
         </Utilisateur>
         <Utilisateur CIN="M9563" Langue="french" role="rol2" Dep="TIMQ">
-            <nomComplet>admin  timq</nomComplet>
+            <nomComplet>admin de department timq</nomComplet>
             <login>timq@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+        <Utilisateur CIN="XX1222" Langue="french" role="rol3">
+            <nomComplet>Super Admin</nomComplet>
+            <login>root@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+        
+        <Utilisateur CIN="MD42343" role="rol4" Langue="french">
+            <nomComplet>Lhussein scolarite</nomComplet>
+            <login>houss@gmail.com</login>
             <password>yahyayahya</password>
         </Utilisateur>
     </Utilisateurs>
@@ -1319,7 +1330,7 @@
     </Langues>
     <Candidats>
         <candidat CNE="EA237793" appoge="1234556" Utilisateur="MD223344">
-            <nomComplet>Yarbi tsdaq</nomComplet>
+            <nomComplet>abdelmoughith elaumari</nomComplet>
             <email>abdelmoughith@gmail.com</email>
             <addresse1>hay el jadid e</addresse1>
             <addresse2>hay imlil n 29</addresse2>
@@ -1344,7 +1355,7 @@
                 </InofsDeuxiemeAnnee>
             </Diplome>
             <experienceProfisonnelle>
-                <experiencePro>no work</experiencePro>
+                <experiencePro>Test Experience </experiencePro>
                 <nombreAnne>1</nombreAnne>
             </experienceProfisonnelle>
             <Document idTypeDocument="baccalaureat">
@@ -1367,8 +1378,8 @@
             </Document>
         </candidat>
         <candidat CNE="EA237792" appoge="1234556" Utilisateur="MD26234">
-            <nomComplet>Yarbi tsdaq</nomComplet>
-            <email>abdelmoughith@gmail.com</email>
+            <nomComplet>Karim ahmaaal</nomComplet>
+            <email>karim@gmail.com</email>
             <addresse1>hay el jadid e</addresse1>
             <addresse2>hay imlil n 29</addresse2>
             <dateNaissance>2002-05-11</dateNaissance>
@@ -1392,7 +1403,7 @@
                 </InofsDeuxiemeAnnee>
             </Diplome>
             <experienceProfisonnelle>
-                <experiencePro>no work</experiencePro>
+                <experiencePro>Test Experience2</experiencePro>
                 <nombreAnne>1</nombreAnne>
             </experienceProfisonnelle>
             <Document idTypeDocument="baccalaureat">
@@ -1415,8 +1426,8 @@
             </Document>
         </candidat>
         <candidat CNE="EA2377923" appoge="1234556" Utilisateur="MD26234">
-            <nomComplet>Yarbi tsdaq</nomComplet>
-            <email>abdelmoughith@gmail.com</email>
+            <nomComplet>Khadija idrissi</nomComplet>
+            <email>Khadija@gmail.com</email>
             <addresse1>hay el jadid e</addresse1>
             <addresse2>hay imlil n 29</addresse2>
             <dateNaissance>2002-05-11</dateNaissance>
@@ -1440,7 +1451,7 @@
                 </InofsDeuxiemeAnnee>
             </Diplome>
             <experienceProfisonnelle>
-                <experiencePro>no work</experiencePro>
+                <experiencePro>Test Experience 3</experiencePro>
                 <nombreAnne>1</nombreAnne>
             </experienceProfisonnelle>
             <Document idTypeDocument="baccalaureat">
@@ -1463,8 +1474,8 @@
             </Document>
         </candidat>
         <candidat CNE="EA237793232" appoge="1234556" Utilisateur="MD26234">
-            <nomComplet>Yarbi tsdaq</nomComplet>
-            <email>abdelmoughith@gmail.com</email>
+            <nomComplet>Wail arabas</nomComplet>
+            <email>Wail@gmail.com</email>
             <addresse1>hay el jadid e</addresse1>
             <addresse2>hay imlil n 29</addresse2>
             <dateNaissance>2002-05-11</dateNaissance>
@@ -1488,7 +1499,7 @@
                 </InofsDeuxiemeAnnee>
             </Diplome>
             <experienceProfisonnelle>
-                <experiencePro>no work</experiencePro>
+                <experiencePro>Test Experience999</experiencePro>
                 <nombreAnne>1</nombreAnne>
             </experienceProfisonnelle>
             <Document idTypeDocument="baccalaureat">
@@ -1511,8 +1522,8 @@
             </Document>
         </candidat>
         <candidat CNE="EA2373232792" appoge="1234556" Utilisateur="MD26234">
-            <nomComplet>Yarbi tsdaq</nomComplet>
-            <email>abdelmoughith@gmail.com</email>
+            <nomComplet>Khawla lemkharbech</nomComplet>
+            <email>Khawla@gmail.com</email>
             <addresse1>hay el jadid e</addresse1>
             <addresse2>hay imlil n 29</addresse2>
             <dateNaissance>2002-05-11</dateNaissance>
@@ -1536,7 +1547,7 @@
                 </InofsDeuxiemeAnnee>
             </Diplome>
             <experienceProfisonnelle>
-                <experiencePro>no work</experiencePro>
+                <experiencePro>Test Experience</experiencePro>
                 <nombreAnne>1</nombreAnne>
             </experienceProfisonnelle>
             <Document idTypeDocument="baccalaureat">
@@ -1559,8 +1570,8 @@
             </Document>
         </candidat>
         <candidat CNE="EA2377932232322" appoge="1234556" Utilisateur="MD26234">
-            <nomComplet>Yarbi tsdaq</nomComplet>
-            <email>abdelmoughith@gmail.com</email>
+            <nomComplet>Naima tariq</nomComplet>
+            <email>Naima@gmail.com</email>
             <addresse1>hay el jadid e</addresse1>
             <addresse2>hay imlil n 29</addresse2>
             <dateNaissance>2002-05-11</dateNaissance>
@@ -1584,7 +1595,7 @@
                 </InofsDeuxiemeAnnee>
             </Diplome>
             <experienceProfisonnelle>
-                <experiencePro>no work</experiencePro>
+                <experiencePro>Test Experience 999</experiencePro>
                 <nombreAnne>1</nombreAnne>
             </experienceProfisonnelle>
             <Document idTypeDocument="baccalaureat">
@@ -1779,7 +1790,7 @@
                 </InofsDeuxiemeAnnee>
             </Diplome>
             <experienceProfisonnelle>
-                <experiencePro>hhhhhhbbllkllk</experiencePro>
+                <experiencePro>teste test test</experiencePro>
                 <nombreAnne>21</nombreAnne>
             </experienceProfisonnelle>
             <Document idTypeDocument="baccalaureat">
@@ -1903,24 +1914,18 @@
             <role>Candidat</role>
         </Role>
         <Role IdRole="rol2">
-            <role>Chef Departement</role>
+            <role>Chef de Département</role>
+        </Role>
+        <Role IdRole="rol4">
+            <role>Agent de Scolarité</role>
+        </Role>
+        <Role IdRole="rol3">
+            <role>Super admin</role>
         </Role>
 
     </Roles>
     <Candidatures>
-        <candidature Candidat="MD990212">
-            <status>En cours de traitement</status>
-            <AnnneCandidature>2023-2024</AnnneCandidature>
-            <choix idFiliereSouhaite="Fil2">
-                <ordre>1</ordre>
-            </choix>
-            <choix idFiliereSouhaite="Fil1">
-                <ordre>2</ordre>
-            </choix>
-            <choix idFiliereSouhaite="Fil3">
-                <ordre>3</ordre>
-            </choix>
-        </candidature>
+
         <candidature Candidat="MD324243">
             <status>En cours de traitement</status>
             <AnnneCandidature>2023-2024</AnnneCandidature>
@@ -1963,20 +1968,66 @@
         </Departement>
     </Departements>
     <Actualites>
-      
-        
-        
         <Actualite idActualite="EO924" idChef="M356373">
             <Titre>la creme de la cerme</Titre>
             <Description>rak khadam</Description>
             <Image>../assets/imageCandidature/65a1c8db7095a_banner.jpg</Image>
         </Actualite>
-        
         <Actualite idActualite="WM108" idChef="M3563">
             <Titre>ana gim</Titre>
             <Description>desc gim</Description>
             <Image>../assets/imageCandidature/65a08ad4586f9_validerrr(1).jpg</Image>
         </Actualite>
-    <Actualite idActualite="OG403" idChef="M9563"><Titre>Annonce mouhem</Titre><Description>Li dfa3 l timq maraytqbalsh o l concours maratjibouch</Description><Image>../assets/imageCandidature/65a1b1a7e32a4_4373396.png</Image></Actualite><Actualite idActualite="UM391" idChef="M356373"><Titre>nenene</Titre><Description>qsqsdqsd</Description><Image>../assets/imageCandidature/65a1c304a772c_WhatsApp Image 2024-01-10 à 02.02.52_6b449236.jpg</Image></Actualite></Actualites>
+        <Actualite idActualite="OG403" idChef="M9563">
+            <Titre>Annonce mouhem</Titre>
+            <Description>Li dfa3 l timq maraytqbalsh o l concours maratjibouch</Description>
+            <Image>../assets/imageCandidature/65a1b1a7e32a4_4373396.png</Image>
+        </Actualite>
+        <Actualite idActualite="UM391" idChef="M356373">
+            <Titre>nenene</Titre>
+            <Description>qsqsdqsd</Description>
+            <Image>../assets/imageCandidature/65a1c304a772c_WhatsApp Image 2024-01-10 à 02.02.52_6b449236.jpg</Image>
+        </Actualite>
+    </Actualites>
+    <Permissions>
+        <Permission IdPermission="per2" Role="rol1" state="1">
+            <for>Voir actualités</for>
+        </Permission>
+        <Permission IdPermission="per3" Role="rol1" state="1">
+            <for>Voir les informations personnelles</for>
+        </Permission>
+        <Permission IdPermission="per5" Role="rol1" state="1">
+            <for>Modifier les informations personnelles</for>
+        </Permission>
+        <Permission IdPermission="per6" Role="rol1" state="0">
+            <for>Voir candidatures</for>
+        </Permission>
+        <Permission IdPermission="per7" Role="rol1" state="0">
+            <for>Modifier candidature</for>
+        </Permission>
+        <Permission IdPermission="per8" Role="rol1" state="0">
+            <for>Ajouter candidature</for>
+        </Permission>
+        <Permission IdPermission="per9" Role="rol1" state="1">
+            <for>Supprimer candidature</for>
+        </Permission>
+        <Permission IdPermission="per10" Role="rol2" state="1">
+            <for>Consulter candidatures</for>
+        </Permission>
+        <Permission IdPermission="per11" Role="rol2" state="1">
+            <for>Gestion actualités</for>
+        </Permission>
+        <Permission IdPermission="per12" Role="rol2" state="1">
+            <for>Ajouter actualité</for>
+        </Permission>
+        <Permission IdPermission="per13" Role="rol2" state="1">
+            <for>Supprimer actualité</for>
+        </Permission>
+        <Permission IdPermission="per14" Role="rol2" state="1">
+            <for>Modifier actualité</for>
+        </Permission>
+
+    </Permissions>
+
 
 </root>

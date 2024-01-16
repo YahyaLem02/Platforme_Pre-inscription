@@ -288,7 +288,6 @@ include '../Translation/headerTranslationCandidatConnect.php';
                         <div class="diplome-details mt-3">
                             <h3 data-translate="diplome_details">Diplome</h3>
 
-                            <!-- Première Année -->
                             <div class="annee-details mt-3">
                                 <div class="input-group">
                                     <?php

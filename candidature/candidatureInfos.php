@@ -1,25 +1,18 @@
 <?php
 include '../Translation/headerTranslationCandidatConnect.php';
+include '../XmlOperations/Permissions.php';
+redirectIfNotAuthorized($VoirCandidatures);
 ?>
 <?php
-// Charger le fichier XML
-$xmlFile = '../xml/BaseXml.xml'; // Chemin vers le fichier XML
-
-// Charger le fichier XML en tant qu'objet DOMDocument
+$xmlFile = '../xml/BaseXml.xml';
 $xml = new DOMDocument();
 $xml->load($xmlFile);
 
-// Créer un objet DOMXPath
 $xpath = new DOMXPath($xml);
-
-// Utiliser XPath pour récupérer la candidature du candidat spécifique
 $candidature = $xpath->query("//candidature[@Candidat='{$_SESSION['cin']}']")->item(0);
-
-// Initialiser des variables par défaut
 $candidatureData = [];
 $erreurCandidature = '';
 
-// Vérifier s'il y a une candidature pour ce candidat
 if ($candidature !== null) {
     $status = $xpath->query('status', $candidature)->item(0)->nodeValue;
     $anneeCandidature = $xpath->query('AnnneCandidature', $candidature)->item(0)->nodeValue;
@@ -40,8 +33,6 @@ if ($candidature !== null) {
 } else {
     $erreurCandidature = 'Aucune candidature trouvée pour ce candidat.';
 }
-
-// Obtention des informations sur les filières disponibles
 $filiereList = [];
 $fileres = $xpath->query('//FiliereSouhaite');
 foreach ($fileres as $filiere) {
@@ -101,10 +92,10 @@ foreach ($fileres as $filiere) {
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
-                                                    <th>Status</th>
-                                                    <th>Année de candidature</th>
-                                                    <th>Choix</th>
-                                                    <th>Filière</th>
+                                                    <th data-translate="candidaturePage.Status"></th>
+                                                    <th data-translate="candidaturePage.Année de candidature"></th>
+                                                    <th data-translate="candidaturePage.Choix"></th>
+                                                    <th data-translate="candidaturePage.Filière"></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -114,7 +105,7 @@ foreach ($fileres as $filiere) {
                                                     <td rowspan="<?php echo count($candidatureData['choix']); ?>"><?php echo $candidatureData['status']; ?></td>
                                                     <td rowspan="<?php echo count($candidatureData['choix']); ?>"><?php echo $candidatureData['anneeCandidature']; ?></td>
                                                     <?php endif; ?>
-                                                    <td>Ordre: <?php echo $choix['ordre']; ?></td>
+                                                    <td><?php echo $choix['ordre']; ?></td>
                                                     <td><?php echo isset($filiereList[$choix['idFiliere']]) ? $filiereList[$choix['idFiliere']] : 'Non trouvé'; ?></td>
                                                 </tr>
                                                 <?php endforeach; ?>
@@ -125,15 +116,22 @@ foreach ($fileres as $filiere) {
                                     <p><?php echo isset($erreurCandidature) ? $erreurCandidature : 'Aucune candidature trouvée pour ce candidat.'; ?></p>
                                     <?php endif; ?>
                                     <?php if (!empty($candidatureData)) : ?>
+                                    <?php if($ModifierCandidature){?>
                                     <button type="button" class="btn btn-warning" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal" data-type="modification">
-                                        Modifier votre candidature
+                                        data-bs-target="#exampleModal" data-type="modification"
+                                        data-translate="candidaturePage.Modifier votre candidature">
                                     </button>
+                                    <?php }?>
+
                                     <!-- Bouton de suppression -->
+                                    <?php if($SupprimerCandidature){?>
+
                                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                        data-bs-target="#confirmModal">
-                                        Supprimer votre candidature
+                                        data-bs-target="#confirmModal"
+                                        data-translate="candidaturePage.Supprimer votre candidature">
                                     </button>
+                                    <?php }?>
+
 
                                     <!-- Modal de confirmation -->
                                     <div class="modal fade" id="confirmModal" tabindex="-1"
@@ -141,45 +139,49 @@ foreach ($fileres as $filiere) {
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="confirmModalLabel">Confirmation</h5>
+                                                    <h5 class="modal-title" id="confirmModalLabel"
+                                                        data-translate="candidaturePage.Suppression.Confirmation"></h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
-                                                <div class="modal-body">
-                                                    Êtes-vous sûr de vouloir supprimer votre candidature ?
+                                                <div class="modal-body"
+                                                    data-translate="candidaturePage.Suppression.Êtes-vous sûr de vouloir supprimer votre candidature ?">
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"
-                                                        data-bs-dismiss="modal">Annuler</button>
+                                                        data-bs-dismiss="modal"
+                                                        data-translate="candidaturePage.Suppression.Annuler"></button>
                                                     <a href="../XmlOperations/DeleteCandidature.php"
-                                                        class="btn btn-danger">Supprimer</a>
+                                                        class="btn btn-danger"
+                                                        data-translate="candidaturePage.Suppression.Supprimer"></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                     <?php endif  ?>
                                     <?php if (empty($candidatureData)) : ?>
+                                    <?php if($AjouterCandidature){?>
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal" data-type="ajout">
                                         Ajouter candidature
                                     </button>
+                                    <?php }?>
                                     <?php endif; ?>
                                     <div class="modal fade" id="exampleModal" tabindex="-1"
                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Titre du modal</h5>
+                                                    <h5 class="modal-title" id="exampleModalLabel"
+                                                        data-translate="candidaturePage.Modification.title"></h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Fermer"></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     <form method="post" action="" id="modalForm">
                                                         <div class="mb-3">
-                                                            <label for="choixFiliere1" class="form-label">Choisissez
-                                                                une
-                                                                filière :</label>
+                                                            <label for="choixFiliere1"
+                                                                class="form-label"data-translate="candidaturePage.Modification.Choisissez une filière "></label>
                                                             <select name="choixFiliere1" id="choixFiliere1"
                                                                 class="form-select choixFiliere">
                                                                 <option value=""
@@ -220,11 +222,10 @@ foreach ($fileres as $filiere) {
                                                             </select>
 
                                                         </div>
-
                                                         <!-- Menu déroulant 2 -->
                                                         <div class="mb-3">
-                                                            <label for="choixFiliere2" class="form-label">Choix 2
-                                                                :</label>
+                                                            <label for="choixFiliere2" class="form-label"
+                                                                data-translate="candidaturePage.Modification.Choix 2">:</label>
                                                             <select name="choixFiliere2" id="choixFiliere2"
                                                                 class="form-select choixFiliere">
                                                                 <option value=""
@@ -254,8 +255,9 @@ foreach ($fileres as $filiere) {
                                                         </div>
                                                         <!-- Menu déroulant 3 -->
                                                         <div class="mb-3">
-                                                            <label for="choixFiliere3" class="form-label">Choix 3
-                                                                :</label>
+                                                            <label for="choixFiliere3" class="form-label"
+                                                                data-translate="candidaturePage.Modification.Choix 3">
+                                                            </label>
                                                             <select name="choixFiliere3" id="choixFiliere3"
                                                                 class="form-select choixFiliere">
                                                                 <option value=""
@@ -288,10 +290,10 @@ foreach ($fileres as $filiere) {
                                                 </form>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"
-                                                        data-bs-dismiss="modal">Fermer</button>
-                                                    <!-- Bouton pour soumettre le formulaire -->
-                                                    <button type="submit" class="btn btn-primary"
-                                                        id="submitBtn">Enregistrer les changements</button>
+                                                        data-bs-dismiss="modal"
+                                                        data-translate="candidaturePage.Modification.Fermer"></button>
+                                                    <button type="submit" class="btn btn-primary" id="submitBtn"
+                                                        data-translate="candidaturePage.Modification.Enregistrer les changements"></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -311,47 +313,36 @@ foreach ($fileres as $filiere) {
     <?php include '../Layouts/footer.html'; ?>
 
 
-    <!-- Votre HTML existant -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            // Get references to the dropdown menus
             var choixFiliere1 = $('#choixFiliere1');
             var choixFiliere2 = $('#choixFiliere2');
             var choixFiliere3 = $('#choixFiliere3');
 
-            // Event handler for changing the first dropdown menu (#choixFiliere1)
             choixFiliere1.on('change', function() {
-                // Get the selected option value
                 var selectedOption = $(this).val();
 
-                // Reset the second dropdown menu (#choixFiliere2)
                 choixFiliere2.val('');
                 choixFiliere2.find('option').removeAttr('disabled');
 
-                // Disable the selected option in the second dropdown menu
                 if (selectedOption !== '') {
                     choixFiliere2.find('option[value="' + selectedOption + '"]').attr('disabled',
                         'disabled');
                 }
             });
 
-            // Event handler for changing the second dropdown menu (#choixFiliere2)
             choixFiliere2.on('change', function() {
-                // Get the selected option value
                 var selectedOption = $(this).val();
 
-                // Reset the third dropdown menu (#choixFiliere3)
                 choixFiliere3.val('');
                 choixFiliere3.find('option').removeAttr('disabled');
 
-                // Disable the selected options in the third dropdown menu
                 if (selectedOption !== '') {
                     choixFiliere3.find('option[value="' + selectedOption + '"]').attr('disabled',
                         'disabled');
                 }
 
-                // Disable the options selected in the first dropdown menu (#choixFiliere1)
                 var selectedOption1 = choixFiliere1.val();
                 if (selectedOption1 !== '') {
                     choixFiliere3.find('option[value="' + selectedOption1 + '"]').attr('disabled',
@@ -363,7 +354,6 @@ foreach ($fileres as $filiere) {
 
 
 
-    <!-- Votre HTML existant -->
 
     <script>
         var modalTriggerButtons = document.querySelectorAll('[data-bs-target="#exampleModal"]');
@@ -396,6 +386,11 @@ foreach ($fileres as $filiere) {
     </script>
     <script src="../Translation/languageConncet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #pad {
+            padding: 2 px;
+        }
+    </style>
 </body>
 
 </html>

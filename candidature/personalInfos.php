@@ -1,5 +1,7 @@
 <?php
 include '../Translation/headerTranslationCandidatConnect.php';
+include '../XmlOperations/Permissions.php';
+redirectIfNotAuthorized($VoirInfosPersonnelles);
 ?>
 <!DOCTYPE html>
 <html <?php echo $_SESSION['lang'] === 'arabic' ? 'lang="ar" dir="rtl"' : 'lang="fr" dir="ltr"'; ?>>
@@ -38,20 +40,15 @@ include '../Translation/headerTranslationCandidatConnect.php';
 <body>
     <?php include '../Layouts/header.php'; ?>
     <?php
-    // Charger le fichier XML
-    $xmlFile = '../xml/BaseXml.xml'; // Mettez ici le chemin de votre fichier XML
+    $xmlFile = '../xml/BaseXml.xml'; 
     
-    // Charger le fichier XML en tant qu'objet DOMDocument
     $xml = new DOMDocument();
     $xml->load($xmlFile);
     
-    // Créer un objet DOMXPath
     $xpath = new DOMXPath($xml);
     
-    // Utiliser XPath pour récupérer les informations du candidat
     $candidat = $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']")->item(0);
     
-    // Récupérer les informations personnelles
     $nomComplet = $xpath->query('nomComplet', $candidat)->item(0)->nodeValue;
     $email = $xpath->query('email', $candidat)->item(0)->nodeValue;
     $addresse1 = $xpath->query('addresse1', $candidat)->item(0)->nodeValue;
@@ -59,7 +56,6 @@ include '../Translation/headerTranslationCandidatConnect.php';
     $dateNaissance = $xpath->query('dateNaissance', $candidat)->item(0)->nodeValue;
     $lieuNaissance = $xpath->query('lieuNaissance', $candidat)->item(0)->nodeValue;
     
-    // Afficher les informations dans le modèle HTML
     
     ?>
     <div class="bg-light">
@@ -74,14 +70,13 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                         <img src="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='photoProfil']/file")->item(0)->nodeValue; ?>" alt="<?php echo $xpath->query("//candidat[@Utilisateur='{$_SESSION['cin']}']/Document[@idTypeDocument='photoProfil']/file")->item(0)->nodeValue; ?>" class="img-fluid">
                                     </div>
                                 </div>
-                                <!-- Modal -->
                                 <div class="modal fade" id="exampleModal" tabindex="-1"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Modifier les informations
-                                                </h5>
+                                                <h5 class="modal-title" id="exampleModalLabel"
+                                                    data-translate="modal.h5"></h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
@@ -89,49 +84,55 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                                 <form method="POST" action="../XmlOperations/modifyPersonalInfo.php"
                                                     enctype="multipart/form-data">
                                                     <div class="mb-3">
-                                                        <label for="nomComplet" class="form-label">Nom complet</label>
+                                                        <label for="nomComplet"
+                                                            class="form-label"data-translate="modal.nomComplet"></label>
                                                         <input type="text" class="form-control" id="nomComplet"
                                                             name="nomComplet" value="<?php echo $nomComplet; ?>">
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="email" class="form-label">Email</label>
+                                                        <label for="email" class="form-label"
+                                                            data-translate="modal.mail"></label>
                                                         <input type="email" class="form-control" id="email"
                                                             name="email" value="<?php echo $email; ?>">
                                                     </div>
-                                                    <!-- Ajoutez d'autres champs pour les informations restantes -->
                                                     <div class="mb-3">
-                                                        <label for="adresse1" class="form-label">Adresse 1</label>
+                                                        <label for="adresse1" class="form-label"
+                                                            data-translate="modal.adress1"></label>
                                                         <input type="text" class="form-control" id="adresse1"
                                                             name="adresse1" value="<?php echo $addresse1; ?>">
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="adresse2" class="form-label">Adresse 2</label>
+                                                        <label for="adresse2" class="form-label"
+                                                            data-translate="modal.adress2"></label>
                                                         <input type="text" class="form-control" id="adresse2"
                                                             name="adresse2" value="<?php echo $addresse2; ?>">
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="dateNaissance" class="form-label">Date de
-                                                            naissance</label>
+                                                        <label for="dateNaissance"
+                                                            class="form-label"data-translate="modal.dateNaissance"></label>
                                                         <input type="date" class="form-control" id="dateNaissance"
                                                             name="dateNaissance" value="<?php echo $dateNaissance; ?>">
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="lieuNaissance" class="form-label">Lieu de
-                                                            naissance</label>
+                                                        <label for="lieuNaissance" class="form-label"
+                                                            data-translate="modal.lieuNaissance"></label>
                                                         <input type="text" class="form-control" id="lieuNaissance"
                                                             name="lieuNaissance" value="<?php echo $lieuNaissance; ?>">
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="photoProfil" class="form-label">Photo de
-                                                            profil</label>
+                                                        <label for="photoProfil"
+                                                            class="form-label"data-translate="modal.photoProfile"></label>
                                                         <input type="file" class="form-control" id="photoProfil"
                                                             name="photoProfil">
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
-                                                            data-bs-dismiss="modal">Fermer</button>
-                                                        <button type="submit" class="btn btn-primary">Enregistrer les
-                                                            modifications</button>
+                                                            data-bs-dismiss="modal"
+                                                            data-translate="modal.fermer"></button>
+                                                        <button type="submit"
+                                                            class="btn btn-primary"data-translate="modal.modify">
+
+                                                        </button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -142,28 +143,30 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                 <div class="col-lg-6">
                                     <div class="bg-secondary py-3 px-3 mb-3 rounded">
                                         <h3 class="h2 text-white mb-0"><?php echo $nomComplet; ?></h3>
-                                        <!-- Ajoutez ici d'autres détails du candidat -->
                                     </div>
                                     <ul class="list-unstyled mb-1-9">
                                         <li class="mb-2 mb-xl-3 display-28"><span
-                                                class="display-26 text-secondary me-2 font-weight-600">Email:</span>
+                                                class="display-26 text-secondary me-2 font-weight-600"
+                                                data-translate="mail"></span>
                                             <?php echo $email; ?></li>
                                         <li class="mb-2 mb-xl-3 display-28"><span
-                                                class="display-26 text-secondary me-2 font-weight-600">Adresse:</span>
+                                                class="display-26 text-secondary me-2 font-weight-600"
+                                                data-translate="adress"></span>
                                             <?php echo $addresse1 . ', ' . $addresse2; ?></li>
                                         <li class="mb-2 mb-xl-3 display-28"><span
-                                                class="display-26 text-secondary me-2 font-weight-600">Date de
-                                                Naissance:</span>
+                                                class="display-26 text-secondary me-2 font-weight-600"
+                                                data-translate="dateNaissance"></span>
                                             <?php echo $dateNaissance; ?></li>
                                         <li class="display-28"><span
-                                                class="display-26 text-secondary me-2 font-weight-600">Lieu de
-                                                Naissance:</span>
+                                                class="display-26 text-secondary me-2 font-weight-600"data-translate="lieuNaissance"></span>
                                             <?php echo $lieuNaissance; ?></li>
                                     </ul>
+                                    <?php if($ModifierInfosPersonnelles){?>
                                     <button type="button" class="btn btn-primary d-block d-lg-inline-block"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        Modifier les informations
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                        data-translate="botona">
                                     </button>
+                                    <?php }?>
                                 </div>
                             </div>
                         </div>
@@ -176,61 +179,42 @@ include '../Translation/headerTranslationCandidatConnect.php';
     <style>
         .profile-pic {
             width: 300px;
-            /* ajustez la taille du cercle selon vos besoins */
             height: 300px;
-            /* ajustez la taille du cercle selon vos besoins */
             border-radius: 50%;
-            /* rend l'image circulaire */
             overflow: hidden;
-            /* masque les parties de l'image qui dépassent du cercle */
             border: 2px solid #000;
             margin-left: 180px;
-            /* couleur et épaisseur de la bordure */
         }
+
         @media (max-width: 767px) {
             .profile-pic {
                 width: 150px;
-                /* Taille pour les écrans plus petits */
                 height: 150px;
-                /* Taille pour les écrans plus petits */
                 margin-left: 50px;
-                /* Marge ajustée pour les écrans plus petits */
                 margin-right: 50px;
-                /* Marge ajustée pour les écrans plus petits */
             }
         }
 
-        /* Pour les tablettes et les ordinateurs de bureau */
         @media (min-width: 768px) {
             .profile-pic {
                 width: 200px;
-                /* Taille pour les tablettes et les ordinateurs de bureau */
                 height: 200px;
-                /* Taille pour les tablettes et les ordinateurs de bureau */
                 margin-left: 100px;
-                /* Marge ajustée pour les tablettes et les ordinateurs de bureau */
                 margin-right: 100px;
-                /* Marge ajustée pour les tablettes et les ordinateurs de bureau */
             }
         }
 
-        /* Pour les écrans plus larges (par exemple, les grands ordinateurs de bureau) */
         @media (min-width: 1200px) {
             .profile-pic {
                 width: 250px;
-                /* Taille pour les grands écrans */
                 height: 250px;
-                /* Taille pour les grands écrans */
                 margin-left: 150px;
-                /* Marge ajustée pour les grands écrans */
                 margin-right: 150px;
-                /* Marge ajustée pour les grands écrans */
             }
         }
 
         .profile-pic img {
             width: 100%;
-            /* assurez-vous que l'image remplit le cercle */
             height: auto;
             display: block;
         }
@@ -375,19 +359,19 @@ include '../Translation/headerTranslationCandidatConnect.php';
         $messageSuccess = urldecode($_GET['messageSuccess']);
         echo "<script src='../node_modules/sweetalert/dist/sweetalert.min.js'></script>";
         echo "<script>
-                                                                    document.addEventListener('DOMContentLoaded', function() {
-                                                                        swal('Succès', '$messageSuccess', 'success');
-                                                                    });
-                                                                    </script>";
+                                                                            document.addEventListener('DOMContentLoaded', function() {
+                                                                                swal('Succès', '$messageSuccess', 'success');
+                                                                            });
+                                                                            </script>";
     }
     if (isset($_GET['messageError'])) {
         $messageError = urldecode($_GET['messageError']);
         echo "<script src='node_modules/sweetalert/dist/sweetalert.min.js'></script>";
         echo "<script>
-                                                                    document.addEventListener('DOMContentLoaded', function() {
-                                                                        swal('Erreur', '$messageError', 'error');
-                                                                    });
-                                                                    </script>";
+                                                                            document.addEventListener('DOMContentLoaded', function() {
+                                                                                swal('Erreur', '$messageError', 'error');
+                                                                            });
+                                                                            </script>";
     }
     ?>
     <script>

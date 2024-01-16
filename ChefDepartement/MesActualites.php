@@ -1,5 +1,7 @@
 <?php
 include '../Translation/headerTranslationCandidatConnect.php';
+include '../XmlOperations/Permissions.php';
+redirectIfNotAuthorized($GestionActualites);
 ?>
 <!DOCTYPE html>
 <html <?php echo $_SESSION['lang'] === 'arabic' ? 'lang="ar" dir="rtl"' : 'lang="fr" dir="ltr"'; ?>>
@@ -40,19 +42,20 @@ include '../Translation/headerTranslationCandidatConnect.php';
                     <div class="card border-0">
                         <div class="card-body p-3 p-md-6 p-lg-7">
                             <div class="mb-3">
+                            <?php if($AjouterActualite){?>
                                 <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#insertModal">
-                                    Ajouter Actualité
+                                    data-target="#insertModal" data-translate="chefActualites.Ajouter Actualité">
                                 </button>
+                                <?php }?>
                             </div>
                             <div class="row align-items-center">
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>Titre</th>
-                                            <th>Description</th>
-                                            <th>Image</th>
-                                            <th>Actions</th>
+                                            <th data-translate="chefActualites.Titre"></th>
+                                            <th data-translate="chefActualites.Description"></th>
+                                            <th data-translate="chefActualites.Image"></th>
+                                            <th data-translate="chefActualites.Actions"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -72,18 +75,21 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                             <td>
                                                 <button type="button" class="btn btn-link" data-toggle="modal"
                                                     data-target="#imageModal<?= $idActualite ?>">
-                                                    <i class="fas fa-eye">Voir</i>
+                                                    <i class="fas fa-eye" data-translate="chefActualites.Voir"></i>
                                                 </button>
                                             </td>
                                             <td>
+                                                <?php if($SupprimerActualite){?>
                                                 <button class="btn btn-danger" data-toggle="modal"
-                                                    data-target="#confirmationModal" data-id="<?= $idActualite ?>">
-                                                    Supprimer
+                                                    data-target="#confirmationModal" data-id="<?= $idActualite ?>"
+                                                    data-translate="chefActualites.Supprimer">
                                                 </button>
+                                                <?php }?>
+                                                <?php if($ModifierActualite){?>
                                                 <button class="btn btn-warning" data-toggle="modal"
-                                                    data-target="#modifierActualiteModal<?= $idActualite ?>">
-                                                    Modifier
+                                                    data-target="#modifierActualiteModal<?= $idActualite ?>"data-translate="chefActualites.Modifier">
                                                 </button>
+                                                <?php }?>
                                             </td>
                                         </tr>
                                         <div class="modal fade" id="imageModal<?= $idActualite ?>" tabindex="-1"
@@ -91,7 +97,8 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Image</h5>
+                                                        <h5 class="modal-title" id="exampleModalLabel"
+                                                            data-translate="chefActualites.Image"></h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
@@ -110,44 +117,42 @@ include '../Translation/headerTranslationCandidatConnect.php';
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="modifierActualiteModalLabel">
-                                                            Modifier Actualité</h5>
+                                                        <h5 class="modal-title" id="modifierActualiteModalLabel"
+                                                            data-translate="chefActualites.Modifier Actualité">
+                                                        </h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <!-- Formulaire pour modifier l'actualité -->
                                                         <form id="modifierActualiteForm"
-                                                            action="../XmlOperations/modifyActualite.php" method="post"
-                                                            enctype="multipart/form-data">
-                                                            <!-- Champ caché pour l'ID de l'actualité à modifier -->
+                                                            action="../XmlOperations/modifyActualite.php"
+                                                            method="post" enctype="multipart/form-data">
                                                             <input type="hidden" name="idActualiteAModifier"
                                                                 id="idActualiteAModifier" value="<?= $idActualite ?>">
-                                                            <!-- Champ d'entrée pour le titre -->
                                                             <div class="form-group">
-                                                                <label for="titreModifier">Titre :</label>
+                                                                <label for="titreModifier"
+                                                                    data-translate="chefActualites.Titre"></label>
                                                                 <input type="text" class="form-control"
                                                                     id="titreModifier" name="titre" required
                                                                     value="<?= $Titre ?>">
                                                             </div>
-                                                            <!-- Champ d'entrée pour la description -->
                                                             <div class="form-group">
-                                                                <label for="descriptionModifier">Description :</label>
+                                                                <label for="descriptionModifier"
+                                                                    data-translate="chefActualites.Description"></label>
                                                                 <textarea class="form-control" id="descriptionModifier" name="description" rows="3" required><?= $description ?></textarea>
                                                             </div>
-                                                            <!-- Champ d'entrée pour l'image -->
                                                             <div class="form-group">
-                                                                <label for="imageModifier">Image :</label>
+                                                                <label for="imageModifier"
+                                                                    data-translate="chefActualites.Image"></label>
                                                                 <input type="file" class="form-control-file"
                                                                     id="imageModifier" name="image"
                                                                     accept="image/*">
                                                             </div>
-                                                            <!-- Bouton de confirmation -->
                                                             <button type="submit" name="submit"
-                                                                class="btn btn-primary">Confirmer la
-                                                                Modification</button>
+                                                                class="btn btn-primary"
+                                                                data-translate="chefActualites.Confirmer la Modification"></button>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -168,29 +173,30 @@ include '../Translation/headerTranslationCandidatConnect.php';
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="insertModalLabel">Ajouter Actualité</h5>
+                        <h5 class="modal-title"
+                            id="insertModalLabel"data-translate="chefActualites.Ajouter Actualité"></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <!-- Formulaire d'insertion -->
                         <form action="../XmlOperations/insertActualite.php" method="POST"
                             enctype="multipart/form-data">
                             <div class="form-group">
-                                <label for="titre">Titre :</label>
+                                <label for="titre" data-translate="chefActualites.Titre"></label>
                                 <input type="text" class="form-control" id="titre" name="titre" required>
                             </div>
                             <div class="form-group">
-                                <label for="description">Description :</label>
+                                <label for="description" data-translate="chefActualites.Description"></label>
                                 <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="image">Image :</label>
+                                <label for="image" data-translate="chefActualites.Image"></label>
                                 <input type="file" class="form-control-file" id="image" name="image"
                                     accept="image/*" required>
                             </div>
-                            <button type="submit" class="btn btn-primary" name="submit">Ajouter</button>
+                            <button type="submit" class="btn btn-primary"
+                                name="submit"data-translate="chefActualites.Ajouter"></button>
                         </form>
                     </div>
                 </div>
@@ -201,17 +207,20 @@ include '../Translation/headerTranslationCandidatConnect.php';
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="confirmationModalLabel">Confirmation de suppression</h5>
+                        <h5 class="modal-title" id="confirmationModalLabel"
+                            data-translate="candidaturePage.Suppression.Confirmation"></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Êtes-vous sûr de vouloir supprimer cette actualité ?</p>
+                        <p data-translate="chefActualites.Êtes-vous sûr de vouloir supprimer cette actualité"></p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                        <button type="button" class="btn btn-danger" id="confirmDeletion">Confirmer</button>
+                        <button type="button" class="btn btn-secondary"
+                            data-dismiss="modal"data-translate="candidaturePage.Suppression.Annuler"></button>
+                        <button type="button" class="btn btn-danger"
+                            id="confirmDeletion"data-translate="candidaturePage.Suppression.Supprimer"></button>
                     </div>
                 </div>
             </div>
@@ -236,19 +245,19 @@ include '../Translation/headerTranslationCandidatConnect.php';
             $messageSuccess = urldecode($_GET['messageSuccess']);
             echo "<script src='../node_modules/sweetalert/dist/sweetalert.min.js'></script>";
             echo "<script>
-                                                                                                                                                document.addEventListener('DOMContentLoaded', function() {
-                                                                                                                                                    swal('Succès', '$messageSuccess', 'success');
-                                                                                                                                                });
-                                                                                                                                                </script>";
+                                                                                                                                                        document.addEventListener('DOMContentLoaded', function() {
+                                                                                                                                                            swal('Succès', '$messageSuccess', 'success');
+                                                                                                                                                        });
+                                                                                                                                                        </script>";
         }
         if (isset($_GET['messageError'])) {
             $messageError = urldecode($_GET['messageError']);
             echo "<script src='node_modules/sweetalert/dist/sweetalert.min.js'></script>";
             echo "<script>
-                                                                                                                                                document.addEventListener('DOMContentLoaded', function() {
-                                                                                                                                                    swal('Erreur', '$messageError', 'error');
-                                                                                                                                                });
-                                                                                                                                                </script>";
+                                                                                                                                                        document.addEventListener('DOMContentLoaded', function() {
+                                                                                                                                                            swal('Erreur', '$messageError', 'error');
+                                                                                                                                                        });
+                                                                                                                                                        </script>";
         }
         ?>
         <script>
