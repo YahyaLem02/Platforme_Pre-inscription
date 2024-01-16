@@ -1,12 +1,12 @@
 <?php
 include '../Translation/headerTranslationCandidatConnect.php';
-// if (
-//     isset($_SESSION['AccesForm']) &&
-//     $_SESSION['AccesForm'] == false
-// ) {
-//     header("Location: ../Welcome/connecter.php");
-//     exit();
-// }
+if (
+    isset($_SESSION['AccesForm']) &&
+    $_SESSION['AccesForm'] == false
+) {
+    header("Location: ../Welcome/connecter.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html <?php echo $_SESSION['lang'] === 'arabic' ? 'lang="ar" dir="rtl"' : 'lang="fr" dir="ltr"'; ?>>

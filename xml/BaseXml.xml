@@ -1316,7 +1316,7 @@
             <login>houss@gmail.com</login>
             <password>yahyayahya</password>
         </Utilisateur>
-    </Utilisateurs>
+    <Utilisateur CIN="MD332344234" Langue="french" role="rol1"><nomComplet>Yahya Lemkharbech</nomComplet><login>yahya@gmail.com</login><password>yahyayahya</password></Utilisateur><Utilisateur CIN="MD2343423" role="rol4"><nomComplet>Amiba</nomComplet><login>amina@gmail.com</login><password>yahyayahya</password></Utilisateur></Utilisateurs>
     <Langues>
         <Langue CodeLangues="arabic">
             <Langue>العربية</Langue>
@@ -1908,7 +1908,7 @@
                 <file>../assets/imageCandidature/659b601373e5c_validerrr(1).jpg</file>
             </Document>
         </candidat>
-    </Candidats>
+    <candidat CNE="K136132598" appoge="32423342" ville="v48" Utilisateur="MD332344234"><nomComplet>Yahya Lemkharbech</nomComplet><email>lemkharbechy@gmail.com</email><addresse1>Zemamera sidi bennour</addresse1><addresse2>el massira  safi</addresse2><dateNaissance>2002-02-22</dateNaissance><lieuNaissance> Laghnadra sidi bennour</lieuNaissance><bac mentionBac="bien" type="SPC" accadime="academie8"><anneeBac>2019-2020</anneeBac><noteBac>14</noteBac></bac><Diplome mentionDiplome="bien" Etablissement="etab10" typeFormation="formation2" filiereDiplome="dutGenieInfo"><InofsPremiereAnnee><annee>2021-2022</annee><NombreEtudiant>167</NombreEtudiant><moyenne>13</moyenne><classement>45</classement></InofsPremiereAnnee><InofsDeuxiemeAnnee><annee>2022-2023</annee><NombreEtudiant>100</NombreEtudiant><moyenne>15</moyenne><classement>23</classement></InofsDeuxiemeAnnee></Diplome><experienceProfisonnelle><experiencePro>Stage chez DEVIHA</experiencePro><nombreAnne>1</nombreAnne></experienceProfisonnelle><Document idTypeDocument="baccalaureat"><file>../assets/imageCandidature/65a5ea352de55_photo.jpeg</file></Document><Document idTypeDocument="diplomeBac2"><file>../assets/imageCandidature/65a5ea352e390_demande_manuscrite.jpeg</file></Document><Document idTypeDocument="releveeDeNotes1"><file>../assets/imageCandidature/65a5ea352e6da_s1.jpeg</file></Document><Document idTypeDocument="releveeDeNotes2"><file>../assets/imageCandidature/65a5ea352ea82_s2.jpeg</file></Document><Document idTypeDocument="photoProfil"><file>../assets/imageCandidature/65a5ea352ee0c_photo.jpeg</file></Document><Document idTypeDocument="copieCIN"><file>../assets/imageCandidature/65a5ea352f133_cni-recto.jpeg</file></Document></candidat></Candidats>
     <Roles>
         <Role IdRole="rol1">
             <role>Candidat</role>

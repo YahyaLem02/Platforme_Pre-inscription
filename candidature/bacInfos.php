@@ -297,9 +297,8 @@ redirectIfNotAuthorized($VoirInfosPersonnelles);
                 height: 250px;
        
                 margin-left: 150px;
-                /* Marge ajustée pour les grands écrans */
                 margin-right: 150px;
-                /* Marge ajustée pour les grands écrans */
+
             }
         }
 

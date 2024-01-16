@@ -138,6 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $candidats->appendChild($candidat);
     $xml->save($xmlFile);
+    $_SESSION['AccesForm']= false;
     $messageSuccess = 'Données insérées avec succès.';
     header('Location: ../candidature/personalInfos?messageSuccess=' . urlencode($messageSuccess));
 
