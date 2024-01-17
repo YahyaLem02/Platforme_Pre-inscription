@@ -4,7 +4,7 @@ if (
     isset($_SESSION['AccesForm']) &&
     $_SESSION['AccesForm'] == false
 ) {
-    header("Location: ../Welcome/connecter.php");
+    header("Location: pageNonTrouve");
     exit();
 }
 ?>

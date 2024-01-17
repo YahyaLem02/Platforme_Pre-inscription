@@ -35,9 +35,34 @@ foreach ($permissions as $permission) {
     }
 }
 
+//Les sessions 
+if (isset($_SESSION['candidat'])) {
+    $isCandidat = $_SESSION['candidat'];
+}
+if (isset($_SESSION['agentScolarite'])) {
+    $isAgentScolarite = $_SESSION['agentScolarite'];
+}
+if (isset($_SESSION['root'])) {
+    $isRoot = $_SESSION['root'];
+}
+if (isset($_SESSION['chefDep'])) {
+    $isChefDep = $_SESSION['chefDep'];
+}
+
+
+
 if (!function_exists('redirectIfNotAuthorized')) {
     function redirectIfNotAuthorized($permission){
         if(!$permission) {
+            header("Location: pageNonTrouve.php");
+            exit(); 
+        }
+    }
+}
+
+if (!function_exists('canAccessPage')) {
+    function canAccessPage($session){
+        if(!$session) {
             header("Location: pageNonTrouve.php");
             exit(); 
         }

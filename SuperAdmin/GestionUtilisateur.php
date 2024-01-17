@@ -1,6 +1,7 @@
 <?php
 include '../Translation/headerTranslationCandidatConnect.php';
 include '../XmlOperations/Permissions.php';
+canAccessPage($isRoot);
 ?>
 <!DOCTYPE html>
 <html <?php echo $_SESSION['lang'] === 'arabic' ? 'lang="ar" dir="rtl"' : 'lang="fr" dir="ltr"'; ?>>

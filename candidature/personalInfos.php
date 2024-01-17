@@ -1,6 +1,7 @@
 <?php
 include '../Translation/headerTranslationCandidatConnect.php';
 include '../XmlOperations/Permissions.php';
+canAccessPage($isCandidat);
 redirectIfNotAuthorized($VoirInfosPersonnelles);
 ?>
 <!DOCTYPE html>

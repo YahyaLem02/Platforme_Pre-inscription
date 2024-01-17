@@ -70,6 +70,7 @@ include '../XmlOperations/Permissions.php';
                 </li>
                 <?php } ?>
                 <?php if (isset($_SESSION["connect"]) && $_SESSION["connect"] == true && $_SESSION['candidat'] == true) {?>
+                    <?php if(isset($_SESSION["AccesForm"]) && $_SESSION["AccesForm"] == false) { ?>
                 <li><a class="nav-link scrollto" href="index.php" data-translate="menu.home"></a></li>
                 <?php if($VoirActualites){?>
                 <li><a href="actualite.php"data-translate="headerCandidat.Actualités"></a></li>
@@ -91,6 +92,7 @@ include '../XmlOperations/Permissions.php';
                 <?php }?>
                 <?php if($VoirCandidatures){?>
                 <li><a href="candidatureInfos.php" data-translate="headerCandidat.Mes candidatures"></a></li>
+                <?php }?>
                 <?php }?>
                 <li><a href="../XmlOperations/DeconnexionAction.php" data-translate="headerCandidat.Quitter"></a></li>
                 <li class="lang-selector">

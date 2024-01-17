@@ -13,6 +13,9 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $email = htmlspecialchars($email);
     $password = htmlspecialchars($password);
     $_SESSION['candidat'] = false;
+    $_SESSION['chefDep'] = false;
+    $_SESSION['root'] = false;
+    $_SESSION['agentScolarite'] = false;
     $_SESSION['AccesForm'] = false;
 
     $matchingCompte = $xml->xpath("//Utilisateur[login = '{$email}' and password = '{$password}']");
