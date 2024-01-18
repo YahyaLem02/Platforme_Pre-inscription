@@ -566,10 +566,10 @@ if (
                         <label for="attestation" data-translate="Attestation de réussite ou diplôme:">Attestation de
                             réussite ou diplôme:</label>
                         <input type="file" id="attestation" name="diplomeBac2" accept=".jpg,.png,.jpeg" required>
-                        <label for="releveS1" data-translate="Relevé de notes S1:">Relevé de notes S1:</label>
+                        <label for="releveS1" data-translate="Relevé de notes S1:">Relevé de notes première année:</label>
                         <input type="file" id="releveS1" name="releveeDeNotes1" accept=".jpg,.png,.jpeg"
                             required>
-                        <label for="releveS2" data-translate="Relevé de notes S2:">Relevé de notes S2:</label>
+                        <label for="releveS2" data-translate="Relevé de notes S2:">Relevé de deuxième année:</label>
                         <input type="file" id="releveS2" name="releveeDeNotes2" accept=".jpg,.png,.jpeg"
                             required>
                         <label for="photo" data-translate="Photo personnel:">Photo personnel:</label>

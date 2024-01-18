@@ -1275,7 +1275,7 @@
             <login>takwin@gmail.com</login>
             <password>yahyayahya</password>
         </Utilisateur>
-        <Utilisateur CIN="MD990212" Langue="arabic" role="rol1">
+        <Utilisateur CIN="MD990212" Langue="french" role="rol1">
             <nomComplet>said sahnouni</nomComplet>
             <login>said@gmail.com</login>
             <password>yahyayahya</password>
@@ -1331,7 +1331,37 @@
             <login>safaa@gmail.com</login>
             <password>yahyayahya</password>
         </Utilisateur>
-        
+
+        <Utilisateur CIN="MD2333232" Langue="french" role="rol1">
+            <nomComplet>mourad alami</nomComplet>
+            <login>mourad@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+        <Utilisateur CIN="MD892761" Langue="arabic" role="rol1">
+            <nomComplet>ahmed </nomComplet>
+            <login>ahmed@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+        <Utilisateur CIN="MD2344" role="rol2" Dep="GI">
+            <nomComplet>chef deb</nomComplet>
+            <login>taha@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+        <Utilisateur CIN="MD1223" Langue="english" role="rol1">
+            <nomComplet>nassim</nomComplet>
+            <login>nassim@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+        <Utilisateur CIN="MD12321" Langue="french" role="rol1">
+            <nomComplet>naima</nomComplet>
+            <login>naima@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
+        <Utilisateur CIN="MD2213" Langue="french" role="rol1">
+            <nomComplet>rachid</nomComplet>
+            <login>rachid@gmail.com</login>
+            <password>yahyayahya</password>
+        </Utilisateur>
     </Utilisateurs>
     <Langues>
         <Langue CodeLangues="arabic">
@@ -1781,7 +1811,7 @@
             </Document>
         </candidat>
         <candidat CNE="K21212321" appoge="23122" ville="v17" Utilisateur="MD990212">
-            <nomComplet>said ahmader</nomComplet>
+            <nomComplet>Abdelmoughit El Aoumari</nomComplet>
             <email>said@gmail.com</email>
             <addresse1>zemaera</addresse1>
             <addresse2>sidi bennour</addresse2>
@@ -1822,7 +1852,7 @@
                 <file>../assets/imageCandidature/65988f39db8ff_banner.jpg</file>
             </Document>
             <Document idTypeDocument="photoProfil">
-                <file>../assets/imageCandidature/65986c48c90e1_photo-transformed.jpeg</file>
+                <file>../assets/imageCandidature/65a90d90d44db_istockphoto-1090878494-612x612.jpg</file>
             </Document>
             <Document idTypeDocument="copieCIN">
                 <file>../assets/imageCandidature/65986c48c93d4_12931.png</file>
@@ -2020,6 +2050,151 @@
                 <file>../assets/imageCandidature/65a7cb07084cb_data-warehouse.png</file>
             </Document>
         </candidat>
+        <candidat CNE="K211902" appoge="312112" ville="v42" Utilisateur="MD2333232">
+            <nomComplet>mourad alami</nomComplet>
+            <email>mourad@gmail.com</email>
+            <addresse1>safi maroc</addresse1>
+            <addresse2>safi maroc</addresse2>
+            <dateNaissance>2024-01-23</dateNaissance>
+            <lieuNaissance>safi maroc</lieuNaissance>
+            <bac mentionBac="bien" type="SE" accadime="academie6">
+                <anneeBac>2022-2023</anneeBac>
+                <noteBac>13</noteBac>
+            </bac>
+            <Diplome mentionDiplome="bien" Etablissement="etab37" typeFormation="formation1" filiereDiplome="dutGenieInfo">
+                <InofsPremiereAnnee>
+                    <annee>2017-2018</annee>
+                    <NombreEtudiant>122</NombreEtudiant>
+                    <moyenne>12</moyenne>
+                    <classement>1</classement>
+                </InofsPremiereAnnee>
+                <InofsDeuxiemeAnnee>
+                    <annee>2022-2023</annee>
+                    <NombreEtudiant>12</NombreEtudiant>
+                    <moyenne>11</moyenne>
+                    <classement>1</classement>
+                </InofsDeuxiemeAnnee>
+            </Diplome>
+            <experienceProfisonnelle>
+                <experiencePro>test experience </experiencePro>
+                <nombreAnne>12</nombreAnne>
+            </experienceProfisonnelle>
+            <Document idTypeDocument="baccalaureat">
+                <file>../assets/imageCandidature/65a8f41555a6b_Reset password-rafiki.png</file>
+            </Document>
+            <Document idTypeDocument="diplomeBac2">
+                <file>../assets/imageCandidature/65a8f415568f7_User research-bro.png</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes1">
+                <file>../assets/imageCandidature/65a8f41556b52_Operating system-bro.png</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes2">
+                <file>../assets/imageCandidature/65a8f41556d55_Capture d'écran 2024-01-17 232251.png</file>
+            </Document>
+            <Document idTypeDocument="photoProfil">
+                <file>../assets/imageCandidature/65a8f41556ee0_Screenshot 2024-01-17 at 13-50-38 E-candidature.png
+                </file>
+            </Document>
+            <Document idTypeDocument="copieCIN">
+                <file>../assets/imageCandidature/65a8f4155756f_data-warehouse.png</file>
+            </Document>
+        </candidat>
+        <candidat CNE="g122333" appoge="22133" ville="v28" Utilisateur="MD892761">
+            <nomComplet>ahmed </nomComplet>
+            <email>test@gmail.com</email>
+            <addresse1>safi</addresse1>
+            <addresse2>safi</addresse2>
+            <dateNaissance>2024-01-09</dateNaissance>
+            <lieuNaissance>safi</lieuNaissance>
+            <bac mentionBac="assezBien" type="SVT" accadime="academie5">
+                <anneeBac>2023-2024</anneeBac>
+                <noteBac>12</noteBac>
+            </bac>
+            <Diplome mentionDiplome="excellent" Etablissement="centre40" typeFormation="formation4" filiereDiplome="btsIRIS">
+                <InofsPremiereAnnee>
+                    <annee>2022-2023</annee>
+                    <NombreEtudiant>122</NombreEtudiant>
+                    <moyenne>12</moyenne>
+                    <classement>12</classement>
+                </InofsPremiereAnnee>
+                <InofsDeuxiemeAnnee>
+                    <annee>2023-2024</annee>
+                    <NombreEtudiant>123</NombreEtudiant>
+                    <moyenne>12</moyenne>
+                    <classement>1</classement>
+                </InofsDeuxiemeAnnee>
+            </Diplome>
+            <experienceProfisonnelle>
+                <experiencePro>experience test</experiencePro>
+                <nombreAnne>1</nombreAnne>
+            </experienceProfisonnelle>
+            <Document idTypeDocument="baccalaureat">
+                <file>../assets/imageCandidature/65a8f9a394f95_Reset password-rafiki.png</file>
+            </Document>
+            <Document idTypeDocument="diplomeBac2">
+                <file>../assets/imageCandidature/65a8f9a39562b_Reset password-rafiki.png</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes1">
+                <file>../assets/imageCandidature/65a8f9a39582a_Reset password-rafiki.png</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes2">
+                <file>../assets/imageCandidature/65a8f9a3959c6_Reset password-rafiki.png</file>
+            </Document>
+            <Document idTypeDocument="photoProfil">
+                <file>../assets/imageCandidature/65a8f9bd0c6cc_Capture d'écran 2024-01-17 231727.png</file>
+            </Document>
+            <Document idTypeDocument="copieCIN">
+                <file>../assets/imageCandidature/65a8f9a395d0f_User research-bro.png</file>
+            </Document>
+        </candidat>
+        <candidat CNE="G325522" appoge="2426267" ville="v9" Utilisateur="MD1223">
+            <nomComplet>nassim</nomComplet>
+            <email>nassim@gmail.com</email>
+            <addresse1>SAFI</addresse1>
+            <addresse2>SAFI</addresse2>
+            <dateNaissance>2024-01-19</dateNaissance>
+            <lieuNaissance>SADFO</lieuNaissance>
+            <bac mentionBac="assezBien" type="SVT" accadime="academie2">
+                <anneeBac>2022-2023</anneeBac>
+                <noteBac>12</noteBac>
+            </bac>
+            <Diplome mentionDiplome="excellent" Etablissement="etab29" typeFormation="formation3" filiereDiplome="btsIRIS">
+                <InofsPremiereAnnee>
+                    <annee>2023-2024</annee>
+                    <NombreEtudiant>123</NombreEtudiant>
+                    <moyenne>15</moyenne>
+                    <classement>17</classement>
+                </InofsPremiereAnnee>
+                <InofsDeuxiemeAnnee>
+                    <annee>2022-2023</annee>
+                    <NombreEtudiant>134</NombreEtudiant>
+                    <moyenne>13</moyenne>
+                    <classement>14</classement>
+                </InofsDeuxiemeAnnee>
+            </Diplome>
+            <experienceProfisonnelle>
+                <experiencePro>EXP</experiencePro>
+                <nombreAnne>1</nombreAnne>
+            </experienceProfisonnelle>
+            <Document idTypeDocument="baccalaureat">
+                <file>../assets/imageCandidature/65a8feee55837_istockphoto-1090878494-612x612.jpg</file>
+            </Document>
+            <Document idTypeDocument="diplomeBac2">
+                <file>../assets/imageCandidature/65a8feee55fed_istockphoto-1090878494-612x612.jpg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes1">
+                <file>../assets/imageCandidature/65a8feee56237_Untitled.jpeg</file>
+            </Document>
+            <Document idTypeDocument="releveeDeNotes2">
+                <file>../assets/imageCandidature/65a8feee56420_istockphoto-1090878494-612x612.jpg</file>
+            </Document>
+            <Document idTypeDocument="photoProfil">
+                <file>../assets/imageCandidature/65a8ff679728d_Untitled.jpeg</file>
+            </Document>
+            <Document idTypeDocument="copieCIN">
+                <file>../assets/imageCandidature/65a8feee5685f_istockphoto-1090878494-612x612.jpg</file>
+            </Document>
+        </candidat>
     </Candidats>
     <Roles>
         <Role IdRole="rol1">
@@ -2064,6 +2239,19 @@
                 <ordre>3</ordre>
             </choix>
         </candidature>
+        <candidature Candidat="MD1223">
+            <status>En cours de traitement</status>
+            <AnnneCandidature>2023-2024</AnnneCandidature>
+            <choix idFiliereSouhaite="Fil2">
+                <ordre>1</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil1">
+                <ordre>2</ordre>
+            </choix>
+            <choix idFiliereSouhaite="Fil3">
+                <ordre>3</ordre>
+            </choix>
+        </candidature>
     </Candidatures>
     <Departements>
         <Departement sigle="GIM" Filiere="Fil1">
@@ -2081,26 +2269,28 @@
     </Departements>
     <Actualites>
         <Actualite idActualite="EO924" idChef="M356373">
-            <Titre>la creme de la cerme</Titre>
-            <Description>rak khadam</Description>
+            <Titre>Nouvelles fonctionnalités à venir</Titre>
+            <Description>Découvrez les dernières mises à jour et améliorations prévues.</Description>
             <Image>../assets/imageCandidature/65a1c8db7095a_banner.jpg</Image>
         </Actualite>
         <Actualite idActualite="WM108" idChef="M3563">
-            <Titre>ana gim</Titre>
-            <Description>desc gim</Description>
+            <Titre>Lancement d'un nouveau produit</Titre>
+            <Description>Explorez les caractéristiques passionnantes de notre dernier produit.</Description>
             <Image>../assets/imageCandidature/65a08ad4586f9_validerrr(1).jpg</Image>
         </Actualite>
         <Actualite idActualite="OG403" idChef="M9563">
-            <Titre>Annonce mouhem</Titre>
-            <Description>Li dfa3 l timq maraytqbalsh o l concours maratjibouch</Description>
+            <Titre>Evénement spécial ce week-end</Titre>
+            <Description>Participez à notre événement exclusif et profitez de remises exceptionnelles.</Description>
             <Image>../assets/imageCandidature/65a1b1a7e32a4_4373396.png</Image>
         </Actualite>
         <Actualite idActualite="UM391" idChef="M356373">
-            <Titre>nenene</Titre>
-            <Description>qsqsdqsd</Description>
+            <Titre>Nouvelles opportunités de carrière</Titre>
+            <Description>Découvrez les postes disponibles et rejoignez notre équipe dynamique.</Description>
             <Image>../assets/imageCandidature/65a1c304a772c_WhatsApp Image 2024-01-10 à 02.02.52_6b449236.jpg</Image>
         </Actualite>
+   
     </Actualites>
+    
     <Permissions>
         <Permission IdPermission="per2" Role="rol1" state="1">
             <for>Voir actualités</for>
@@ -2114,10 +2304,10 @@
         <Permission IdPermission="per6" Role="rol1" state="1">
             <for>Voir candidatures</for>
         </Permission>
-        <Permission IdPermission="per7" Role="rol1" state="0">
+        <Permission IdPermission="per7" Role="rol1" state="1">
             <for>Modifier candidature</for>
         </Permission>
-        <Permission IdPermission="per8" Role="rol1" state="0">
+        <Permission IdPermission="per8" Role="rol1" state="1">
             <for>Ajouter candidature</for>
         </Permission>
         <Permission IdPermission="per9" Role="rol1" state="1">
