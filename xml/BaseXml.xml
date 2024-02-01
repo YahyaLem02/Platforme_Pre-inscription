@@ -1250,7 +1250,7 @@
             <login>root@gmail.com</login>
             <password>yahyayahya</password>
         </Utilisateur>
-    </Utilisateurs>
+    <Utilisateur CIN="MD131212" Langue="french" role="rol1"><nomComplet>zakaria laaliji</nomComplet><login>ziko@gmail.com</login><password>yahyayahya</password></Utilisateur></Utilisateurs>
     <Langues>
         <Langue CodeLangues="arabic">
             <Langue>العربية</Langue>
